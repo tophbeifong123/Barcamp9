@@ -5,10 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
             scroll-behavior: smooth;
+        }
+         /* Horizontal Scrolling Gallery */
+         .horizontal-gallery-container {
+            padding: 1rem;
+            gap: 1rem;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        .horizontal-gallery {
+            display: flex;
+            white-space: nowrap;
+            gap: 1rem;
+        }
+
+        .horizontal-gallery img {
+            height: 300px; /* Fixed height for images */
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        .horizontal-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Fullscreen Image Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        /* Custom scrollbar styles */
+        .simplebar {
+            position: relative;
+            height: 100%; /* Ensure full height */
+            overflow: hidden;
+        }
+
+        .simplebar-scrollbar {
+            background: #6200ea; /* Thumb color */
+            border-radius: 8px; /* Rounded corners for thumb */
+        }
+
+        .simplebar-track {
+            background: rgba(0, 0, 0, 0.1); /* Track background color */
+            border-radius: 8px; /* Rounded corners for track */
+        }
+
+        /* Change scrollbar width */
+        .simplebar-scrollbar:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit; /* Match scrollbar color with thumb */
+        }
+
+        /* Additional margin for spacing between galleries */
+        .horizontal-gallery:nth-of-type(2) {
+            margin-top: 20px; /* Adjust this value as needed */
         }
         
     </style>
@@ -129,8 +206,17 @@
         </div>
         
         <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
-          <div class="text-8xl">Gallery</div>
-          <div class="h-[500px]">
+            <h2 class="text-center mb-4">Gallery</h2>
+            <div data-simplebar class="horizontal-gallery-container">
+                <div class="horizontal-gallery">
+                    <!-- First row of images (1-34) -->
+                </div>
+                <div class="horizontal-gallery">
+                    <!-- Second row of images (35-68) -->
+                </div>
+            </div>
+          </div>
+  
             
           </div>
         </div>
@@ -175,5 +261,51 @@
         </a>
       </div>
     </footer>
+    <div class="overlay" id="overlay">
+      <img id="overlayImage" src="" alt="Full-size image">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.min.js"></script>
+  <script>
+      const firstGallery = document.querySelectorAll('.horizontal-gallery')[0];
+      const secondGallery = document.querySelectorAll('.horizontal-gallery')[1];
+      const overlay = document.getElementById('overlay');
+      const overlayImage = document.getElementById('overlayImage');
+
+      // Add images to the first gallery (1-34)
+      for (let i = 1; i <= 34; i++) {
+          const img = document.createElement('img');
+          img.src = `images/images${i}.jpg`; // Specify the path to images
+          img.alt = `images${i}`;
+          img.onclick = () => showFullImage(img.src);
+          firstGallery.appendChild(img);
+      }
+
+      // Add images to the second gallery (35-68)
+      for (let i = 35; i <= 67; i++) {
+          const img = document.createElement('img');
+          img.src = `images/images${i}.jpg`; // Specify the path to images
+          img.alt = `images${i}`;
+          img.onclick = () => showFullImage(img.src);
+          secondGallery.appendChild(img);
+      }
+
+      // Add image 68 to the first gallery
+      const img68 = document.createElement('img');
+      img68.src = `images/images68.jpg`; // Specify the path to image 68
+      img68.alt = `images68`;
+      img68.onclick = () => showFullImage(img68.src);
+      firstGallery.appendChild(img68);
+
+      // Show image in full screen overlay
+      function showFullImage(src) {
+          overlayImage.src = src;
+          overlay.style.display = 'flex';
+      }
+
+      // Hide overlay on click
+      overlay.onclick = () => {
+          overlay.style.display = 'none';
+      };
+  </script>
 </body>
 </html>
