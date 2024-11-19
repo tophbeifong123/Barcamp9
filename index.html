@@ -5,10 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html {
             scroll-behavior: smooth;
+        }
+
+         .horizontal-gallery-container {
+            padding: 1rem;
+            gap: 1rem;
+            overflow-x: auto; 
+        }
+
+        .horizontal-gallery {
+            display: flex;
+            white-space: nowrap;
+            gap: 1rem;
+        }
+
+        .horizontal-gallery img {
+            height: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .horizontal-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .simplebar {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .simplebar-scrollbar {
+            background: #6200ea; 
+            border-radius: 8px; 
+        }
+
+        .simplebar-track {
+            background: rgba(0, 0, 0, 0.1); 
+            border-radius: 8px; 
+        }
+
+        .simplebar-scrollbar:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+        }
+
+        .horizontal-gallery:nth-of-type(2) {
+            margin-top: 20px; 
         }
         
     </style>
@@ -131,8 +203,15 @@
         </div>
         
         <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
-          <div class="text-8xl">Gallery</div>
-          <div class="h-[500px]">
+            <h2 class="text-center mb-4">Gallery</h2>
+            <div data-simplebar class="horizontal-gallery-container">
+                <div class="horizontal-gallery">
+                </div>
+                <div class="horizontal-gallery">
+                </div>
+            </div>
+          </div>
+  
             
           </div>
         </div>
@@ -177,5 +256,46 @@
         </a>
       </div>
     </footer>
+    <div class="overlay" id="overlay">
+      <img id="overlayImage" src="" alt="Full-size image">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.min.js"></script>
+  <script>
+      const firstGallery = document.querySelectorAll('.horizontal-gallery')[0];
+      const secondGallery = document.querySelectorAll('.horizontal-gallery')[1];
+      const overlay = document.getElementById('overlay');
+      const overlayImage = document.getElementById('overlayImage');
+
+      for (let i = 1; i <= 34; i++) {
+          const img = document.createElement('img');
+          img.src = `images/images${i}.jpg`; 
+          img.alt = `images${i}`;
+          img.onclick = () => showFullImage(img.src);
+          firstGallery.appendChild(img);
+      }
+
+      for (let i = 35; i <= 67; i++) {
+          const img = document.createElement('img');
+          img.src = `images/images${i}.jpg`; 
+          img.alt = `images${i}`;
+          img.onclick = () => showFullImage(img.src);
+          secondGallery.appendChild(img);
+      }
+
+      const img68 = document.createElement('img');
+      img68.src = `images/images68.jpg`; 
+      img68.alt = `images68`;
+      img68.onclick = () => showFullImage(img68.src);
+      firstGallery.appendChild(img68);
+
+      function showFullImage(src) {
+          overlayImage.src = src;
+          overlay.style.display = 'flex';
+      }
+
+      overlay.onclick = () => {
+          overlay.style.display = 'none';
+      };
+  </script>
 </body>
 </html>
