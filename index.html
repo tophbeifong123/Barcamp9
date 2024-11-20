@@ -1,301 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="./output.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-         .horizontal-gallery-container {
-            padding: 1rem;
-            gap: 1rem;
-            overflow-x: auto; 
-        }
+    .gallery-wrapper {
+      position: relative;
+      /* กำหนดให้กล่องนี้เป็นอ้างอิง */
+      width: 90%;
+      /* กำหนดความกว้างของกล่องเป็น 90% ของหน้าจอ */
+      max-width: 1400px;
+      /* เพิ่มขนาดความกว้างสูงสุด */
+      height:  auto;
+      /* เพิ่มความสูงของกล่อง */
+      margin: 0 auto;
+      /* จัดกล่องให้อยู่ตรงกลาง */
+      overflow: hidden;
+      /* ซ่อนส่วนที่ล้นออกมาจากกล่อง */
+      border: 2px solid #ddd;
+      /* ขอบของกล่อง */
+      border-radius: 8px;
+      /* มุมโค้งมนของกล่อง */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* เพิ่มเงาให้กล่อง */
+    }
 
-        .horizontal-gallery {
-            display: flex;
-            white-space: nowrap;
-            gap: 1rem;
-        }
 
-        .horizontal-gallery img {
-            height: 300px;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
 
-        .horizontal-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
+    .horizontal-gallery-container {
+      padding: 1rem;
+      gap: 1rem;
+      overflow-x: auto;
+    }
 
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
+    .horizontal-gallery {
+      display: flex;
+      white-space: nowrap;
+      gap: 1rem;
+    }
 
-        .overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
+    .horizontal-gallery img {
+      height: 300px;
+      width: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      max-height: 100%; /* จำกัดความสูงไม่ให้เกินขอบกล่อง */
+      max-width: 100%; /* ปรับความกว้างให้สัมพันธ์กับความสูง */
+    }
 
-        .simplebar {
-            position: relative;
-            height: 100%;
-            overflow: hidden;
-        }
+    @media (max-width: 768px) {
+    .horizontal-gallery img {
+        height: 200px; /* ลดความสูงสำหรับหน้าจอขนาดเล็ก */
+    }
+}
 
-        .simplebar-scrollbar {
-            background: #6200ea; 
-            border-radius: 8px; 
-        }
+    .horizontal-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
 
-        .simplebar-track {
-            background: rgba(0, 0, 0, 0.1); 
-            border-radius: 8px; 
-        }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
 
-        .simplebar-scrollbar:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: inherit;
-        }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
 
-        .horizontal-gallery:nth-of-type(2) {
-            margin-top: 20px; 
-        }
-        
-    </style>
+    .simplebar {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .simplebar-scrollbar {
+      background: #6200ea;
+      border-radius: 8px;
+    }
+
+    .simplebar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .simplebar-scrollbar:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+    }
+
+    .horizontal-gallery:nth-of-type(2) {
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="navbar bg-base-100 sticky top-0 border-b-4 z-50">
-        <div class="flex-1">
-          <a href="#" class="btn btn-ghost text-xl">Barmcamp</a>
-        </div>
-        <div class="flex-none">
-          <ul class="menu menu-horizontal px-1">
-            <li><a href="#Home" class="hover:scale-150">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Gallery">Gallery</a></li>
-          </ul>
-        </div>
+  <div class="navbar bg-base-100 sticky top-0 border-b-4 z-50">
+    <div class="flex-1">
+      <a href="#" class="btn btn-ghost text-xl">Barmcamp</a>
     </div>
-    <!-- #6ab6b4  ฟ้า 
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#Home" class="hover:scale-150">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- #6ab6b4  ฟ้า 
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
-    <main class="container mx-auto md:p-4 mt-4 mb-4 grid gap-4">
-        <div class="bg-lime-400 py-16 border-black border-4" id="Home">
-          <div class="text-8xl">Home</div>
-          <div class="h-[500px]">
-            
-          </div>
-        </div>
-        <div class="bg-lime-400 py-16 border-black border-4" id="About">
-          <div class="text-8xl">About</div>
-          <div class="h-[500px]">
+  <main class="container mx-auto md:p-4 mt-4 mb-4 grid gap-4">
+    <div class="bg-lime-400 py-16 border-black border-4" id="Home">
+      <div class="text-8xl">Home</div>
+      <div class="h-[500px]">
 
-          </div>
-        </div>
-        <div class="bg-black text-white py-10 border-black border container mx-auto" id="Timeline">
-          <div class="flex-auto lg:flex flex-wrap items-start max">
-            <div class="flex-1 text-8xl lg:sticky lg:top-[300px] text-center text-black font-medium border-t-4 border-b-4 bg-white md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">Timeline</div>
-            <div class="flex-1 lg:border-l-8 sm:pl-0 lg:px-4 sm:border-l-0">
-              <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                <li>
-                  <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="timeline-start mb-10 md:text-end">
-                    <time class="font-mono italic text-amber-400">1984</time>
-                    <div class="text-lg font-black text-amber-300">First Macintosh computer</div>
-                    <div class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
-                      The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal computer. It played a pivotal role in establishing desktop publishing as a general office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it came with a keyboard and single-button mouse.
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <hr />
-                  <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="timeline-end mb-10">
-                    <time class="font-mono italic text-amber-400">1998</time>
-                    <div class="text-lg font-black text-amber-300">iMac</div>
-                    <div class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
-                      iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the primary part of Apple's consumer desktop offerings since its debut in August 1998, and has evolved through seven distinct forms
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <hr />
-                  <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="timeline-start mb-10 md:text-end">
-                    <time class="font-mono italic text-amber-400">2001</time>
-                    <div class="text-lg font-black text-amber-300">iPod</div>
-                    <div class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
-                      The iPod is a discontinued series of portable media players and multi-purpose mobile devices designed and marketed by Apple Inc. The first version was released on October 23, 2001, about 8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450 million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At over 20 years, the iPod brand is the oldest to be discontinued by Apple
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <hr />
-                  <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="timeline-end mb-10">
-                    <time class="font-mono italic text-amber-400">2007</time>
-                    <div class="text-lg font-black text-amber-300">iPhone</div>
-                    <div class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
-                      iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone accounts for 15.6% of global smartphone market share
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <hr />
-                  <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="timeline-start mb-10 md:text-end">
-                    <time class="font-mono italic text-amber-400">2015</time>
-                    <div class="text-lg font-black text-amber-300">Apple Watch</div>
-                    <div class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
-                      The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products and services
-                    </div>
-                  </div>
-                </li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
-            <h2 class="text-center mb-4">Gallery</h2>
-            <div data-simplebar class="horizontal-gallery-container">
-                <div class="horizontal-gallery">
+      </div>
+    </div>
+    <div class="bg-lime-400 py-16 border-black border-4" id="About">
+      <div class="text-8xl">About</div>
+      <div class="h-[500px]">
+
+      </div>
+    </div>
+    <div class="bg-black text-white py-10 border-black border container mx-auto" id="Timeline">
+      <div class="flex-auto lg:flex flex-wrap items-start max">
+        <div
+          class="flex-1 text-8xl lg:sticky lg:top-[300px] text-center text-black font-medium border-t-4 border-b-4 bg-white md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
+          Timeline</div>
+        <div class="flex-1 lg:border-l-8 sm:pl-0 lg:px-4 sm:border-l-0">
+          <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li>
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="timeline-start mb-10 md:text-end">
+                <time class="font-mono italic text-amber-400">1984</time>
+                <div class="text-lg font-black text-amber-300">First Macintosh computer</div>
+                <div
+                  class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
+                  The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal
+                  computer. It played a pivotal role in establishing desktop publishing as a general office function.
+                  The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with
+                  integrated carrying handle; it came with a keyboard and single-button mouse.
                 </div>
-                <div class="horizontal-gallery">
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="timeline-end mb-10">
+                <time class="font-mono italic text-amber-400">1998</time>
+                <div class="text-lg font-black text-amber-300">iMac</div>
+                <div
+                  class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
+                  iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the
+                  primary part of Apple's consumer desktop offerings since its debut in August 1998, and has evolved
+                  through seven distinct forms
                 </div>
-            </div>
-          </div>
-  
-            
-          </div>
-        </div>
-    </main>
-    <footer class="flex flex- items-center justify-between border-t-4 border-t-slate-500 h-16 p-4">
-      <div class="flex">
-        <svg
-          width="36"
-          height="36"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          class="fill-current">
-          <path
-            d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-        </svg>
-        <div class="uppercase self-center px-2" style="letter-spacing: 3px">
-          barcamp songkhla
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="timeline-start mb-10 md:text-end">
+                <time class="font-mono italic text-amber-400">2001</time>
+                <div class="text-lg font-black text-amber-300">iPod</div>
+                <div
+                  class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
+                  The iPod is a discontinued series of portable media players and multi-purpose mobile devices designed
+                  and marketed by Apple Inc. The first version was released on October 23, 2001, about 8+1⁄2 months
+                  after the Macintosh version of iTunes was released. Apple sold an estimated 450 million iPod products
+                  as of 2022. Apple discontinued the iPod product line on May 10, 2022. At over 20 years, the iPod brand
+                  is the oldest to be discontinued by Apple
+                </div>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="timeline-end mb-10">
+                <time class="font-mono italic text-amber-400">2007</time>
+                <div class="text-lg font-black text-amber-300">iPhone</div>
+                <div
+                  class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
+                  iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating
+                  system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on January 9, 2007.
+                  Since then, Apple has annually released new iPhone models and iOS updates. As of November 1, 2018,
+                  more than 2.2 billion iPhones had been sold. As of 2022, the iPhone accounts for 15.6% of global
+                  smartphone market share
+                </div>
+              </div>
+              <hr />
+            </li>
+            <li>
+              <hr />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="timeline-start mb-10 md:text-end">
+                <time class="font-mono italic text-amber-400">2015</time>
+                <div class="text-lg font-black text-amber-300">Apple Watch</div>
+                <div
+                  class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2">
+                  The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking,
+                  health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple
+                  products and services
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="https://web.facebook.com/BarcampSongkhla" target="_blank" role="button">
-          <!-- Facebook -->
-          <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-              <path
-                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
-            </svg>
-          </span>
-        </a>
-        <a href="https://www.instagram.com/barcampsk/" target="_blank" role="button">
-          <!-- Instagram -->
-          <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-              <path
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-            </svg>
-          </span>
-        </a>
+    </div>
+
+    <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
+      <h2 class="text-center mb-4">Gallery</h2>
+      <div class="gallery-wrapper">
+        <div data-simplebar class="horizontal-gallery-container">
+          <div class="horizontal-gallery">
+          </div>
+          <div class="horizontal-gallery">
+          </div>
+        </div>
       </div>
-    </footer>
-    <div class="overlay" id="overlay">
-      <img id="overlayImage" src="" alt="Full-size image">
+    </div>
+
+
+    </div>
+    </div>
+  </main>
+  <footer class="flex flex- items-center justify-between border-t-4 border-t-slate-500 h-16 p-4">
+    <div class="flex">
+      <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd" class="fill-current">
+        <path
+          d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+        </path>
+      </svg>
+      <div class="uppercase self-center px-2" style="letter-spacing: 3px">
+        barcamp songkhla
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://web.facebook.com/BarcampSongkhla" target="_blank" role="button">
+        <!-- Facebook -->
+        <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+            <path
+              d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+          </svg>
+        </span>
+      </a>
+      <a href="https://www.instagram.com/barcampsk/" target="_blank" role="button">
+        <!-- Instagram -->
+        <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </footer>
+  <div class="overlay" id="overlay">
+    <img id="overlayImage" src="" alt="Full-size image">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.min.js"></script>
   <script>
-      const firstGallery = document.querySelectorAll('.horizontal-gallery')[0];
-      const secondGallery = document.querySelectorAll('.horizontal-gallery')[1];
-      const overlay = document.getElementById('overlay');
-      const overlayImage = document.getElementById('overlayImage');
+    const firstGallery = document.querySelectorAll('.horizontal-gallery')[0];
+    const secondGallery = document.querySelectorAll('.horizontal-gallery')[1];
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlayImage');
 
-      for (let i = 1; i <= 34; i++) {
-          const img = document.createElement('img');
-          img.src = `images/images${i}.jpg`; 
-          img.alt = `images${i}`;
-          img.onclick = () => showFullImage(img.src);
-          firstGallery.appendChild(img);
-      }
+    for (let i = 1; i <= 34; i++) {
+      const img = document.createElement('img');
+      img.src = `images/images${i}.jpg`;
+      img.alt = `images${i}`;
+      img.onclick = () => showFullImage(img.src);
+      firstGallery.appendChild(img);
+    }
 
-      for (let i = 35; i <= 67; i++) {
-          const img = document.createElement('img');
-          img.src = `images/images${i}.jpg`; 
-          img.alt = `images${i}`;
-          img.onclick = () => showFullImage(img.src);
-          secondGallery.appendChild(img);
-      }
+    for (let i = 35; i <= 67; i++) {
+      const img = document.createElement('img');
+      img.src = `images/images${i}.jpg`;
+      img.alt = `images${i}`;
+      img.onclick = () => showFullImage(img.src);
+      secondGallery.appendChild(img);
+    }
 
-      const img68 = document.createElement('img');
-      img68.src = `images/images68.jpg`; 
-      img68.alt = `images68`;
-      img68.onclick = () => showFullImage(img68.src);
-      firstGallery.appendChild(img68);
+    const img68 = document.createElement('img');
+    img68.src = `images/images68.jpg`;
+    img68.alt = `images68`;
+    img68.onclick = () => showFullImage(img68.src);
+    firstGallery.appendChild(img68);
 
-      function showFullImage(src) {
-          overlayImage.src = src;
-          overlay.style.display = 'flex';
-      }
+    function showFullImage(src) {
+      overlayImage.src = src;
+      overlay.style.display = 'flex';
+    }
 
-      overlay.onclick = () => {
-          overlay.style.display = 'none';
-      };
+    overlay.onclick = () => {
+      overlay.style.display = 'none';
+    };
   </script>
 </body>
+
 </html>
