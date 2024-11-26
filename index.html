@@ -14,6 +14,67 @@
       scroll-behavior: smooth;
     }
 
+    .cool-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #6e6295, #c39bd3);
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .cool-button:hover {
+      background: linear-gradient(90deg, #c39bd3, #6e6295);
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .cool-button:active {
+      transform: scale(0.98);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .gallery-title {
+      color: #6e6295;
+      font-size: 2.5rem;
+
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Media Query สำหรับจอขนาดกลาง */
+    @media (max-width: 768px) {
+      .gallery-title {
+        font-size: 1.50rem;
+        /* ลดขนาดฟอนต์ */
+      }
+    }
+
+    /* Media Query สำหรับจอขนาดเล็ก */
+    @media (max-width: 480px) {
+      .gallery-title {
+        font-size: 1rem;
+        /* ลดขนาดฟอนต์สำหรับจอเล็กมาก */
+      }
+    }
+
+    #Gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
     .gallery-wrapper {
       position: relative;
       /* กำหนดให้กล่องนี้เป็นอ้างอิง */
@@ -21,13 +82,13 @@
       /* กำหนดความกว้างของกล่องเป็น 90% ของหน้าจอ */
       max-width: 1400px;
       /* เพิ่มขนาดความกว้างสูงสุด */
-      height:  auto;
+      height: auto;
       /* เพิ่มความสูงของกล่อง */
       margin: 0 auto;
       /* จัดกล่องให้อยู่ตรงกลาง */
       overflow: hidden;
       /* ซ่อนส่วนที่ล้นออกมาจากกล่อง */
-      border: 2px solid #ddd;
+      border: 2px solid #dddddd00;
       /* ขอบของกล่อง */
       border-radius: 8px;
       /* มุมโค้งมนของกล่อง */
@@ -55,15 +116,18 @@
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
-      max-height: 100%; /* จำกัดความสูงไม่ให้เกินขอบกล่อง */
-      max-width: 100%; /* ปรับความกว้างให้สัมพันธ์กับความสูง */
+      max-height: 100%;
+      /* จำกัดความสูงไม่ให้เกินขอบกล่อง */
+      max-width: 100%;
+      /* ปรับความกว้างให้สัมพันธ์กับความสูง */
     }
 
     @media (max-width: 768px) {
-    .horizontal-gallery img {
-        height: 200px; /* ลดความสูงสำหรับหน้าจอขนาดเล็ก */
+      .horizontal-gallery img {
+        height: 100px;
+        /* ลดความสูงสำหรับหน้าจอขนาดเล็ก */
+      }
     }
-}
 
     .horizontal-gallery img:hover {
       transform: scale(1.05);
@@ -95,7 +159,7 @@
     }
 
     .simplebar-scrollbar {
-      background: #6200ea;
+      background: #6e6295;
       border-radius: 8px;
     }
 
@@ -116,126 +180,135 @@
       margin-top: 20px;
     }
 
-    @keyframes test{
-      from{
+    @keyframes test {
+      from {
         opacity: 0;
         transform: scale(0.8);
       }
-      to{
+
+      to {
         opacity: 1;
         transform: scale(1);
       }
     }
 
-    .linetime{
+    .linetime {
       animation: test linear;
       animation-timeline: view(90% auto);
     }
 
     /* Add subtle bounce on hover */
-@keyframes subtle-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
+    @keyframes subtle-bounce {
 
-.card:hover {
-  animation: subtle-bounce 1s ease-in-out;
-}
+      0%,
+      100% {
+        transform: translateY(0);
+      }
 
-/* Adjusting for left-to-right scrolling */
-.marquee-container {
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-}
+      50% {
+        transform: translateY(-5px);
+      }
+    }
 
-.marquee-content {
-  display: flex;
-  flex-direction: row;
-  animation: scroll-left 15s linear infinite;
-}
+    .card:hover {
+      animation: subtle-bounce 1s ease-in-out;
+    }
 
-/* Keyframes for horizontal scroll */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+    /* Adjusting for left-to-right scrolling */
+    .marquee-container {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  #barcampTitle {
-    text-align: center;
-    margin: 0 auto;
-  }
+    .marquee-content {
+      display: flex;
+      flex-direction: row;
+      animation: scroll-left 15s linear infinite;
+    }
 
-  #About {
-    flex-direction: column;
-    gap: 4rem;
-  }
+    /* Keyframes for horizontal scroll */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
 
-  .card h1 {
-    font-size: 1.5rem;
-  }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-  .card p {
-    font-size: 1rem;
-  }
-}
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      #barcampTitle {
+        text-align: center;
+        margin: 0 auto;
+      }
 
-@media (max-width: 640px) {
-  .text-7xl {
-    font-size: 2rem;
-  }
+      #About {
+        flex-direction: column;
+        gap: 4rem;
+      }
 
-  .card h1 {
-    font-size: 1.25rem;
-  }
+      .card h1 {
+        font-size: 1.5rem;
+      }
 
-  .card p {
-    font-size: 0.875rem;
-  }
-}
+      .card p {
+        font-size: 1rem;
+      }
+    }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  #About {
-    flex-direction: column;
-    gap: 4rem;
-  }
+    @media (max-width: 640px) {
+      .text-7xl {
+        font-size: 2rem;
+      }
 
-  #barcampTitle {
-    order: -1; /* Move the right section above the left section */
-    text-align: center;
-    margin: 0 auto;
-  }
+      .card h1 {
+        font-size: 1.25rem;
+      }
 
-  .card h1 {
-    font-size: 1.5rem;
-  }
+      .card p {
+        font-size: 0.875rem;
+      }
+    }
 
-  .card p {
-    font-size: 1rem;
-  }
-}
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      #About {
+        flex-direction: column;
+        gap: 4rem;
+      }
 
-@media (max-width: 640px) {
-  .text-7xl {
-    font-size: 2rem;
-  }
+      #barcampTitle {
+        order: -1;
+        /* Move the right section above the left section */
+        text-align: center;
+        margin: 0 auto;
+      }
 
-  .card h1 {
-    font-size: 1.25rem;
-  }
+      .card h1 {
+        font-size: 1.5rem;
+      }
 
-  .card p {
-    font-size: 0.875rem;
-  }
-}
+      .card p {
+        font-size: 1rem;
+      }
+    }
 
+    @media (max-width: 640px) {
+      .text-7xl {
+        font-size: 2rem;
+      }
+
+      .card h1 {
+        font-size: 1.25rem;
+      }
+
+      .card p {
+        font-size: 0.875rem;
+      }
+    }
   </style>
 </head>
 
@@ -262,31 +335,43 @@
 
       </div>
     </div>
-    <div class="bg-gradient-to-r from-lime-400 to-teal-400 w-full py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8 relative" id="About">
+    <div
+      class="bg-gradient-to-r from-lime-400 to-teal-400 w-full py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col lg:flex-row justify-between items-center gap-8 relative"
+      id="About">
       <!-- Left section -->
       <div class="flex flex-col gap-8 sm:gap-14 items-center lg:items-start w-full lg:w-1/2">
-        <div class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300" id="seminarCard">
+        <div
+          class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300"
+          id="seminarCard">
           <h1 class="text-xl sm:text-2xl font-semibold text-center text-green-800">งานสัมมนานอกกรอบ</h1>
           <p class="text-center text-gray-600 mt-2 sm:mt-4">บรรยากาศที่ไม่เป็นทางการ</p>
         </div>
-    
-        <div class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300" id="discussionCard">
+
+        <div
+          class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300"
+          id="discussionCard">
           <h1 class="text-xl sm:text-2xl font-semibold text-center text-green-800">เสวนาแลกเปลี่ยนทัศนคติ</h1>
           <p class="text-center text-gray-600 mt-2 sm:mt-4">แลกเปลี่ยนความคิดเห็นและแบ่งปันความรู้</p>
         </div>
-    
-        <div class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300" id="techCard">
+
+        <div
+          class="card w-full bg-white shadow hover:shadow-lg border border-gray-200 p-6 rounded-lg transition-all duration-300"
+          id="techCard">
           <h1 class="text-xl sm:text-2xl font-semibold text-center text-green-800">คนที่ชื่นชอบในเทคโนโลยี</h1>
-          <p class="text-center text-gray-600 mt-2 sm:mt-4">เรียนรู้ร่วมกัน สร้างเครือข่ายระหว่างคนที่ชื่นชอบในเทคโนโลยี</p>
+          <p class="text-center text-gray-600 mt-2 sm:mt-4">เรียนรู้ร่วมกัน สร้างเครือข่ายระหว่างคนที่ชื่นชอบในเทคโนโลยี
+          </p>
         </div>
       </div>
-    
+
       <!-- Right section -->
-      <div class="text-3xl sm:text-7xl font-bold text-gray-900 w-full lg:w-1/2 text-center lg:text-right relative" id="barcampTitle">
+      <div class="text-3xl sm:text-7xl font-bold text-gray-900 w-full lg:w-1/2 text-center lg:text-right relative"
+        id="barcampTitle">
         <div class="mb-4">Barcamp คืออะไร</div>
-        <div class="text-base sm:text-lg text-gray-700 mt-4 text-left lg:text-left lg:ml-auto" style="max-width: 500px; margin: 0 auto;">
-          การจัดงานสัมมนาที่เน้นรูปแบบนอกกรอบแบบ “unconference” หรือการประชุมที่ไม่มีการกำหนดหัวข้อไว้ล่วงหน้า 
-          ผู้เข้าร่วมสามารถเสนอโจทย์หรือหัวข้อที่จะนำเสนอได้ด้วยตัวเอง ทำให้เป็นเวทีที่เปิดกว้างในการเสวนาแลกเปลี่ยนทัศนคติ
+        <div class="text-base sm:text-lg text-gray-700 mt-4 text-left lg:text-left lg:ml-auto"
+          style="max-width: 500px; margin: 0 auto;">
+          การจัดงานสัมมนาที่เน้นรูปแบบนอกกรอบแบบ “unconference” หรือการประชุมที่ไม่มีการกำหนดหัวข้อไว้ล่วงหน้า
+          ผู้เข้าร่วมสามารถเสนอโจทย์หรือหัวข้อที่จะนำเสนอได้ด้วยตัวเอง
+          ทำให้เป็นเวทีที่เปิดกว้างในการเสวนาแลกเปลี่ยนทัศนคติ
         </div>
       </div>
     </div>
@@ -352,11 +437,12 @@
                 </svg>
               </div>
               <div class="timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-ou linetime">
-                  <time class="font-mono italic text-amber-400">Jun 28th, 2008</time>
+                <time class="font-mono italic text-amber-400">Jun 28th, 2008</time>
                 <div class="text-lg font-black text-amber-300">Barcamp in Songkhla</div>
                 <div
                   class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2 p-2 font-sans	">
-                  สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
+                  สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ
+                  ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
               <hr />
@@ -375,7 +461,8 @@
                 <div class="text-lg font-black text-amber-300">Coming soon</div>
                 <div
                   class="min-[375px]:border-b-4 min-[375px]:pl-0 min-[375px]:pb-4 md:border-4 text-start md:pl-2 mt-2 p-2 font-sans">
-                  บาร์แคมป์ได้ดำเนินมาถึงครั้งที่8 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8 มหาวิทยาลัยสงขลานครินทร์
+                  บาร์แคมป์ได้ดำเนินมาถึงครั้งที่8 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
+                  มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
               <hr />
@@ -406,7 +493,9 @@
     </div>
 
     <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
-      <h2 class="text-center mb-4">Gallery</h2>
+      <h2 class="gallery-title text-center mb-4">Gallery</h2>
+
+
       <div class="gallery-wrapper">
         <div data-simplebar class="horizontal-gallery-container">
           <div class="horizontal-gallery">
@@ -415,12 +504,13 @@
           </div>
         </div>
       </div>
+      <a href="https://jajoji.github.io/my-godot-game/" class="cool-button"><span class="icon">🎮</span> เข้าสู่ Gallery Room</a>
     </div>
 
     <div class="bg-gradient-to-r from-lime-400 to-teal-400 w-full py-16 border-black border-4" id="Gallery">
       <div class="text-5xl text-center font-bold mb-10 text-white drop-shadow-lg">
         <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
-        
+
         <!-- แสดงผลแบบหลายบรรทัดในหน้าจอมือถือ -->
         <div class="block md:hidden">
           <p class="leading-tight">ขอขอบคุณ</p>
@@ -428,19 +518,24 @@
           <p class="leading-tight">ทุกท่าน</p>
         </div>
       </div>
-      
-      <div class="grid gap-6 px-4 md:px-16 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+
+      <div
+        class="grid gap-6 px-4 md:px-16 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
         <!-- Loop through each logo using daisyUI's card component style for better visuals -->
-        <div class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
           <span class="text-4xl font-semibold text-gray-800">Logo 1</span>
         </div>
-        <div class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
           <span class="text-4xl font-semibold text-gray-800">Logo 2</span>
         </div>
-        <div class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
           <span class="text-4xl font-semibold text-gray-800">Logo 3</span>
         </div>
-        <div class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
           <span class="text-4xl font-semibold text-gray-800">Logo 4</span>
         </div>
       </div>
@@ -526,7 +621,7 @@
     };
   </script>
 
-  
+
 </body>
 
 </html>
