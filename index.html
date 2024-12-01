@@ -9,8 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
@@ -44,6 +44,7 @@
 
 
     .right {
+      margin-right: 30px;
       flex: 1;
       text-align: right;
     }
@@ -135,11 +136,9 @@
       /* จัดกล่องให้อยู่ตรงกลาง */
       overflow: hidden;
       /* ซ่อนส่วนที่ล้นออกมาจากกล่อง */
-      border: 2px solid #dddddd00;
       /* ขอบของกล่อง */
       border-radius: 8px;
       /* มุมโค้งมนของกล่อง */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       /* เพิ่มเงาให้กล่อง */
     }
 
@@ -358,6 +357,7 @@
         font-size: 0.875rem;
       }
     }
+
     body {
       font-family: 'Mali', sans-serif;
     }
@@ -382,33 +382,44 @@
   <!-- #6ab6b4  ฟ้า 
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
-    
+
 
   <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50 border-b-4">
-    <div class="max-w-screen-xl flex  min-[0px]:flex-row-reverse md:flex-row flex-wrap items-center justify-between mx-auto lg:p-4">
-        <div class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="./images/download.jpeg" class="h-14 w-14" alt="Flowbite Logo" />
-            <span class="hidden sm:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BARCAMP SONGKHLA</span>
-        </div>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
+    <div
+      class="max-w-screen-xl flex  min-[0px]:flex-row-reverse md:flex-row flex-wrap items-center justify-between mx-auto lg:p-4">
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="./images/download.jpeg" class="h-14 w-14" alt="Flowbite Logo" />
+        <span class="hidden sm:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BARCAMP
+          SONGKHLA</span>
+      </div>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <a href="#" class="block py-2 px-3  hover:bg-blue-700 rounded text-gray-900  md:bg-transparent  md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 " aria-current="page">Home</a>
+            <a href="#"
+              class="block py-2 px-3  hover:bg-blue-700 rounded text-gray-900  md:bg-transparent  md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 "
+              aria-current="page">Home</a>
           </li>
           <li>
-            <a href="#About" class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+            <a href="#About"
+              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li>
           <li>
-            <a href="#Timeline" class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a>
+            <a href="#Timeline"
+              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a>
           </li>
           <li>
-            <a href="#Gallery" class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery
+            <a href="#Gallery"
+              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery
             </a>
           </li>
         </ul>
@@ -467,13 +478,13 @@
     </div>
     <div style="font-family: Mali;" class="bg-gradient-to-b text-white py-10 container mx-auto" id="Timeline">
       <div class="flex-auto lg:flex flex-wrap items-start max">
+        <div style="font-family: Mali"
+          class="flex-2 hover:scale-105 transition duration-300 ease-in-out text-7xl lg:sticky lg:top-[300px] text-center text-black shadow-lg xl:rounded-l-3xl min-[1024px]:font-extrabold min-[0px]:font-medium min-[1024px]:p-5 min-[0px]:p-0 bg-[#BBDDF5] md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
+          Timeline
+        </div>
+
         <div
-        style="font-family: Mali"
-        class="flex-2 hover:scale-105 transition duration-300 ease-in-out text-7xl lg:sticky lg:top-[300px] text-center text-black shadow-lg xl:rounded-l-3xl min-[1024px]:font-extrabold min-[0px]:font-medium min-[1024px]:p-5 min-[0px]:p-0 bg-[#BBDDF5] md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
-        Timeline
-      </div>
-      
-        <div class="flex-1 lg:border-l-[16px] lg:border-l-[#6E6295] sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-4 sm:border-l-0">
+          class="flex-1 lg:border-l-[16px] lg:border-l-[#6E6295] sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-4 sm:border-l-0">
           <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
               <div class="timeline-middle">
@@ -495,10 +506,10 @@
                   ทั่วโลกอย่าง รวดเร็ว
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
             </li>
             <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-5 w-5 text-[#FFD700]">
@@ -518,10 +529,10 @@
                   สงขลา และ ภูเก็ต
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
             </li>
             <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-5 w-5 text-[#FFD700]">
@@ -539,10 +550,10 @@
                   ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
             </li>
             <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;"/>
+              <hr class="bg-[#6E6295]" style="width: 12px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-5 w-5 text-[#FFD700]">
@@ -567,18 +578,14 @@
       </div>
     </div>
 
-    <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
+    <div class="bg-lime-400 py-16 border-black border-4" id="Gallery">
+      <h2 class="gallery-title text-left" style="font-family: 'Lilita One', sans-serif;">Gallery</h2>
       <div class="gallery-container">
         <div class="left">
           <img src="images/images69.jpg"
-            style="border-radius: 15px; max-width: 80%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-
-          <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
-            <span class="icon">🎮</span> เข้าสู่Gallery Room
-          </a>
+            style="border-radius: 15px; max-width: 90%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         </div>
         <div class="right">
-          <h2 class="gallery-title text-left" style="font-family: 'Lilita One', sans-serif; margin-left: 40px;">Gallery</h2>
           <div class="gallery-wrapper">
             <div data-simplebar class="horizontal-gallery-container">
               <div class="horizontal-gallery">
@@ -589,7 +596,37 @@
           </div>
         </div>
       </div>
+
+      <!-- เพิ่มเส้นขีดแนวนอนที่มีรูปภาพตรงกลาง -->
+      <div class="flex items-center justify-center w-full mt-8">
+        <div class="flex-1 border-t-2 border-gray-400"></div>
+        <div class="mx-4">
+          <!-- ใช้รูปภาพแทนไอคอน -->
+          <img src="images/godot_logo.png" alt="center-image" class="w-12 h-12 object-contain">
+        </div>
+        <div class="flex-1 border-t-2 border-gray-400"></div>
+      </div>
+
+      <div class="flex items-center justify-start space-x-4 mt-8">
+        <!-- รูป -->
+        <img src="images/my-gallert.png" alt="image" class="w-90 h-64 object-cover rounded-lg float-left mr-4">
+      
+        <!-- ข้อความ -->
+        <h2 class="gallery-title text-left mt-6" style="font-family: 'Lilita One', sans-serif;">Gallery Room</h2>
+      
+        <!-- ปุ่ม -->
+        <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
+          class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center hover:bg-purple-600">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+        
     </div>
+
+
 
     <div class="bg-gradient-to-b from-[#BDE0FE] via-[#A2D2FF] to-[#89C2D9] w-full py-16 border-black border-4"
       id="Gallery">
