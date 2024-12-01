@@ -9,25 +9,60 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
 
+    .gallery-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      /* ใช้ Flexbox */
+      flex-direction: column;
+      /* จัดเรียงในแนวตั้ง */
+      justify-content: center;
+      /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+      align-items: center;
+      /* จัดให้อยู่ตรงกลางในแนวนอน */
+      padding: 20px;
+      /* เพิ่มระยะห่างจากขอบ */
+      text-align: left;
+    }
+
+
+
+    .right {
+      flex: 1;
+      text-align: right;
+    }
+
+
     .cool-button {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 15px 30px;
+      /* เพิ่มความสูงและขนาดปุ่ม */
       font-family: 'Poppins', sans-serif;
       font-size: 1.2rem;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(90deg, #6e6295, #c39bd3);
+      background: linear-gradient(90deg, #6e6295, #6e6295);
       text-transform: uppercase;
       text-decoration: none;
       border-radius: 8px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+      margin-top: 30px;
+      /* เพิ่มระยะห่างระหว่างปุ่มและรูป */
     }
 
     .cool-button:hover {
@@ -43,7 +78,7 @@
 
 
     .gallery-title {
-      color: #6e6295;
+      color: #000000;
       font-size: 2.5rem;
 
       text-align: center;
@@ -72,6 +107,16 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      background: linear-gradient(to bottom, #47baf4, #ffffff);
+      /* สีพื้นหลังจากฟ้าด้านบนไปเป็นขาวด้านล่าง */
+      transition: background 1s ease;
+      /* ทำให้การเปลี่ยนแปลงราบรื่น */
+      padding-top: 4rem;
+      /* py-16 เทียบเท่ากับ padding-top: 4rem */
+      padding-bottom: 4rem;
+      /* py-16 เทียบเท่ากับ padding-bottom: 4rem */
+      border: 4px solid black;
+      /* ขอบสีดำ */
     }
 
 
@@ -111,7 +156,7 @@
     }
 
     .horizontal-gallery img {
-      height: 300px;
+      height: 200px;
       width: auto;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -309,7 +354,6 @@
         font-size: 0.875rem;
       }
     }
-    
   </style>
 </head>
 
@@ -369,15 +413,17 @@
       <div class="text-3xl font-bold text-gray-900" id="barcampTitle">
         <div class="mb-4" style="font-size: 50px; margin-bottom: 30px; ">Barcamp คืออะไร</div>
         <div class="text-base sm:text-lg text-gray-700 mt-4 text-left lg:text-left lg:ml-auto 
-        "style="max-width: 550px; margin: 0 auto; text-indent: 2em;">
+        " style="max-width: 550px; margin: 0 auto; text-indent: 2em;">
           การจัดงานสัมมนาที่เน้นรูปแบบนอกกรอบแบบ “unconference” หรือการประชุมที่ไม่มีการกำหนดหัวข้อไว้ล่วงหน้า
           ผู้เข้าร่วมสามารถเสนอโจทย์หรือหัวข้อที่จะนำเสนอได้ด้วยตัวเอง
           ทำให้เป็นเวทีที่เปิดกว้างในการเสวนาแลกเปลี่ยนทัศนคติ
         </div>
-      
+
       </div>
     </div>
-    <div class="bg-gradient-to-b from-[#BDE0FE] via-[#A2D2FF] to-[#89C2D9] text-white py-10 border-black border container mx-auto" id="Timeline">
+    <div
+      class="bg-gradient-to-b from-[#BDE0FE] via-[#A2D2FF] to-[#89C2D9] text-white py-10 border-black border container mx-auto"
+      id="Timeline">
       <div class="flex-auto lg:flex flex-wrap items-start max">
         <div
           class=" hover:scale-105 transition duration-300 ease-in-ou flex-1 text-8xl lg:sticky lg:top-[300px] text-center text-black  shadow-lg rounded-lg  min-[1024px]:font-extrabold  min-[0px]:font-medium	 min-[1024px]:p-5 min-[0px]:p-0 border-t-4 border-b-4  bg-white md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
@@ -387,13 +433,15 @@
           <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
               <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-[#FFD700]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-5 w-5 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
-              <div class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
+              <div
+                class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
                 <time class="font-mono italic text-blue-500">In 2005</time>
                 <div class="text-lg font-black text-blue-700">First time of Barcamp</div>
                 <div class="border-b-4 border-blue-400 p-2 mt-2 text-start">
@@ -408,17 +456,18 @@
             <li>
               <hr />
               <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-[#FFD700]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-5 w-5 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
-              <div class="linetime timeline-end mb-[4px] hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
+              <div
+                class="linetime timeline-end mb-[4px] hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
                 <time class="font-mono italic text-blue-500">January 26th, 2008</time>
                 <div class="text-lg font-black text-blue-700">Barcamp in Thailand</div>
-                <div
-                  class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
+                <div class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
                   บาร์แคมป์ได้จัดขึ้นครั้งแรกเมื่อวันที่ 26 มกราคม
                   พ.ศ. 2551 ที่กรุงเทพมหานคร
                   จากนั้นได้มีผู้สนใจจัดงานตามจังหวัดต่างๆ ได้แก่ เชียงใหม่
@@ -430,17 +479,18 @@
             <li>
               <hr />
               <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-[#FFD700]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-5 w-5 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
-              <div class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
+              <div
+                class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
                 <time class="font-mono italic text-blue-500">Jun 28th, 2008</time>
                 <div class="text-lg font-black text-blue-700">Barcamp in Songkhla</div>
-                <div
-                  class="border-b-4 border-blue-400 p-2 mt-2 text-start">
+                <div class="border-b-4 border-blue-400 p-2 mt-2 text-start">
                   สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ
                   ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
                 </div>
@@ -450,15 +500,18 @@
             <li>
               <hr />
               <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-[#FFD700]">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-5 w-5 text-[#FFD700]">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
                 </svg>
               </div>
-              <div class="linetime timeline-end mb-10 hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
+              <div
+                class="linetime timeline-end mb-10 hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF7E6] text-black p-4">
                 <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
                 <div class="text-lg font-black text-blue-700">Coming soon</div>
-                <div
-                  class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
+                <div class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
                   บาร์แคมป์ได้ดำเนินมาถึงครั้งที่8 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
                   มหาวิทยาลัยสงขลานครินทร์
                 </div>
@@ -471,21 +524,31 @@
     </div>
 
     <div class="bg-lime-400  py-16 border-black border-4" id="Gallery">
-      <h2 class="gallery-title text-center mb-4">Gallery</h2>
+      <div class="gallery-container">
+        <div class="left">
+          <img src="images/images69.jpg"
+            style="border-radius: 15px; max-width: 80%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 
-
-      <div class="gallery-wrapper">
-        <div data-simplebar class="horizontal-gallery-container">
-          <div class="horizontal-gallery">
-          </div>
-          <div class="horizontal-gallery">
+          <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
+            <span class="icon">🎮</span> เข้าสู่Gallery Room
+          </a>
+        </div>
+        <div class="right">
+          <h2 class="gallery-title text-left" style="font-family: 'Lilita One', sans-serif; margin-left: 40px;">Gallery</h2>
+          <div class="gallery-wrapper">
+            <div data-simplebar class="horizontal-gallery-container">
+              <div class="horizontal-gallery">
+              </div>
+              <div class="horizontal-gallery">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <a href="https://jajoji.github.io/my-godot-game/" class="cool-button"><span class="icon">🎮</span> เข้าสู่ Gallery Room</a>
     </div>
 
-    <div class="bg-gradient-to-b from-[#BDE0FE] via-[#A2D2FF] to-[#89C2D9] w-full py-16 border-black border-4" id="Gallery">
+    <div class="bg-gradient-to-b from-[#BDE0FE] via-[#A2D2FF] to-[#89C2D9] w-full py-16 border-black border-4"
+      id="Gallery">
       <div class="text-5xl text-center font-bold mb-10 text-white drop-shadow-lg">
         <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
 
