@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -29,7 +31,6 @@
     .left {
       flex: 1;
       display: flex;
-      /* ใช้ Flexbox */
       flex-direction: column;
       /* จัดเรียงในแนวตั้ง */
       justify-content: center;
@@ -37,11 +38,8 @@
       align-items: center;
       /* จัดให้อยู่ตรงกลางในแนวนอน */
       padding: 20px;
-      /* เพิ่มระยะห่างจากขอบ */
       text-align: left;
     }
-
-
 
     .right {
       margin-right: 30px;
@@ -49,27 +47,45 @@
       text-align: right;
     }
 
+    /* เพิ่ม Media Query สำหรับหน้าจอที่มีความกว้างต่ำกว่า 1024px */
+    @media screen and (max-width: 1024px) {
+      .gallery-container {
+        flex-direction: column;
+        /* เปลี่ยนการเรียงให้เป็นแนวตั้ง */
+      }
+
+      .left,
+      .right {
+        flex: none;
+        /* ปิดการยืดขนาด */
+        width: 100%;
+        /* ให้แต่ละ div ขยายเต็มหน้าจอ */
+        margin-right: 0;
+        /* เอาระยะห่างออกในกรณีที่เป็นแนวตั้ง */
+      }
+    }
+
 
     .cool-button {
       display: inline-block;
       padding: 15px 30px;
-      /* เพิ่มความสูงและขนาดปุ่ม */
       font-family: 'Poppins', sans-serif;
       font-size: 1.2rem;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(90deg, #6e6295, #6e6295);
+      background: linear-gradient(to bottom, #6e6295, #374c83);
+      /* เปลี่ยนเป็น gradient จากบนลงล่าง */
       text-transform: uppercase;
       text-decoration: none;
       border-radius: 8px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       margin-top: 30px;
-      /* เพิ่มระยะห่างระหว่างปุ่มและรูป */
     }
 
     .cool-button:hover {
-      background: linear-gradient(90deg, #c39bd3, #6e6295);
+      background: linear-gradient(to bottom, #c39bd3, #6e6295);
+      /* สีเมื่อ hover */
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
@@ -79,30 +95,39 @@
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
 
+    .gallery-title1 {
+  color: #000000;
+  font-size: 40px; /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.2; /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
+}
+.gallery-title {
+  color: #000000;
+  font-size: 40px; /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.2; /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
+}
 
-    .gallery-title {
-      color: #000000;
-      font-size: 2.5rem;
+/* Media Query สำหรับจอขนาดกลาง */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 32px; /* ลดขนาดฟอนต์สำหรับหน้าจอที่มีขนาดเล็ก */
+    margin-bottom: 1rem; /* ลดระยะห่างด้านล่าง */
+  }
+}
 
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
+/* Media Query สำหรับจอขนาดเล็ก */
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 24px; /* ลดขนาดฟอนต์ลงสำหรับหน้าจอที่เล็กมาก */
+    margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
+    line-height: 1.4; /* ปรับ line-height เพื่อให้ตัวอักษรไม่ตัด */
+  }
+}
 
-    /* Media Query สำหรับจอขนาดกลาง */
-    @media (max-width: 768px) {
-      .gallery-title {
-        font-size: 1.50rem;
-        /* ลดขนาดฟอนต์ */
-      }
-    }
 
-    /* Media Query สำหรับจอขนาดเล็ก */
-    @media (max-width: 480px) {
-      .gallery-title {
-        font-size: 1rem;
-        /* ลดขนาดฟอนต์สำหรับจอเล็กมาก */
-      }
-    }
 
     #Gallery {
       display: flex;
@@ -141,6 +166,53 @@
       /* มุมโค้งมนของกล่อง */
       /* เพิ่มเงาให้กล่อง */
     }
+
+    @media (max-width: 1024px) {
+
+      /* ซ่อนข้อความ */
+      .gallery-title1 {
+        display: none;
+      }
+
+      /* ซ่อนปุ่มเก่า */
+      .old-button {
+        display: none !important;
+      }
+
+      /* แสดงปุ่มใหม่ */
+      .new-button {
+        display: block !important;
+      }
+
+      /* จัด container ให้อยู่กึ่งกลาง */
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        /* จัดเรียงในแนวตั้ง */
+        align-items: center;
+        /* จัดให้อยู่กึ่งกลางในแนวขวาง */
+        justify-content: center;
+        /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+        margin-left: 0 !important;
+        /* ลบ margin-left */
+        margin-right: 0;
+        /* ลบ margin-right */
+        width: 100%;
+        /* ให้ container เต็มความกว้าง */
+      }
+
+      /* ปรับรูปให้อยู่ตรงกลาง */
+      .image-element {
+        margin: 0;
+        /* ลบ margin */
+        display: block;
+        /* บังคับให้อยู่กึ่งกลาง */
+      }
+    }
+
+
+
+
 
 
 
@@ -579,7 +651,9 @@
     </div>
 
     <div class="bg-lime-400 py-16 border-black border-4" id="Gallery">
-      <h2 class="gallery-title text-left" style="font-family: 'Lilita One', sans-serif;">Gallery</h2>
+      <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px;">
+        Gallery</h2>
+
       <div class="gallery-container">
         <div class="left">
           <img src="images/images69.jpg"
@@ -606,24 +680,48 @@
         </div>
         <div class="flex-1 border-t-2 border-gray-400"></div>
       </div>
+      <div class="flex items-center justify-between mt-8 w-full px-8">
+        <!-- ชิดซ้าย (รูป) -->
+        <div class="flex items-center image-container" style="margin-left: 30px;">
+          <img src="images/my-gallery.png" alt="image" class="w-90 h-64 object-cover rounded-lg image-element">
+          <h2 class="gallery-title1"
+            style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px; margin-left: 50px;">
+            Gallery Room
+          </h2>
+        </div>
 
-      <div class="flex items-center justify-start space-x-4 mt-8">
-        <!-- รูป -->
-        <img src="images/my-gallert.png" alt="image" class="w-90 h-64 object-cover rounded-lg float-left mr-4">
-      
-        <!-- ข้อความ -->
-        <h2 class="gallery-title text-left mt-6" style="font-family: 'Lilita One', sans-serif;">Gallery Room</h2>
-      
-        <!-- ปุ่ม -->
-        <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
-          class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center hover:bg-purple-600">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
-            class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
+
+        <!-- ชิดขวา (ปุ่มเก่า) -->
+        <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
+          <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
+            class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
+            style="background: linear-gradient(to bottom, #374C83, #6E6295);">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+              class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ปุ่มใหม่ (สำหรับหน้าจอเล็ก) -->
+      <div class="flex items-center justify-center mt-8 md:hidden new-button">
+        <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
+          <span class="icon">🎮</span> เข้าสู่ Gallery Room
         </a>
       </div>
-        
+
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+
     </div>
 
 
