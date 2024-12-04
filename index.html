@@ -15,7 +15,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
@@ -488,7 +493,7 @@
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
             <a href="#"
-              class="block py-2 px-3  hover:bg-blue-700 rounded text-gray-900  md:bg-transparent  md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 "
+              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               aria-current="page">Home</a>
           </li>
           <li>
@@ -511,9 +516,11 @@
   <!-- <nav class="sm:hidden bg-[#85CBFC] h-14">
 
   </nav> -->
-  <main class="top-0 flex flex-col items-center gap-4">
+  <main class="flex flex-col items-center gap-16">
+
+    <!-- event -->
     <div
-      class="relative w-full h-screen pb-12 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
+      class="relative w-full h-screen pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
       id="Home">
 
       <div class="absolute inset-0 bottom-32 flex flex-col justify-center items-center z-40 gap-[30px]">
@@ -561,9 +568,33 @@
       </div> -->
     </div>
 
-
-    <div class="container bg-white w-full py-16 border-black border-4">
-      <div class="text-5xl text-center font-bold mb-10 text-black drop-shadow-lg">
+    <div class="grid lg:mx-8 xl:mx-32 border-b-4 px-4">
+      <div class="font-bold text-4xl border-b-4 py-4 text-center lg:text-left" style="font-family: 'Kanit';">
+        เวลาและสถานที่
+      </div>
+    
+      <div class="grid items-center justify-center lg:items-start lg:justify-start py-8">
+        <div class="p-6 text-lg lg:text-left text-start" style="font-family: 'Kanit';">
+          <p>วันเสาร์ที่ 27 มกราคม 2567</p>
+          <p>ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+        </div>
+    
+        <div class="flex justify-center">
+          <iframe 
+            class="w-full max-w-xs sm:max-w-md lg:max-w-2xl h-[200px] sm:h-[300px] lg:h-[450px] border rounded-lg shadow-lg" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.025931690464!2d100.4960252!3d7.0062293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d29f53320558d%3A0x44bc2a2c81175fd9!2z4Lio4Li54LiZ4Lii4LmM4Lia4Lij4Li04LiB4Liy4Lij4Lin4Li04LiK4Liy4LiB4Liy4LijIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4quC4h-C4guC4peC4suC4meC4hOC4o-C4tOC4meC4l-C4o-C5jA!5e0!3m2!1sth!2sth!4v1733348193726!5m2!1sth!2sth" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+    
+    <!-- sponsor -->
+    <div class="lg:mx-8 xl:mx-32 bg-white  py-16 border-black border-4">
+      <div class="text-5xl text-center font-bold mb-10 text-black drop-shadow-lg ">
         <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
 
         <!-- แสดงผลแบบหลายบรรทัดในหน้าจอมือถือ -->
@@ -575,7 +606,7 @@
       </div>
 
       <div
-        class="grid gap-6 px-4 md:px-16 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+        class="grid gap-6  md:px-28 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center ">
         <!-- Loop through each logo using daisyUI's card component style for better visuals -->
         <div
           class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
@@ -597,16 +628,20 @@
 
 
     </div>
+
+    <!-- About -->
     <div
-      class="container bg-[#FFF4BD] w-full py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col gap-8 relative"
+      class="lg:mx-8 xl:mx-32 bg-gradient-to-b from-[#FFF4BD] to-[#F6E176] py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col gap-8 relative"
       id="About">
       <!-- Top section -->
-      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle">
-        <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl" style="text-align: center;">Barcamp Songkhla?</div>
-        <div class="text-base sm:text-lg lg:text-xl text-gray-700">
-          <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
-            เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
-          <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
+      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle py-8">
+        <div class="py-12">
+          <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl text-center" style="font-family: 'Kanit';">Barcamp Songkhla?</div>
+          <div class="text-base sm:text-lg lg:text-xl font-normal	text-[#786F6F]" style="font-family: 'IBM Plex Sans Thai Looped';">
+            <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
+              เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
+            <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
+          </div> 
         </div>
       </div>
 
@@ -615,7 +650,7 @@
       <div class="flex flex-col lg:flex-row gap-8 w-full justify-center items-stretch">
         <!-- Card 1 -->
         <div
-          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          class=" rounded-3xl	 card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
           <!-- Image -->
           <img src="462584687_1315857265998058_8446590888404726318_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
           <br>
@@ -629,40 +664,47 @@
 
         <!-- Card 2 -->
         <div
-          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-3xl	transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
           <!-- Image -->
           <img src="462581701_1089496742616593_1297429892282991063_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
           <br>
           <!-- Title -->
           <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
           <!-- Description -->
-          <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
-            พูดคุย แบ่งปัน และแลกเปลี่ยนมุมมองใหม่ ๆ
-          </p>
+           <div>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
+              แลกเปลี่ยนความคิดเห็น
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
+              และแบ่งปันความรู้
+            </p>
+           </div>
+
         </div>
 
         <!-- Card 3 -->
         <div
-          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          class=" rounded-3xl	 card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
           <!-- Image -->
           <img src="462572978_602775155418655_5454715295681774944_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
           <br>
           <!-- Title -->
           <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
           <!-- Description -->
-          <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
-            ร่วมสร้างเครือข่ายและเรียนรู้ไปด้วยกัน
-          </p>
+          <div>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+              เรียนรู้ร่วมกัน สร้างเครือข่าย
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+              ระหว่างคนที่ชื่นชอบในเทคโนโลยี
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-
-
-
-
-
-    <div style="font-family: Mali;" class="bg-gradient-to-b text-white py-10 container mx-auto" id="Timeline">
+    <!-- timeline -->
+    <div style="font-family: Mali;" class="bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32" id="Timeline">
       <div class="flex-auto lg:flex flex-wrap items-start max">
         <div style="font-family: Mali"
           class="flex-2 hover:scale-105 transition duration-300 ease-in-out text-7xl lg:sticky lg:top-[300px] text-center text-black shadow-lg xl:rounded-l-3xl min-[1024px]:font-extrabold min-[0px]:font-medium min-[1024px]:p-5 min-[0px]:p-0 bg-[#BBDDF5] md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
@@ -764,6 +806,7 @@
       </div>
     </div>
 
+    <!-- Gallery -->
     <div class="bg-lime-400 py-16 border-black border-4" id="Gallery">
       <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px;">
         Gallery</h2>
