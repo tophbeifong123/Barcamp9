@@ -96,36 +96,46 @@
     }
 
     .gallery-title1 {
-  color: #000000;
-  font-size: 40px; /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
-  text-align: center;
-  margin-bottom: 1.5rem;
-  line-height: 1.2; /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
-}
-.gallery-title {
-  color: #000000;
-  font-size: 40px; /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
-  text-align: center;
-  margin-bottom: 1.5rem;
-  line-height: 1.2; /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
-}
+      color: #000000;
+      font-size: 40px;
+      /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
+    }
 
-/* Media Query สำหรับจอขนาดกลาง */
-@media (max-width: 768px) {
-  .gallery-title {
-    font-size: 32px; /* ลดขนาดฟอนต์สำหรับหน้าจอที่มีขนาดเล็ก */
-    margin-bottom: 1rem; /* ลดระยะห่างด้านล่าง */
-  }
-}
+    .gallery-title {
+      color: #000000;
+      font-size: 40px;
+      /* ขนาดฟอนต์สำหรับหน้าจอปกติ */
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      /* เพิ่ม line-height เพื่อให้ตัวอักษรดูชัดเจน */
+    }
 
-/* Media Query สำหรับจอขนาดเล็ก */
-@media (max-width: 480px) {
-  .gallery-title {
-    font-size: 24px; /* ลดขนาดฟอนต์ลงสำหรับหน้าจอที่เล็กมาก */
-    margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
-    line-height: 1.4; /* ปรับ line-height เพื่อให้ตัวอักษรไม่ตัด */
-  }
-}
+    /* Media Query สำหรับจอขนาดกลาง */
+    @media (max-width: 768px) {
+      .gallery-title {
+        font-size: 32px;
+        /* ลดขนาดฟอนต์สำหรับหน้าจอที่มีขนาดเล็ก */
+        margin-bottom: 1rem;
+        /* ลดระยะห่างด้านล่าง */
+      }
+    }
+
+    /* Media Query สำหรับจอขนาดเล็ก */
+    @media (max-width: 480px) {
+      .gallery-title {
+        font-size: 24px;
+        /* ลดขนาดฟอนต์ลงสำหรับหน้าจอที่เล็กมาก */
+        margin-bottom: 0.5rem;
+        /* ลดระยะห่างด้านล่าง */
+        line-height: 1.4;
+        /* ปรับ line-height เพื่อให้ตัวอักษรไม่ตัด */
+      }
+    }
 
 
 
@@ -501,109 +511,152 @@
   <!-- <nav class="sm:hidden bg-[#85CBFC] h-14">
 
   </nav> -->
-  <main class="container mx-auto md:p-4 mt-4 mb-4 grid gap-4">
-    <div class="bg-lime-400 py-16 border-black border-4" id="Home">
-      <div class="text-8xl">Home</div>
-      <div class="h-[500px]">
-
-      </div>
-    </div>
-    
-
-    <div class="bg-white w-full py-16 border-black border-4">
-    <div class="text-5xl text-center font-bold mb-10 text-black drop-shadow-lg">
-      <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
-
-      <!-- แสดงผลแบบหลายบรรทัดในหน้าจอมือถือ -->
-      <div class="block md:hidden">
-        <p class="leading-tight">ขอขอบคุณ</p>
-        <p class="leading-tight">ผู้สนับสนุน</p>
-        <p class="leading-tight">ทุกท่าน</p>
-      </div>
-    </div>
-
+  <main class="top-0 flex flex-col items-center gap-4">
     <div
-      class="grid gap-6 px-4 md:px-16 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
-      <!-- Loop through each logo using daisyUI's card component style for better visuals -->
-      <div
-        class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-        <span class="text-4xl font-semibold text-gray-800">Logo 1</span>
+      class="relative w-full h-screen pb-12 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
+      id="Home">
+
+      <div class="absolute inset-0 bottom-32 flex flex-col justify-center items-center z-40 gap-[30px]">
+        <div class="h-7/12 w-4/5 sm:h-6/12 sm:w-3/5 md:6/12 md:3/5 xl:h-5/12 xl:w-3/5">
+          <img src="images/barcampsongkhla9_label1.png" alt="barcamp">
+          </img>
+        </div>
+        <div class="flex justify-center flex-col items-center bg-white bg-opacity-70 px-4 py-2.5 rounded-3xl gap-4">
+          <div class="text-xl flex flex-col items-center">
+            <div>
+              มาร่วมพูดคุยและ
+            </div>
+            <div>
+              แลกเปลี่ยนไอเดียไปพร้อมกัน
+            </div>
+          </div>
+          <div class="text-[10px] flex flex-col items-center">
+            <div>
+              พื้นที่สำหรับทุกคนที่มี "ไอเดียที่อยากแชร์" ไม่ว่าจะเป็นเรื่องเทคโนโลยี
+            </div>
+            <div>
+              ประสบการณ์เจ๋ง ๆ หรือความรู้ใหม่ ๆ ที่คุณอยากแบ่งปัน
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="card  w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-        <span class="text-4xl font-semibold text-gray-800">Logo 2</span>
+        class="absolute inset-x-0 bottom-16 flex flex-col sm:flex-row sm:bottom-24 text-white gap-4 justify-center items-center z-40">
+        <button class="px-2 py-2.5 rounded-lg bg-[#2F6AA4] bg-opacity-70 border-2">ช่องทางการติดตาม</button>
+        <button class="px-2 py-2.5 rounded-lg bg-[#6E6295] border-2">ร่วมเป็นส่วนสำคัญของงาน</button>
+        <button class="px-2 py-2.5 rounded-lg bg-[#362F62] bg-opacity-70 border-2">ร่วมสนับสนุน</button>
       </div>
-      <div
-        class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-        <span class="text-4xl font-semibold text-gray-800">Logo 3</span>
+      <div class="absolute -bottom-12 h-[100px] w-full bg-gradient-to-b from-[#228ac0] to-white z-30">
       </div>
-      <div
-        class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-        <span class="text-4xl font-semibold text-gray-800">Logo 4</span>
+      <!-- <div class="absolute  -bottom-36  h-full z-10"> -->
+      <div class="absolute inset-0 -bottom-36 flex flex-col justify-center items-center">
+        <div class="h-7/12 w-4/5">
+          <img src="images/moon.png" alt="moon"></img>
+        </div>
+        <img src="images/new-sea-wave.png" alt="sae-wave"
+          class="absolute bottom-64 sm:bottom-48 md:bottom-32 lg:bottom-24 xl:bottom-16 2xl:bottom-10"></img>
       </div>
+      <!-- <div class="absolute w-full inset-x-0 -bottom-48 z-40">
+       
+      </div> -->
     </div>
 
 
-  </div>
+    <div class="container bg-white w-full py-16 border-black border-4">
+      <div class="text-5xl text-center font-bold mb-10 text-black drop-shadow-lg">
+        <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
+
+        <!-- แสดงผลแบบหลายบรรทัดในหน้าจอมือถือ -->
+        <div class="block md:hidden">
+          <p class="leading-tight">ขอขอบคุณ</p>
+          <p class="leading-tight">ผู้สนับสนุน</p>
+          <p class="leading-tight">ทุกท่าน</p>
+        </div>
+      </div>
+
+      <div
+        class="grid gap-6 px-4 md:px-16 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+        <!-- Loop through each logo using daisyUI's card component style for better visuals -->
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+          <span class="text-4xl font-semibold text-gray-800">Logo 1</span>
+        </div>
+        <div
+          class="card  w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+          <span class="text-4xl font-semibold text-gray-800">Logo 2</span>
+        </div>
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+          <span class="text-4xl font-semibold text-gray-800">Logo 3</span>
+        </div>
+        <div
+          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
+          <span class="text-4xl font-semibold text-gray-800">Logo 4</span>
+        </div>
+      </div>
+
+
+    </div>
     <div
-    class="bg-[#FFF4BD] w-full py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col gap-8 relative"
-    id="About">
-    <!-- Top section -->
-    <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle">
-      <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl" style="text-align: center;">Barcamp Songkhla?</div>
-      <div class="text-base sm:text-lg lg:text-xl text-gray-700">
-        <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
-        <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
+      class="container bg-[#FFF4BD] w-full py-8 sm:py-16 px-4 sm:px-8 border border-gray-300 rounded-lg shadow-lg flex flex-col gap-8 relative"
+      id="About">
+      <!-- Top section -->
+      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle">
+        <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl" style="text-align: center;">Barcamp Songkhla?</div>
+        <div class="text-base sm:text-lg lg:text-xl text-gray-700">
+          <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
+            เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
+          <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
+        </div>
+      </div>
+
+
+      <!-- Bottom section (cards arranged horizontally) -->
+      <div class="flex flex-col lg:flex-row gap-8 w-full justify-center items-stretch">
+        <!-- Card 1 -->
+        <div
+          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          <!-- Image -->
+          <img src="462584687_1315857265998058_8446590888404726318_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
+          <br>
+          <!-- Title -->
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">งานสัมมนานอกกรอบ</h1>
+          <!-- Description -->
+          <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
+            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          <!-- Image -->
+          <img src="462581701_1089496742616593_1297429892282991063_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
+          <br>
+          <!-- Title -->
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
+          <!-- Description -->
+          <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
+            พูดคุย แบ่งปัน และแลกเปลี่ยนมุมมองใหม่ ๆ
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
+          <!-- Image -->
+          <img src="462572978_602775155418655_5454715295681774944_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
+          <br>
+          <!-- Title -->
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
+          <!-- Description -->
+          <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
+            ร่วมสร้างเครือข่ายและเรียนรู้ไปด้วยกัน
+          </p>
+        </div>
       </div>
     </div>
-    
-  
-    <!-- Bottom section (cards arranged horizontally) -->
-    <div class="flex flex-col lg:flex-row gap-8 w-full justify-center items-stretch">
-      <!-- Card 1 -->
-      <div
-        class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
-        <!-- Image -->
-        <img src="462584687_1315857265998058_8446590888404726318_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
-        <br>
-        <!-- Title -->
-        <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">งานสัมมนานอกกรอบ</h1>
-        <!-- Description -->
-        <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
-          บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
-        </p>
-      </div>
-  
-      <!-- Card 2 -->
-      <div
-        class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
-        <!-- Image -->
-        <img src="462581701_1089496742616593_1297429892282991063_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
-        <br>
-        <!-- Title -->
-        <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
-        <!-- Description -->
-        <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
-          พูดคุย แบ่งปัน และแลกเปลี่ยนมุมมองใหม่ ๆ
-        </p>
-      </div>
-  
-      <!-- Card 3 -->
-      <div
-        class="card flex flex-col justify-start items-start w-full lg:w-1/3 bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 rounded-lg transition-transform duration-300 transform hover:-translate-y-2 min-h-[320px]">
-        <!-- Image -->
-        <img src="462572978_602775155418655_5454715295681774944_n.png" alt="Tech Icon" class="w-12 h-12 mb-4">
-        <br>
-        <!-- Title -->
-        <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
-        <!-- Description -->
-        <p class="text-sm sm:text-base lg:text-lg text-left text-gray-600 mt-4">
-          ร่วมสร้างเครือข่ายและเรียนรู้ไปด้วยกัน
-        </p>
-      </div>
-    </div>
-  </div>
-  
+
 
 
 
