@@ -448,6 +448,131 @@
     body {
       font-family: 'Mali', sans-serif;
     }
+    * {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.wrapper h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 888;
+  text-transform: uppercase;
+}
+.wrapper div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+div .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.wrapper div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(3) {
+  top: 40%;
+  left: 40%;
+  animation: animate 3s linear infinite;
+}
+.wrapper div:nth-child(4) {
+  top: 66%;
+  left: 30%;
+  animation: animate 7s linear infinite;
+}
+.wrapper div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(7) {
+  top: 70%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(9) {
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(10) {
+  top: 45%;
+  left: 20%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(11) {
+  top: 10%;
+  left: 90%;
+  animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(12) {
+  top: 20%;
+  left: 70%;
+  animation: animate 7s linear infinite;
+}
+.wrapper div:nth-child(13) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(14) {
+  top: 60%;
+  left: 5%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(15) {
+  top: 90%;
+  left: 80%;
+  animation: animate 9s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
+}
+
   </style>
 </head>
 
@@ -522,7 +647,24 @@
     <div
       class="relative w-full h-screen pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
       id="Home">
-
+      <div class="wrapper">
+        <h1>Bubbles Animation</h1>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+      </div>
       <div class="absolute inset-0 bottom-32 flex flex-col justify-center items-center z-40 gap-[30px]">
         <div class="h-7/12 w-4/5 sm:h-6/12 sm:w-3/5 md:6/12 md:3/5 xl:h-5/12 xl:w-3/5">
           <img src="images/barcampsongkhla9_label1.png" alt="barcamp">
@@ -568,7 +710,7 @@
       </div> -->
     </div>
 
-    <div class="grid lg:mx-8 xl:mx-32 border-b-4 px-4">
+    <div class="grid lg:mx-8 xl:mx-32 border-b-4 px-4 py-4">
       <div class="font-bold text-4xl border-b-4 py-4 text-center lg:text-left" style="font-family: 'Kanit';">
         เวลาและสถานที่
       </div>
@@ -592,42 +734,44 @@
       </div>
     </div>
     
-    <!-- sponsor -->
-    <div class="lg:mx-8 xl:mx-32 bg-white  py-16 border-black border-4">
-      <div class="text-5xl text-center font-bold mb-10 text-black drop-shadow-lg ">
-        <div class="hidden md:block">ขอขอบคุณผู้สนับสนุนทุกท่าน</div>
-
-        <!-- แสดงผลแบบหลายบรรทัดในหน้าจอมือถือ -->
-        <div class="block md:hidden">
-          <p class="leading-tight">ขอขอบคุณ</p>
-          <p class="leading-tight">ผู้สนับสนุน</p>
-          <p class="leading-tight">ทุกท่าน</p>
+  <!-- sponsor -->
+  <div class="lg:mx-8 xl:mx-36 bg-white pb-16 min-[0px]:mx-10">
+    <div class="grid">
+      <div class="flex flex-wrap pb-16 justify-between sm:flex">
+        <div class="font-bold text-5xl py-4" style="font-family: 'Kanit';">ผู้สนับสนุน</div>
+        <div class="justify-self-end hidden sm:block">
+          <p>เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน</p>
+          <p>จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่</p>
+          <p>และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้</p>
         </div>
       </div>
 
-      <div
-        class="grid gap-6  md:px-28 h-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center ">
-        <!-- Loop through each logo using daisyUI's card component style for better visuals -->
-        <div
-          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-          <span class="text-4xl font-semibold text-gray-800">Logo 1</span>
+      <div class="flex flex-wrap gap-5 items-center justify-center">
+        <div class="sm:hidden block">
+          <marquee>
+            <div class="flex gap-4">
+              <div class="bg-red-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
+              <div class="bg-blue-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
+              <div class="bg-green-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
+              <div class="bg-yellow-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
+              <div class="bg-black min-w-[150px] h-[90px] flex items-center justify-center"></div>
+            </div>
+          </marquee>
         </div>
-        <div
-          class="card  w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-          <span class="text-4xl font-semibold text-gray-800">Logo 2</span>
-        </div>
-        <div
-          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-          <span class="text-4xl font-semibold text-gray-800">Logo 3</span>
-        </div>
-        <div
-          class="card bg-gray-300 w-64 h-48 flex items-center justify-center rounded-lg shadow-lg border-4 border-black animate-bounce-slow mx-auto sm:mx-0">
-          <span class="text-4xl font-semibold text-gray-800">Logo 4</span>
+
+        <div class="hidden sm:flex flex-wrap gap-5 items-center justify-center">
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
         </div>
       </div>
-
-
     </div>
+  </div>
+
 
     <!-- About -->
     <div
@@ -707,9 +851,9 @@
     </div>
 
     <!-- timeline -->
-    <div style="font-family: Mali;" class="bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32" id="Timeline">
+    <div style="font-family: 'IBM Plex Sans Thai Looped';" class="bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32" id="Timeline">
       <div class="flex-auto lg:flex flex-wrap items-start max">
-        <div style="font-family: Mali"
+        <div style="font-family: 'Kanit'"
           class="flex-2 hover:scale-105 transition duration-300 ease-in-out text-7xl lg:sticky lg:top-[300px] text-center text-black shadow-lg xl:rounded-l-3xl min-[1024px]:font-extrabold min-[0px]:font-medium min-[1024px]:p-5 min-[0px]:p-0 bg-[#BBDDF5] md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
           Timeline
         </div>
