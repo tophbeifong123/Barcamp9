@@ -504,6 +504,10 @@
       animation: animate 8s linear infinite;
     }
 
+    .transition-colors {
+  transition: color 0.3s ease-in-out;
+}
+
     .wrapper div:nth-child(2) {
       top: 60%;
       left: 80%;
@@ -618,58 +622,52 @@
   <!-- #6ab6b4  ฟ้า 
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
-
-
-  <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50 border-b-4">
-    <div
-      class="max-w-screen-xl flex  min-[0px]:flex-row-reverse md:flex-row flex-wrap items-center justify-between mx-auto lg:p-4">
-      <div class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="./images/download.jpeg" class="h-14 w-14" alt="Flowbite Logo" />
-        <span class="hidden sm:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BARCAMP
-          SONGKHLA</span>
+    <nav id="navbar" class="fixed top-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300">
+      <div class="flex items-center justify-between h-16 px-4 lg:px-24">
+        <!-- ปุ่มเมนูในหน้าจอเล็ก -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="inline-flex items-center p-2 rounded-lg md:hidden hover:bg-gray-100 order-1 cursor-pointer">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+    
+        <!-- โลโก้และข้อความ -->
+        <div class="flex items-center order-2 md:order-1">
+          <img src="./images/download.jpeg" alt="Flowbite Logo" class="h-10 w-10">
+          <span class="text-xl font-bold ml-3 hidden sm:block">BARCAMP SONGKHLA</span>
+        </div>
+    
+        <!-- เมนูตัวเลือก -->
+        <div class="hidden absolute top-16 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-black bg-opacity-50">
+          <ul class="flex flex-col md:flex-row md:space-x-6 text-sm font-medium p-4 md:p-0">
+            <li><a href="#" class="transition-colors duration-300">Home</a></li>
+            <li><a href="#About" class="transition-colors duration-300">About</a></li>
+            <li><a href="#Timeline" class="transition-colors duration-300">Timeline</a></li>
+            <li><a href="#Gallery" class="transition-colors duration-300">Gallery</a></li>
+          </ul>
+        </div>
       </div>
-      <button data-collapse-toggle="navbar-default" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15" />
-        </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#"
-              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#About"
-              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#Timeline"
-              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a>
-          </li>
-          <li>
-            <a href="#Gallery"
-              class="block py-2 px-3 hover:bg-blue-700 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
+    
+    
+    
+    
+    
+    
+    
+
+    
   <!-- <nav class="sm:hidden bg-[#85CBFC] h-14">
 
   </nav> -->
   <main class="flex flex-col items-center gap-16">
     <!-- bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32 -->
     <!-- event -->
-    <div class="relative w-full h-screen min-h-[650px] max-h-[500px] sm:max-h-[750px] lg:max-h-[1000px]  flex flex-col justify-center items-center pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
+   <div class="relative w-full h-screen min-h-[800px] sm:min-h-[900px] lg:min-h-[1000px] flex flex-col justify-center items-center pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
       id="Home"> 
+ 
       <div class="wrapper">
         <div><span class="dot"></span></div>
         <div><span class="dot"></span></div>
@@ -1115,6 +1113,60 @@
     overlay.onclick = () => {
       overlay.style.display = 'none';
     };
+
+    document.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  const links = navbar.querySelectorAll('a, span, svg, label');
+  const hamburger = document.querySelector('label[for="menu-toggle"]'); // Hamburger button
+
+  // เมื่อเลื่อนหน้าเว็บ
+  if (window.scrollY > 10) {
+    navbar.classList.add('bg-black', 'border-gray-700');
+    navbar.classList.remove('bg-transparent', 'border-transparent');
+
+    links.forEach((el) => {
+      el.classList.add('text-white');
+      el.classList.remove('text-custom');
+    });
+
+    hamburger.classList.add('bg-black', 'bg-opacity-50');
+    hamburger.classList.remove('hover:bg-gray-100');
+  } else {
+    navbar.classList.add('bg-transparent', 'border-transparent');
+    navbar.classList.remove('bg-black', 'border-gray-700');
+
+    links.forEach((el) => {
+      el.classList.add('text-custom');
+      el.classList.remove('text-white');
+    });
+
+    hamburger.classList.remove('bg-black', 'bg-opacity-50');
+    hamburger.classList.add('hover:bg-gray-100');
+  }
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+menuToggle.addEventListener('change', () => {
+  const navbar = document.getElementById('navbar');
+
+  if (menuToggle.checked) {
+    // เมื่อเปิดเมนู
+    if (window.scrollY === 0) {
+      // เปลี่ยนพื้นหลังเฉพาะเมื่ออยู่บนสุดของหน้าเว็บ
+      navbar.classList.add('bg-black');
+      navbar.classList.remove('bg-transparent');
+    }
+  } else {
+    // เมื่อปิดเมนู
+    if (window.scrollY === 0) {
+      // รีเซ็ตพื้นหลังเฉพาะเมื่ออยู่บนสุดของหน้าเว็บ
+      navbar.classList.remove('bg-black');
+      navbar.classList.add('bg-transparent');
+    }
+  }
+});
+
+    
   </script>
 
 
