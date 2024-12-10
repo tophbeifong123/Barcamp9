@@ -641,7 +641,7 @@
     
         <!-- เมนูตัวเลือก -->
         <div class="hidden absolute top-16 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50">
-          <ul class="flex flex-col md:flex-row md:space-x-6 text-sm font-medium p-4 md:p-0" style="font-family: 'Kanit';">
+          <ul class="flex flex-col md:flex-row md:space-x-6 text-sm lg:text-xl xl:text-2xl font-medium p-4 md:p-0" style="font-family: 'Kanit';">
             <li><a href="#" class="transition-colors duration-300">Home</a></li>
             <li><a href="#About" class="transition-colors duration-300">About</a></li>
             <li><a href="#Timeline" class="transition-colors duration-300">Timeline</a></li>
@@ -657,7 +657,7 @@
   <main class="flex flex-col items-center gap-16">
     <!-- bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32 -->
     <!-- event -->
-   <div class="relative w-full h-screen min-h-[500px] sm:min-h-[600px] lg:min-h-[800px] flex flex-col justify-center items-center pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
+   <div class="relative w-full h-screen min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] lg:max-h-[950px] xl:max-h-[1240px] flex flex-col justify-center items-center pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
       id="Home"> 
  
       <div class="wrapper">
@@ -684,7 +684,7 @@
         </div>
         <div class="flex justify-center flex-col items-center bg-white bg-opacity-70 px-4 py-2.5 md:px-8 md:py-8 rounded-3xl gap-4 md:gap-6"  >
           <div class="text-sm sm:text-lg md:text-2xl lg:text-4xl flex flex-col items-center md:gap-4 " style="font-family: 'Kanit';">
-            <div class="bold">
+            <div class="bold text-stroke-lg">
               มาร่วมพูดคุยและ
             </div>
             <div>
@@ -736,13 +736,22 @@
 
       <div class="grid items-center justify-center lg:items-start lg:justify-center py-4 border-t-2 w-full ">
         <div class="p-6 text-lg lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
-          <p>วันเสาร์ที่ 27 มกราคม 2567</p>
-          <p>ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+          <div class="flex flex-row items-center">
+            <img src="images/download.jpeg" alt="fish"
+          class="w-16"></img>
+            <p>วันเสาร์ที่ 27 มกราคม 2567</p>
+
+          </div>
+          <div class="flex flex-row items-center">
+            <img src="images/download.jpeg" alt="fish"
+            class="w-16"></img>
+            <p>ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+          </div>
         </div>
 
-        <div class="flex justify-center item">
+        <div class="flex justify-center item ">
           <iframe
-            class="w-full max-w-xs sm:max-w-md lg:max-w-2xl h-[200px] sm:h-[300px] lg:h-[450px] border rounded-lg shadow-lg"
+            class="w-full max-w-xs sm:max-w-md lg:max-w-2xl h-[300px] sm:h-[400px] lg:h-[500px] border rounded-lg shadow-lg"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.025931690464!2d100.4960252!3d7.0062293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d29f53320558d%3A0x44bc2a2c81175fd9!2z4Lio4Li54LiZ4Lii4LmM4Lia4Lij4Li04LiB4Liy4Lij4Lin4Li04LiK4Liy4LiB4Liy4LijIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4quC4h-C4guC4peC4suC4meC4hOC4o-C4tOC4meC4l-C4o-C5jA!5e0!3m2!1sth!2sth!4v1733348193726!5m2!1sth!2sth"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
@@ -1008,7 +1017,7 @@
         <div class="flex items-center image-container" style="margin-left: 30px;">
           <img src="images/my-gallery.png" alt="image" class="w-90 h-64 object-cover rounded-lg image-element">
           <h2 class="gallery-title1"
-            style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px; margin-left: 50px;">
+            style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; margin-left: 50px;">
             Gallery Room
           </h2>
         </div>
