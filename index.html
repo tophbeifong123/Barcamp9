@@ -772,7 +772,7 @@
     </div>
 
     <!-- sponsor -->
-    <div class="lg:mx-8 xl:mx-36 bg-white pb-16 min-[0px]:mx-10">
+    <div class="lg:mx-20 xl:mx-64 bg-white pb-32 min-[0px]:mx-20 max-w-[1200px] w-full">
       <div class="grid">
         <div class="flex flex-wrap pb-16 justify-between sm:flex">
           <div class="text-3xl font-bold text-gray-900 py-4" style="font-family: 'Kanit';">ผู้สนับสนุน</div>
@@ -796,18 +796,55 @@
             </marquee>
           </div>
 
-          <div class="hidden sm:flex flex-wrap gap-5 items-center justify-center">
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
+          <div class="hidden sm:flex flex-wrap gap-10 items-center justify-center">
+            <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon" class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+            <img src="images/import-star.png" alt="Tech Icon" class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
           </div>
+          
+          
         </div>
       </div>
     </div>
+
+    <style>
+      .lg\:mx-8 {
+        margin-left: 32px; /* เพิ่มระยะห่างด้านซ้าย */
+        margin-right: 32px; /* เพิ่มระยะห่างด้านขวา */
+      }
+      
+      .xl\:mx-36 {
+        margin-left: 144px; /* เพิ่มระยะห่างด้านซ้าย */
+        margin-right: 144px; /* เพิ่มระยะห่างด้านขวา */
+      }
+      
+      .bg-white.pb-16 {
+        padding-bottom: 64px; /* เพิ่มระยะห่างด้านล่าง */
+      }
+      
+      .min-\[0px\]\:mx-10 {
+        margin-left: 40px; /* เพิ่มระยะห่างด้านซ้าย */
+        margin-right: 40px; /* เพิ่มระยะห่างด้านขวา */
+      }
+      
+      .lg\:mx-8.xl\:mx-36 {
+        max-width: 1200px; /* ขยายความกว้างสูงสุด */
+        width: 100%; /* ทำให้ขยายเต็มพื้นที่ที่กำหนด */
+      }
+      
+
+      .sponsor-logo {
+        width: 150px; /* กำหนดความกว้างของภาพ */
+        height: 90px; /* กำหนดความสูงของภาพ */
+        object-fit: contain; /* ทำให้ภาพคงอัตราส่วน */
+        border-radius: 8px; /* เพิ่มมุมโค้งเพื่อความสวยงาม */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+      }
+      
+      .flex-wrap.gap-5 {
+        gap: 20px; /* ปรับระยะห่างระหว่างภาพ */
+      }
+      
+    </style>
 
 
     <!-- About -->
