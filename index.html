@@ -623,7 +623,7 @@
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
     <nav id="navbar" class="fixed top-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300">
-      <div class="flex items-center justify-between h-20 px-4 lg:px-24">
+      <div class="flex items-center justify-between h-19 px-4 lg:px-24">
         <!-- ปุ่มเมนูในหน้าจอเล็ก -->
         <input type="checkbox" id="menu-toggle" class="hidden peer">
         <label for="menu-toggle" class="inline-flex items-center p-2 rounded-lg md:hidden hover:bg-gray-100 order-1 cursor-pointer">
@@ -632,7 +632,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </label>
-        
+    
         <!-- โลโก้และข้อความ -->
         <div class="flex items-center order-2 md:order-1">
           <img src="./images/download.jpeg" alt="Flowbite Logo" class="h-10 w-10">
@@ -640,8 +640,8 @@
         </div>
     
         <!-- เมนูตัวเลือก -->
-        <div class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
-          style="max-height: 700px; padding-top: 5rem; padding-bottom: 2rem; z-index: -40;"> <!-- ปรับ top-0 เพื่อให้เมนูชิดกับ navbar -->
+        <div id="menu" class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
+          style="max-height: 700px; z-index: 40; padding-top: 2.5rem; padding-bottom: 2rem;">
           <ul class="flex flex-col md:flex-row md:space-x-6 text-sm lg:text-xl xl:text-2xl font-medium p-4 md:p-0" style="font-family: 'Kanit';">
             <li class="py-4 px-6"><a href="#" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Home</a></li>
             <li class="py-4 px-6"><a href="#About" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">About</a></li>
@@ -1161,6 +1161,7 @@
 const menuToggle = document.getElementById('menu-toggle');
 menuToggle.addEventListener('change', () => {
   const navbar = document.getElementById('navbar');
+  const menu = document.getElementById('menu');
 
   if (menuToggle.checked) {
     // เมื่อเปิดเมนู
@@ -1169,6 +1170,9 @@ menuToggle.addEventListener('change', () => {
       navbar.classList.add('bg-white');
       navbar.classList.remove('bg-transparent');
     }
+    // ปรับค่า z-index และ padding-top เมื่อเปิดเมนู
+    menu.style.zIndex = '-40';
+    menu.style.paddingTop = '4rem';
   } else {
     // เมื่อปิดเมนู
     if (window.scrollY === 0) {
@@ -1176,8 +1180,12 @@ menuToggle.addEventListener('change', () => {
       navbar.classList.remove('bg-white');
       navbar.classList.add('bg-transparent');
     }
+    // ปรับค่า z-index และ padding-top เมื่อปิดเมนู
+    menu.style.zIndex = '40';
+    menu.style.paddingTop = '2rem';
   }
 });
+
 
     
   </script>
