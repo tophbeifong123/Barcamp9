@@ -775,13 +775,17 @@
     <div class="lg:mx-20 xl:mx-64 bg-white pb-32 min-[0px]:mx-20 max-w-[1200px] w-full">
       <div class="grid">
         <div class="flex flex-wrap pb-16 justify-between sm:flex">
-          <div class="text-3xl font-bold text-gray-900 py-4" style="font-family: 'Kanit';">ผู้สนับสนุน</div>
+          <div class="supporter w-full text-center sm:w-auto sm:text-left" style="font-family: 'Kanit';">
+            ผู้สนับสนุน
+          </div>
           <div class="justify-self-end hidden sm:block">
             <p>เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน</p>
             <p>จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่</p>
             <p>และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้</p>
           </div>
         </div>
+        
+        
 
         <div class="flex flex-wrap gap-5 items-center justify-center">
           <div class="sm:hidden block">
@@ -806,9 +810,20 @@
     </div>
 
     <style>
+      .supporter {
+        font-size: 1.875rem; 
+        font-weight: bold;
+        color: #1f2937; 
+        padding: 1rem 0; 
+        font-family: 'Kanit', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .lg\:mx-8 {
-        margin-left: 32px; /* เพิ่มระยะห่างด้านซ้าย */
-        margin-right: 32px; /* เพิ่มระยะห่างด้านขวา */
+        margin-left: 32px;
+        margin-right: 32px;
       }
       
       .xl\:mx-36 {
