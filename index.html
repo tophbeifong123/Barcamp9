@@ -623,7 +623,7 @@
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
     <nav id="navbar" class="fixed top-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300">
-      <div class="flex items-center justify-between h-16 px-4 lg:px-24">
+      <div class="flex items-center justify-between h-20 px-4 lg:px-24">
         <!-- ปุ่มเมนูในหน้าจอเล็ก -->
         <input type="checkbox" id="menu-toggle" class="hidden peer">
         <label for="menu-toggle" class="inline-flex items-center p-2 rounded-lg md:hidden hover:bg-gray-100 order-1 cursor-pointer">
@@ -632,7 +632,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </label>
-    
+        
         <!-- โลโก้และข้อความ -->
         <div class="flex items-center order-2 md:order-1">
           <img src="./images/download.jpeg" alt="Flowbite Logo" class="h-10 w-10">
@@ -640,16 +640,26 @@
         </div>
     
         <!-- เมนูตัวเลือก -->
-        <div class="hidden absolute top-16 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50">
+        <div class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
+          style="max-height: 700px; padding-top: 5rem; padding-bottom: 2rem; z-index: -40;"> <!-- ปรับ top-0 เพื่อให้เมนูชิดกับ navbar -->
           <ul class="flex flex-col md:flex-row md:space-x-6 text-sm lg:text-xl xl:text-2xl font-medium p-4 md:p-0" style="font-family: 'Kanit';">
-            <li><a href="#" class="transition-colors duration-300">Home</a></li>
-            <li><a href="#About" class="transition-colors duration-300">About</a></li>
-            <li><a href="#Timeline" class="transition-colors duration-300">Timeline</a></li>
-            <li><a href="#Gallery" class="transition-colors duration-300">Gallery</a></li>
+            <li class="py-4 px-6"><a href="#" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Home</a></li>
+            <li class="py-4 px-6"><a href="#About" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">About</a></li>
+            <li class="py-4 px-6"><a href="#Timeline" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Timeline</a></li>
+            <li class="py-4 px-6"><a href="#Gallery" class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Gallery</a></li>
           </ul>
         </div>
       </div>
     </nav>
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   <!-- <nav class="sm:hidden bg-[#85CBFC] h-14">
 
@@ -683,13 +693,15 @@
           </img>
         </div>
         <div class="flex justify-center flex-col items-center bg-white bg-opacity-70 px-4 py-2.5 md:px-8 md:py-8 rounded-3xl gap-4 md:gap-6"  >
-          <div class="font-bold text-white text-sm sm:text-lg md:text-2xl lg:text-4xl flex flex-col items-center md:gap-4 " style="font-family: 'Kanit';">
-            <div class="">
+          <div class="text-sm sm:text-lg md:text-2xl lg:text-4xl flex flex-col items-center md:gap-4 " style="font-family: 'Kanit';">
+            <div style="font-weight: bold; font-size: 2em; color: white; -webkit-text-stroke: 2px #6E6295;">
               มาร่วมพูดคุยและ
             </div>
-            <div>
+            
+            <div style="font-size: 1.5em; text-align: center; color: white; -webkit-text-stroke: 2px #6E6295;">
               แลกเปลี่ยนไอเดียไปพร้อมกัน
             </div>
+            
           </div>
           <div class="text-[10px] text-[#374C83] sm:text-base md:text-xl lg:text-xl flex flex-col items-center md:gap-1" style="font-family: 'IBM Plex Sans Thai Looped';">
             <div>
