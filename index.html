@@ -649,7 +649,8 @@
       <!-- โลโก้และข้อความ -->
       <div class="flex items-center order-2 md:order-1">
         <img src="./images/LogoNav.svg" alt="Flowbite Logo" class="h-12">
-        <span class="text-xl font-bold ml-3 hidden sm:block text-[#374C83]" style="font-family: 'Kanit';letter-spacing: 3px;">BARCAMP
+        <span class="text-xl font-bold ml-3 hidden sm:block text-[#374C83]"
+          style="font-family: 'Kanit';letter-spacing: 3px;">BARCAMP
           SONGKHLA</span>
       </div>
 
@@ -658,8 +659,10 @@
         class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
         style="z-index: 40; padding-top: 2rem; padding-bottom: 2rem;">
         <ul class="flex flex-col md:flex-row md:space-x-6" style="font-family: 'Kanit';">
-          <li><a href="#" class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">HOME</a></li>
-          <li><a href="#About" class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">ABOUT</a>
+          <li><a href="#" class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">HOME</a>
+          </li>
+          <li><a href="#About"
+              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">ABOUT</a>
           </li>
           <li><a href="#Timeline"
               class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">TIMELINE</a></li>
@@ -762,7 +765,8 @@
                   </div>
                   <div class="flex flex-row items-start">
                     <span class="text-3xl">🗺️</span>
-                    <p class="p-2 font-semibold">ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+                    <p class="p-2 font-semibold">ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8
+                    </p>
                   </div>
                 </div>
 
@@ -1065,14 +1069,45 @@
 
     <!-- Gallery -->
     <div id="Gallery">
-      <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px;">
-        Gallery
-      </h2>
+      <div style="position: relative; display: inline-block;">
+        <img src="images/fish2.png" style="position: absolute; top: -10px; left: 0; width: 300px; height: 100%; z-index: 0;">
+        <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
+            Gallery
+        </h2>
+    </div>
+    
+    
 
       <div class="gallery-container">
         <div class="left" style="position: relative;">
-          <img src="images/images69.png" style=" max-width: 150%; height: auto; z-index: 2;">
+          <img src="images/images69.png" style="max-width: 150%; height: auto; z-index: 2;" class="jellyfish-animation"
+            id="myJelly">
         </div>
+
+
+        <style>
+          /* CSS สำหรับอนิเมชั่น */
+          @keyframes jellyfishMove {
+            0% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(-20px);
+              /* ขึ้นไปข้างบน */
+            }
+
+            100% {
+              transform: translateY(0);
+              /* กลับมาตำแหน่งเดิม */
+            }
+          }
+
+          .jellyfish-animation {
+            animation: jellyfishMove 3s infinite;
+            /* ระยะเวลา 3 วินาที และวนลูป */
+          }
+        </style>
 
 
 
@@ -1105,8 +1140,10 @@
               Gallery Room
             </h2>
           </div>
+      
 
           <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
+            <img src="images/dead_ship.png" alt="center-image" style="width: 400px; height: 400px; margin-right: 175px;">
             <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
               class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
               style="background: linear-gradient(to bottom, #374C83, #6E6295);">
@@ -1123,6 +1160,8 @@
           <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
             <span class="icon">🎮</span> เข้าสู่ Gallery Room
           </a>
+        </div>
+
         </div>
       </div>
     </div>
@@ -1251,6 +1290,12 @@
         menu.style.paddingTop = '2rem';
       }
     });
+
+    document.getElementById("myJelly").addEventListener("click", function () {
+    overlayImage.src = "images/images69.jpg"; 
+    overlay.style.display = 'flex';
+});
+
 
 
 
