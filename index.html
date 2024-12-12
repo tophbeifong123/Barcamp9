@@ -626,6 +626,11 @@
       transform: rotate(-30deg);
       /* หมุน 30 องศา */
     }
+
+    .rotate-302 {
+      transform: rotate(30deg);
+      /* หมุน 30 องศา */
+    }
   </style>
 </head>
 
@@ -721,38 +726,39 @@
 
             </div>
           </div> -->
-          <!-- <div class="flex flex-col items-center justify-center relative ">
+          <div class="flex flex-col items-center justify-center relative ">
             <div
               class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
-              style="font-family: 'Kanit';">Follow Us</div>
+              style="font-family: 'Kanit';">FOLLOW US</div>
             <div
-              class=" bg-[#978DB5] px-4 py-2.5 md:px-8 md:py-8 rounded-3xl border border-[3px] border-black overflow-hidden">
+              class=" bg-gradient-to-b from-20% from-[#6f6292] to-[#374C83]  px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
 
               <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
-                <div class=" text-sm lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
-                  <div class="flex flex-row items-start">
+                <div class="lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
+                  <div class="flex flex-col justify-between items-start text-sm text-white">
+                    <p class="p-2 ">ติดตามข่าวสารได้ที่</p>
+                    <p class="p-1 font-semibold text-2xl" style="font-family: 'Kanit';">BARCAMP SONGKHLA</p>
+                    <p class="p-2 font-semibold ">Facebook : Barcamp Songkhla</p>
+                    <p class="p-2 font-semibold ">IG : BarcampSK</p>
+                    <div class="flex flex-row gap-12">
 
-                    <span class="text-3xl">📅</span>
-                    <p class="p-2 ">วันเสาร์ที่ 27 มกราคม 2567</p>
-
-                  </div>
-                  <div class="flex flex-row items-start">
-                    <span class="text-3xl">🗺️</span>
-                    <p class="p-2">ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+                      <img src="images/facebookLogo.svg" alt="FACEBOOK" class="pl-2 rotate-30 w-24"></img>
+                      <img src="images/igLogo.svg" alt="IG" class="pb-12 rotate-302 w-24"></img>
+                    </div>
                   </div>
                 </div>
               </div>
               <img src="images/LogoOL.svg" alt="fish" class="absolute -left-16 -bottom-24 rotate-30 w-36"></img>
             </div>
-          </div> -->
+          </div>
 
           <div class="flex flex-col items-center justify-center relative ">
             <div
               class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
               style="font-family: 'Kanit';">EVENT</div>
             <div
-              class=" bg-[#FFF4BD] px-8 py-2.5 md:px-24 md:py-10 rounded-3xl border border-[3px] border-black overflow-hidden">
+              class=" bg-gradient-to-b from-20% from-[#FFF4BD] to-[#ffffff] px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
 
               <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
@@ -1070,13 +1076,15 @@
     <!-- Gallery -->
     <div id="Gallery">
       <div style="position: relative; display: inline-block;">
-        <img src="images/fish2.png" style="position: absolute; top: -10px; left: 0; width: 300px; height: 100%; z-index: 0;">
-        <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
-            Gallery
+        <img src="images/fish2.png"
+          style="position: absolute; top: -10px; left: 0; width: 300px; height: 100%; z-index: 0;">
+        <h2 class="gallery-title text-left"
+          style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
+          Gallery
         </h2>
-    </div>
-    
-    
+      </div>
+
+
 
       <div class="gallery-container">
         <div class="left" style="position: relative;">
@@ -1140,10 +1148,11 @@
               Gallery Room
             </h2>
           </div>
-      
+
 
           <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
-            <img src="images/dead_ship.png" alt="center-image" style="width: 400px; height: 400px; margin-right: 175px;">
+            <img src="images/dead_ship.png" alt="center-image"
+              style="width: 400px; height: 400px; margin-right: 175px;">
             <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
               class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
               style="background: linear-gradient(to bottom, #374C83, #6E6295);">
@@ -1162,15 +1171,16 @@
           </a>
         </div>
 
-        </div>
       </div>
+    </div>
     </div>
 
   </main>
-  <footer class="flex flex- items-center justify-between border-t-4 border-t-slate-500 h-24 p-4 lg:px-24">
+  <footer class="flex flex-row items-center justify-between border-t-4 border-t-slate-500 h-24 p-4 lg:px-24">
     <div class="flex">
-      <img src="./images/download.jpeg" alt="logo-barcamp9" class="w-14 h-14">
-      <div class="uppercase self-center px-2 font-bold min-[0px]:text-[12px] lg:text-xl" style="letter-spacing: 3px">
+      <img src="./images/LogoNav.svg" alt="logo-barcamp9" class="w-14 h-14">
+      <div class="uppercase self-center px-2 font-bold min-[0px]:text-[12px] lg:text-xl"
+        style="font-family: 'Kanit';letter-spacing: 3px;">
         BARCAMP SONGKHLA
       </div>
     </div>
@@ -1183,6 +1193,7 @@
             <path
               d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
           </svg>
+
         </span>
       </a>
       <a href="https://www.instagram.com/barcampsk/" target="_blank" role="button">
@@ -1292,9 +1303,9 @@
     });
 
     document.getElementById("myJelly").addEventListener("click", function () {
-    overlayImage.src = "images/images69.jpg"; 
-    overlay.style.display = 'flex';
-});
+      overlayImage.src = "images/images69.jpg";
+      overlay.style.display = 'flex';
+    });
 
 
 
