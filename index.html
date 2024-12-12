@@ -783,18 +783,15 @@
     </div>
 
     <!-- sponsor -->
-    <div class="lg:mx-20 xl:mx-64 bg-white pb-32 min-[0px]:mx-20 max-w-[1200px] w-full">
+    <div class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center" style="background-image: url('images/nsw.png');">
       <div class="grid">
-        <div class="flex flex-wrap pb-16 justify-between sm:flex">
-          <div class="supporter w-full text-center sm:w-auto sm:text-left" style="font-family: 'Kanit';">
+        <!-- Section for "ผู้สนับสนุน" -->
+        <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
+          <div class="supporter w-full text-center" style="font-family: 'Kanit';">
             ผู้สนับสนุน
           </div>
-          <div class="justify-self-end hidden sm:block">
-            <p>เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน</p>
-            <p>จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่</p>
-            <p>และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้</p>
-          </div>
         </div>
+      </div>
 
 
 
@@ -814,9 +811,9 @@
 
           <div class="hidden sm:flex flex-wrap gap-10 items-center justify-center">
             <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
-              class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+              class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
             <img src="images/import-star.png" alt="Tech Icon"
-              class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+              class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
           </div>
 
 
@@ -888,84 +885,62 @@
     </style>
 
 
-    <!-- About -->
-    <div
-      class="mx-4 rounded-3xl	 lg:mx-8 xl:mx-32 bg-gradient-to-b from-[#FFF4BD] to-[#F6E176] pt-8 sm:py-16 px-4 sm:px-8 border border-gray-300 shadow-lg flex flex-col gap-8 relative"
-      id="About">
-      <!-- Top section -->
-      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle py-8">
-        <div class="pt-12">
-          <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl text-center" style="font-family: 'Kanit';">Barcamp Songkhla?
-          </div>
-          <div class="text-base sm:text-lg lg:text-xl font-normal	text-[#786F6F]"
-            style="font-family: 'IBM Plex Sans Thai Looped';">
-            <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
-              เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
-            <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
-          </div>
-        </div>
+    <div class="bg-blue-600 py-12 px-8 sm:px-16 lg:px-32 text-white">
+      <!-- Top Section -->
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
+        <!-- Left: Title -->
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="font-family: 'Kanit';">
+          <span class="text-lg sm:text-xl lg:text-2xl">WHAT IS</span><br>
+          BARCAMP SONGKHLA?
+        </h1>
+        <!-- Right: Description -->
+        <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg">
+          เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน<br>
+          จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่<br>
+          และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
+        </p>
       </div>
-
-
-      <!-- Bottom section (cards arranged horizontally) -->
-      <div class="flex flex-col lg:flex-row gap-6  justify-center items-center pb-8">
+    
+      <!-- Bottom Section -->
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1 -->
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <!-- Image -->
-          <img src="/images/Group 17.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <!-- Title -->
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">งานสัมมนานอกกรอบ</h1>
-          <!-- Description -->
-          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
+          <div class="flex items-center mb-4">
+            <img src="/images/Group 17.png" alt="Icon" class="w-12 h-12">
+            <h2 class="ml-4 text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">
             บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
           </p>
-          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
+          <div class="flex items-center mb-4">
+            <img src="/images/Group 16.png" alt="Icon" class="w-12 h-12">
+            <h2 class="ml-4 text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">
+            แลกเปลี่ยนความคิดเห็น<br>
+            และแบ่งปันความรู้
           </p>
         </div>
-
-        <!-- Card 2 -->
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full  h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <!-- Image -->
-          <img src="/images/Group 16.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <!-- Title -->
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
-          <!-- Description -->
-          <div>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
-              แลกเปลี่ยนความคิดเห็น
-            </p>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
-              และแบ่งปันความรู้
-            </p>
-          </div>
-
-        </div>
-
+    
         <!-- Card 3 -->
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <!-- Image -->
-          <img src="/images/Group 18.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <!-- Title -->
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
-          <!-- Description -->
-          <div>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-              เรียนรู้ร่วมกัน สร้างเครือข่าย
-            </p>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-              ระหว่างคนที่ชื่นชอบในเทคโนโลยี
-            </p>
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
+          <div class="flex items-center mb-4">
+            <img src="/images/Group 18.png" alt="Icon" class="w-12 h-12">
+            <h2 class="ml-4 text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
           </div>
+          <p class="text-sm sm:text-base text-gray-600">
+            เรียนรู้ร่วมกัน สร้างเครือข่าย<br>
+            ระหว่างคนที่ชื่นชอบในเทคโนโลยี
+          </p>
         </div>
       </div>
     </div>
+    
+
 
     <!-- timeline -->
     <div style="font-family: 'IBM Plex Sans Thai Looped';" class="bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32"
