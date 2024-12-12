@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="title" content="barcamp songkhla">
+  <meta name="description"
+    content="It's common to refer to a barcamp as such. un-conference Basically, the main goal of a bar camp is to bring together people who love technology ">
+  <meta name="keywords"
+    content="barcamp, barcamp sonskhla, songkhla, barcamp9, barcampsk9, barcamp songkhla9, บาร์แคมป์, บาร์แคมป์สงขลา, บาร์แคมป์สงขลา9">
+  <meta name="robots" content="noindex, follow">
+  <title>Barcamp 9</title>
+  <link rel="icon" href="images/LogoNav.svg" type="image/svg" />
   <link href="./output.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.1.0/dist/simplebar.css" />
@@ -601,24 +608,15 @@
         transform: scale(1.3) translateY(-100px) rotate(360deg);
       }
     }
+
+    .rotate-30 {
+      transform: rotate(-30deg);
+      /* หมุน 30 องศา */
+    }
   </style>
 </head>
 
 <body>
-  <!-- <div class="navbar bg-base-100 sticky top-0 border-b-4 z-50 px-24">
-    <div class="flex-1">
-      <img src="./images/download.jpeg" alt="logo-barcamp9" class="w-14 h-14">
-      <a href="#" class="btn btn-ghost text-xl">BARCAMP SONGKHLA</a>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1 font-bold text-base">
-        <li><a href="#Home" class="hover:scale-150">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Timeline">Timeline</a></li>
-        <li><a href="#Gallery">Gallery</a></li>
-      </ul>
-    </div>
-  </div> -->
   <!-- #6ab6b4  ฟ้า 
     #6e6295 ม่วง 
     #fff4bd  ครีม -->
@@ -637,24 +635,24 @@
 
       <!-- โลโก้และข้อความ -->
       <div class="flex items-center order-2 md:order-1">
-        <img src="./images/download.jpeg" alt="Flowbite Logo" class="h-10 w-10">
-        <span class="text-xl font-bold ml-3 hidden sm:block" style="font-family: 'Kanit';">BARCAMP SONGKHLA</span>
+        <img src="./images/LogoNav.svg" alt="Flowbite Logo" class="h-16">
+        <span class="text-xl font-bold ml-3 hidden sm:block" style="font-family: 'Kanit';letter-spacing: 3px;">BARCAMP
+          SONGKHLA</span>
       </div>
 
       <!-- เมนูตัวเลือก -->
       <div id="menu"
         class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
-        style="max-height: 700px; z-index: 40; padding-top: 2.5rem; padding-bottom: 2rem;">
-        <ul class="flex flex-col md:flex-row md:space-x-6 text-sm lg:text-xl xl:text-2xl font-medium p-4 md:p-0"
-          style="font-family: 'Kanit';">
-          <li class="py-4 px-6"><a href="#"
-              class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Home</a></li>
-          <li class="py-4 px-6"><a href="#About"
-              class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">About</a></li>
-          <li class="py-4 px-6"><a href="#Timeline"
-              class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Timeline</a></li>
-          <li class="py-4 px-6"><a href="#Gallery"
-              class="transition-colors duration-300 !text-black text-lg lg:text-xl xl:text-2xl">Gallery</a></li>
+        style="z-index: 40; padding-top: 2rem; padding-bottom: 2rem;">
+        <ul class="flex flex-col md:flex-row md:space-x-6" style="font-family: 'Kanit';">
+          <li><a href="#" class="transition-colors duration-300 !text-black text-lg lg:text-xl font-bold">HOME</a></li>
+          <li><a href="#About" class="transition-colors duration-300 !text-black text-lg lg:text-xl font-bold">ABOUT</a>
+          </li>
+          <li><a href="#Timeline"
+              class="transition-colors duration-300 !text-black text-lg lg:text-xl font-bold">TIMELINE</a></li>
+          <li><a href="#Gallery"
+              class="transition-colors duration-300 !text-black text-lg lg:text-xl font-bold">GALLERY</a></li>
+
         </ul>
       </div>
     </div>
@@ -672,118 +670,124 @@
   <!-- <nav class="sm:hidden bg-[#85CBFC] h-14">
 
   </nav> -->
-  <main class="flex flex-col items-center gap-16">
-    <!-- bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32 -->
-    <!-- event -->
+  <main class="flex flex-col items-center gap-16 bg-[#DDF3FF]">
     <div
-      class="relative w-full h-screen min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] lg:max-h-[950px] xl:max-h-[1240px] flex flex-col justify-center items-center pb-20 bg-gradient-to-b from-[#ECF7FF] via-[#85CBFC] via-60% to-[#228ac0] to-80% overflow-hidden"
+      class="w-full h-screen min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] lg:max-h-[950px] xl:max-h-[1240px] flex flex-col justify-start pt-24 lg:pt-32  items-center   overflow-hidden"
       id="Home">
 
-      <div class="wrapper">
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-        <div><span class="dot"></span></div>
-      </div>
-      <div
-        class="absolute inset-0 bottom-16 md:bottom-16 xl:bottom-32 pt-36 flex flex-col justify-center items-center z-40 gap-[30px]">
-        <div class="h-7/12 w-4/5 sm:h-6/12 sm:w-3/5 md:6/12 md:3/5 xl:h-5/12 xl:w-2/5">
-          <img src="images/barcampsongkhla9_label1.png" alt="barcamp">
-          </img>
+      <!-- <div class="wrapper">
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+    </div> -->
+      <div class="flex flex-col justify-start items-center" style="font-family: 'Kanit';">
+        <div class="font-bold flex flex-col items-center gap-4 h-fit">
+          <div class="text-5xl">มาร่วมแลกเปลี่ยนไอเดียไปพร้อมกัน</div>
+          <div class="text-4xl">BARCAMP SONGKHLA 9</div>
         </div>
-        <div
-          class="flex justify-center flex-col items-center bg-white bg-opacity-70 px-4 py-2.5 md:px-8 md:py-8 rounded-3xl gap-4 md:gap-6">
-          <div class="text-sm sm:text-lg md:text-2xl lg:text-4xl flex flex-col items-center md:gap-4 "
-            style="font-family: 'Kanit';">
-            <div style="font-weight: bold; font-size: 2em; color: white; -webkit-text-stroke: 2px #6E6295;">
-              มาร่วมพูดคุยและ
-            </div>
 
-            <div style="font-size: 1.5em; text-align: center; color: white; -webkit-text-stroke: 2px #6E6295;">
-              แลกเปลี่ยนไอเดียไปพร้อมกัน
-            </div>
+        <div class="flex flex-row items-between gap-16 pt-12">
+          <!-- <div class="bg-[#706199] px-4 py-2.5 md:px-8 md:py-8 rounded-3xl border border-[3px] border-black">
+            <div class="h-64 w-64 text-sm sm:text-lg md:text-2xl lg:text-4xl flex flex-col items-center md:gap-4 "
+              style="font-family: 'Kanit';">
 
-          </div>
-          <div class="text-[10px] text-[#374C83] sm:text-base md:text-xl lg:text-xl flex flex-col items-center md:gap-1"
-            style="font-family: 'IBM Plex Sans Thai Looped';">
-            <div>
-              พื้นที่สำหรับทุกคนที่มี "ไอเดียที่อยากแชร์" ไม่ว่าจะเป็นเรื่องเทคโนโลยี
             </div>
-            <div>
-              ประสบการณ์เจ๋ง ๆ หรือความรู้ใหม่ ๆ ที่คุณอยากแบ่งปัน
+          </div> -->
+          <div class="flex flex-col items-center justify-center relative ">
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
+              style="font-family: 'Kanit';">Follow Us</div>
+            <div
+              class=" bg-[#978DB5] px-4 py-2.5 md:px-8 md:py-8 rounded-3xl border border-[3px] border-black overflow-hidden">
+
+              <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
+                style="font-family: 'Kanit';">
+                <div class=" text-sm lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
+                  <div class="flex flex-row items-start">
+                    <!-- <img src="images/LogoOL.svg" alt="fish" class="w-8"></img> -->
+                    <span class="text-3xl">📅</span>
+                    <p class="p-2">วันเสาร์ที่ 27 มกราคม 2567</p>
+
+                  </div>
+                  <div class="flex flex-row items-start">
+                    <span class="text-3xl">🗺️</span>
+                    <p class="p-2">ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+                  </div>
+                </div>
+              </div>
+              <img src="images/LogoOL.svg" alt="fish" class="absolute -left-16 -bottom-24 rotate-30 w-36"></img>
             </div>
           </div>
+
+          <div class="flex flex-col items-center justify-center relative ">
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
+              style="font-family: 'Kanit';">EVENT</div>
+            <div
+              class=" bg-[#FFF4BD] px-4 py-2.5 md:px-8 md:py-8 rounded-3xl border border-[3px] border-black overflow-hidden">
+
+              <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
+                style="font-family: 'Kanit';">
+                <div class=" text-sm lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
+                  <div class="flex flex-row items-start">
+                    <!-- <img src="images/LogoOL.svg" alt="fish" class="w-8"></img> -->
+                    <span class="text-3xl">📅</span>
+                    <p class="p-2">วันเสาร์ที่ 27 มกราคม 2567</p>
+
+                  </div>
+                  <div class="flex flex-row items-start">
+                    <span class="text-3xl">🗺️</span>
+                    <p class="p-2">ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
+                  </div>
+                </div>
+
+                <div class="flex justify-center item  ">
+                  <iframe class="w-full h-full  max-w-xs sm:max-w-md lg:max-w-2xl border rounded-lg shadow-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.025931690464!2d100.4960252!3d7.0062293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d29f53320558d%3A0x44bc2a2c81175fd9!2z4Lio4Li54LiZ4Lii4LmM4Lia4Lij4Li04LiB4Liy4Lij4Lin4Li04LiK4Liy4LiB4Liy4LijIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4quC4h-C4guC4peC4suC4meC4hOC4o-C4tOC4meC4l-C4o-C5jA!5e0!3m2!1sth!2sth!4v1733348193726!5m2!1sth!2sth"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+              <img src="images/LogoOL.svg" alt="fish" class="absolute -left-16 -bottom-24 rotate-30 w-36"></img>
+            </div>
+          </div>
+
         </div>
-        <div
-          class="inset-x-0  flex flex-col sm:flex-row sm:bottom-24 text-white gap-4 justify-center items-center z-40 font-medium"
-          style="font-family: 'Kanit';">
-          <a href="https://linktr.ee/barcampsk" target="_blank" rel="noopener noreferrer"
-            class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-4 text-sm lg:text-base xl:text-lg rounded-2xl bg-[#2F6AA4] bg-opacity-70 border-4 flex justify-center ">
-            ช่องทางการติดตาม
-          </a>
-          <!-- <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
-            class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-6 text-sm lg:text-lg xl:text-xl rounded-lg bg-[#6E6295] border-2 flex justify-center">
-            ร่วมเป็นส่วนสำคัญของงาน
-          </a> -->
-          <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
-            class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-4 text-sm lg:text-base xl:text-lg rounded-2xl bg-[#362F62] bg-opacity-70 border-4 flex justify-center">
-            ร่วมสนับสนุน
-          </a>
-        </div>
+        <!-- <div
+        class="inset-x-0  flex flex-col sm:flex-row sm:bottom-24 text-white gap-4 justify-center items-center z-40 font-medium" style="font-family: 'Kanit';">
+        <a href="https://linktr.ee/barcampsk" target="_blank" rel="noopener noreferrer"
+          class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-4 text-sm lg:text-base xl:text-lg rounded-2xl bg-[#2F6AA4] bg-opacity-70 border-4 flex justify-center ">
+          ช่องทางการติดตาม
+        </a>
+        <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
+          class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-6 text-sm lg:text-lg xl:text-xl rounded-lg bg-[#6E6295] border-2 flex justify-center">
+          ร่วมเป็นส่วนสำคัญของงาน
+        </a>
+        <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
+          class="px-2 py-4 w-48 lg:w-64 xl:w-72 xl:py-4 text-sm lg:text-base xl:text-lg rounded-2xl bg-[#362F62] bg-opacity-70 border-4 flex justify-center">
+          ร่วมสนับสนุน
+        </a>
+      </div> -->
       </div>
       <!-- <div class="absolute -bottom-12 h-[100px] w-full bg-gradient-to-b from-[#228ac0] to-white z-30">
-      </div> -->
-      <div class="absolute inset-0 -bottom-36 flex flex-col justify-center items-center">
-        <div class="h-7/12 w-4/5">
-          <img src="images/moon.png" alt="moon" class=""></img>
-        </div>
-        <img src="images/new-sea-wave.png" alt="sae-wave"
-          class="absolute bottom-64 sm:bottom-48 md:bottom-32 lg:bottom-24 xl:bottom-16 2xl:-bottom-16 "></img>
-      </div>
-    </div>
-
-    <div class="lg:mx-8 xl:mx-36 bg-white pb-16 min-[0px]:mx-10 border-b-2 w-3/4 py-4 gap-4 flex flex-col items-center">
-      <div class="text-3xl font-bold text-gray-900 py-4 lg:text-left flex justify-center "
-        style="font-family: 'Kanit';">
-        เวลาและสถานที่
-      </div>
-
-      <div class="grid items-center justify-center lg:items-start lg:justify-center py-4 border-t-2 w-full ">
-        <div class="p-6 text-lg lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
-          <div class="flex flex-row items-center">
-            <img src="images/download.jpeg" alt="fish" class="w-16"></img>
-            <p>วันเสาร์ที่ 27 มกราคม 2567</p>
-
-          </div>
-          <div class="flex flex-row items-center">
-            <img src="images/download.jpeg" alt="fish" class="w-16"></img>
-            <p>ณ อาคารศูนย์ทรัพยากรการเรียนรู้ฯ (LRC) มหาวิทยาลัยสงขลานครินทร์ ชั้น 8</p>
-          </div>
-        </div>
-
-        <div class="flex justify-center item ">
-          <iframe
-            class="w-full max-w-xs sm:max-w-md lg:max-w-2xl h-[300px] sm:h-[400px] lg:h-[500px] border rounded-lg shadow-lg"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.025931690464!2d100.4960252!3d7.0062293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d29f53320558d%3A0x44bc2a2c81175fd9!2z4Lio4Li54LiZ4Lii4LmM4Lia4Lij4Li04LiB4Liy4Lij4Lin4Li04LiK4Liy4LiB4Liy4LijIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4quC4h-C4guC4peC4suC4meC4hOC4o-C4tOC4meC4l-C4o-C5jA!5e0!3m2!1sth!2sth!4v1733348193726!5m2!1sth!2sth"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
+    </div> -->
     </div>
 
     <!-- sponsor -->
-    <div class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center" style="background-image: url('images/nsw.png');">
+    <div class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center"
+      style="background-image: url('images/nsw.png');">
       <div class="grid">
         <!-- Section for "ผู้สนับสนุน" -->
         <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
@@ -795,30 +799,30 @@
 
 
 
-        <div class="flex flex-wrap gap-5 items-center justify-center">
-          <div class="sm:hidden block">
-            <marquee>
-              <div class="flex gap-4">
-                <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
-                  class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-                <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
-                <img src="images/import-star.png" alt="Tech Icon"
-                  class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-                <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
-              </div>
-            </marquee>
-          </div>
-
-          <div class="hidden sm:flex flex-wrap gap-10 items-center justify-center">
-            <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
-              class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-            <img src="images/import-star.png" alt="Tech Icon"
-              class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-          </div>
-
-
+      <div class="flex flex-wrap gap-5 items-center justify-center">
+        <div class="sm:hidden block">
+          <marquee>
+            <div class="flex gap-4">
+              <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
+                class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+              <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
+              <img src="images/import-star.png" alt="Tech Icon"
+                class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+              <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
+            </div>
+          </marquee>
         </div>
+
+        <div class="hidden sm:flex flex-wrap gap-10 items-center justify-center">
+          <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
+            class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+          <img src="images/import-star.png" alt="Tech Icon"
+            class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+        </div>
+
+
       </div>
+    </div>
     </div>
 
     <style>
@@ -900,7 +904,7 @@
           และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
         </p>
       </div>
-    
+
       <!-- Bottom Section -->
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1 -->
@@ -913,7 +917,7 @@
             บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
           </p>
         </div>
-    
+
         <!-- Card 2 -->
         <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
           <div class="flex items-center mb-4">
@@ -925,7 +929,7 @@
             และแบ่งปันความรู้
           </p>
         </div>
-    
+
         <!-- Card 3 -->
         <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
           <div class="flex items-center mb-4">
@@ -939,7 +943,7 @@
         </div>
       </div>
     </div>
-    
+
 
 
     <!-- timeline -->
@@ -1051,15 +1055,14 @@
       <h2 class="gallery-title text-left" style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 48px;">
         Gallery
       </h2>
-    
+
       <div class="gallery-container">
         <div class="left" style="position: relative;">
-          <img src="images/images69.png"
-               style=" max-width: 150%; height: auto; z-index: 2;">
+          <img src="images/images69.png" style=" max-width: 150%; height: auto; z-index: 2;">
         </div>
-        
-        
-        
+
+
+
         <div class="right">
           <div class="gallery-wrapper">
             <div data-simplebar class="horizontal-gallery-container">
@@ -1071,7 +1074,7 @@
           </div>
         </div>
       </div>
-    
+
       <!-- เริ่มต้นส่วนที่ต้องการพื้นหลังสีน้ำตาล -->
       <div class="background-brown" style="background-color: #D9AD65; width: 100vw ;padding-bottom: 50px;">
         <div class="flex items-center justify-center w-full mt-8">
@@ -1089,7 +1092,7 @@
               Gallery Room
             </h2>
           </div>
-    
+
           <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
             <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
               class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
@@ -1101,7 +1104,7 @@
             </a>
           </div>
         </div>
-    
+
         <!-- ปุ่มใหม่ (สำหรับหน้าจอเล็ก) -->
         <div class="flex items-center justify-center mt-8 md:hidden new-button">
           <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
@@ -1110,7 +1113,7 @@
         </div>
       </div>
     </div>
-    
+
   </main>
   <footer class="flex flex- items-center justify-between border-t-4 border-t-slate-500 h-24 p-4 lg:px-24">
     <div class="flex">
