@@ -340,13 +340,13 @@
       from {
         opacity: 0;
         transform: scale(0.8);
-        transform: translateX(200px);
+        transform: translateY(200px);
       }
 
       to {
         opacity: 1;
         transform: scale(1);
-        transform: translateX(0);
+        transform: translateY(0);
       }
     }
 
@@ -728,10 +728,10 @@
           </div> -->
           <div class="flex flex-col items-center justify-center relative ">
             <div
-              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center  p-2 font-bold text-xl text-white"
               style="font-family: 'Kanit';">FOLLOW US</div>
             <div
-              class=" bg-gradient-to-b from-20% from-[#6f6292] to-[#374C83]  px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
+              class=" bg-gradient-to-b from-20% from-[#6f6292] to-[#374C83]  px-8 py-2.5 md:py-10 rounded-3xl border-2 border-black overflow-hidden">
 
               <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
@@ -755,10 +755,10 @@
 
           <div class="flex flex-col items-center justify-center relative ">
             <div
-              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center w-fit p-2 font-bold text-xl text-white"
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-black rounded-full flex justify-center items-center  p-2 font-bold text-xl text-white"
               style="font-family: 'Kanit';">EVENT</div>
             <div
-              class=" bg-gradient-to-b from-20% from-[#FFF4BD] to-[#ffffff] px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
+              class=" bg-gradient-to-b from-20% from-[#FFF4BD] to-[#ffffff] px-8 py-2.5 md:py-10 rounded-3xl  border-2 border-black overflow-hidden">
 
               <div class="h-64 w-64 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
@@ -970,103 +970,102 @@
 
 
     <!-- timeline -->
-    <div style="font-family: 'IBM Plex Sans Thai Looped';" class="bg-gradient-to-b text-white py-10 lg:mx-8 xl:mx-32"
+    <div style="font-family: 'IBM Plex Sans Thai Looped';" class="bg-[#218AC1] text-white pb-10 lg:mx-8 xl:mx-32 border-[3px] border-black"
       id="Timeline">
-      <div class="flex-auto lg:flex flex-wrap items-start max">
+      <div class="grid lg:flex flex-wrap items-start max">
         <div style="font-family: 'Kanit'"
-          class="flex-2 hover:scale-105 transition duration-300 ease-in-out text-3xl sm:text-4xl lg:text-5xl lg:sticky lg:top-[300px] text-center text-black shadow-lg xl:rounded-l-3xl min-[1024px]:font-extrabold min-[0px]:font-medium min-[1024px]:p-5 min-[0px]:p-0 bg-[#BBDDF5] md:mb-10 md:self-end lg:self-start min-[0px]:mb-8 lg:mb-0 min-[1024px]:ml-4">
-          Timeline
+          class="bg-cover w-full h-full bg-fixed bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl lg:text-8xl text-white font-bold min-[1024px]:px-10 min-[0px]:p-0  md:mb-10  text-start border-4 border-l-0 border-r-0">
+          TIMELINE
         </div>
 
         <div
-          class="flex-1 lg:border-l-[16px] lg:border-l-[#6E6295] sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-4 sm:border-l-0">
-          <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            <li>
+          class="sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-4 sm:border-l-0 mt-4">
+          <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
+            <li class="">
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="h-5 w-5 text-[#FFD700]">
+                  class="h-10 w-10 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
               <div
-                class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF4BD] text-black p-4">
+                class="rounded-3xl xl:mx-20 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black lg:p-6 min-[0px]:p-4">
                 <time class="font-mono italic text-blue-500">In 2005</time>
-                <div class="text-lg font-black text-blue-700">First time of Barcamp</div>
-                <div class="border-b-4 border-blue-400 p-2 mt-2 text-start">
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700" >First time of Barcamp</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'" class="border-b-4 border-blue-400 p-2 mt-2 text-start">
                   บาร์แคมป์จัดขึ้นครั้งแรกเมื่อ พ.ศ. 2548 ที่เมืองพาโลอัลโต
                   สหรัฐอเมริกา ได้
                   รับความนิยมจนมีการจัดบาร์แคมป์กระจายไปตามเมืองต่างๆ
                   ทั่วโลกอย่าง รวดเร็ว
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
             </li>
-            <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+            <li class="">
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="h-5 w-5 text-[#FFD700]">
+                  class="h-10 w-10 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
               <div
-                class="linetime timeline-end mb-[4px] hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF4BD] text-black p-4">
+                class="rounded-3xl xl:mx-20 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
                 <time class="font-mono italic text-blue-500">January 26th, 2008</time>
-                <div class="text-lg font-black text-blue-700">Barcamp in Thailand</div>
-                <div class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Thailand</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'" class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
                   บาร์แคมป์ได้จัดขึ้นครั้งแรกเมื่อวันที่ 26 มกราคม
                   พ.ศ. 2551 ที่กรุงเทพมหานคร
                   จากนั้นได้มีผู้สนใจจัดงานตามจังหวัดต่างๆ ได้แก่ เชียงใหม่
                   สงขลา และ ภูเก็ต
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
             </li>
-            <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+            <li class="">
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="h-5 w-5 text-[#FFD700]">
+                  class="h-10 w-10 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
               <div
-                class="linetime timeline-start mb-10 md:text-end hover:scale-105 transition duration-300 ease-in-out shadow-lg rounded-xl bg-[#FFF4BD] text-black p-4">
-                <time class="font-mono italic text-blue-500">Jun 28th, 2008</time>
-                <div class="text-lg font-black text-blue-700">Barcamp in Songkhla</div>
-                <div class="border-b-4 border-blue-400 p-2 mt-2 text-start">
+              class="rounded-3xl xl:mx-20 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
+              <time class="font-mono italic text-blue-500">Jun 28th, 2008</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Songkhla</div>
+                <div  style="font-family: 'IBM Plex Sans Thai Looped'" class="border-b-4 border-blue-400 p-2 mt-2 text-start">
                   สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ
                   ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
             </li>
-            <li>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
+            <li class="min-">
+              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="h-5 w-5 text-[#FFD700]">
+                  class="h-10 w-10 text-[#FFD700]">
                   <path fill-rule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                     clip-rule="evenodd" />
                 </svg>
               </div>
               <div
-                class="linetime timeline-end mb-10 hover:scale-105 transition duration-300 ease-in-ou shadow-lg rounded-xl bg-[#FFF4BD] text-black p-4">
-                <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
-                <div class="text-lg font-black text-blue-700">Coming soon</div>
-                <div class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
+              class="rounded-3xl xl:mx-20 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
+              <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Coming soon</div>
+                <div  style="font-family: 'IBM Plex Sans Thai Looped'" class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
                   บาร์แคมป์ได้ดำเนินมาถึงครั้งที่ 9 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
                   มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
-              <hr class="bg-[#6E6295]" style="width: 12px;" />
             </li>
           </ul>
         </div>
