@@ -54,12 +54,14 @@
       align-items: center;
       /* จัดให้อยู่ตรงกลางในแนวนอน */
       padding: 20px;
+      
       text-align: left;
     }
 
     .right {
       margin-right: 30px;
       flex: 1;
+      flex: 1.8;
       text-align: right;
 
     }
@@ -72,15 +74,23 @@
       }
 
       .left,
-      .right {
-        flex: none;
+      .left{
+        flex: none  ;
         /* ปิดการยืดขนาด */
-        width: 100%;
+        width: 50%;
         /* ให้แต่ละ div ขยายเต็มหน้าจอ */
         margin-right: 0;
         /* เอาระยะห่างออกในกรณีที่เป็นแนวตั้ง */
       }
-    }
+
+      .right {
+        flex: none;
+        /* ปิดการยืดขนาด */
+        width: 100%;
+        width: 90%;
+        /* ให้แต่ละ div ขยายเต็มหน้าจอ */
+        margin-right: 0;
+      }}
 
 
     .cool-button {
