@@ -184,11 +184,11 @@
       /* ทำให้การเปลี่ยนแปลงราบรื่น */
       padding-top: 4rem;
       margin-bottom: 30px;
-      margin-left: 30px;
-      margin-right: 30px;
+      /* margin-left: 30px;
+      margin-right: 30px; */
       border: 3px solid #000000;
-      width: calc(100% - 60px);
-      max-width: 1700px;
+      width: calc(100%);
+      max-width: 100%;
 
       /* เพิ่ม border สีดำขนาด 3px */
       /* ขอบโค้งมน */
@@ -692,7 +692,7 @@
   </nav>
 
 
-  <main class="flex flex-col items-center gap-16 bg-[#DDF3FF]">
+  <main class="flex flex-col items-center w-full gap-16 px-8 bg-[#DDF3FF]">
     <div
       class="w-full h-screen min-h-screen sm:min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] md:max-h-[800px] flex flex-col justify-start sm:justify-center md:justify-start pt-16 md:pt-24 lg:pt-32  items-center   overflow-hidden"
       id="Home">
@@ -732,7 +732,7 @@
             <div
               class="absolute -top-2.5 sm:-top-2 md:-top-4 left-1/2 transform -translate-x-1/2  bg-black rounded-full flex justify-center items-center w-fit px-6 font-bold text-sm md:text-xl 2xl:text-3xl text-white"
               style="font-family: 'Kanit';">FOLLOW US</div>
-            <div class=" bg-[#BEB1E0]  px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
+            <div class=" bg-[#BEB1E0]  px-8 py-2.5 md:py-10 rounded-3xl  border-2 border-black overflow-hidden">
               <div
                 class="h-56 w-56 md:h-64 md:w-64 2xl:h-96 2xl:w-96 text-sm sm:text-lg md:text-base lg:text-base flex flex-col justify-center md:justify-start items-center md:gap-4 "
                 style="font-family: 'Kanit';">
@@ -782,7 +782,7 @@
               class="absolute -top-2.5 sm:-top-2 md:-top-4 left-1/2 transform -translate-x-1/2  bg-[#374C83] rounded-full flex justify-center items-center w-fit px-6 font-bold text-sm md:text-xl 2xl:text-3xl text-white"
               style="font-family: 'Kanit';">EVENT</div>
             <div
-              class=" bg-[#fff4bd] px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-[#374C83] overflow-hidden">
+              class=" bg-[#fff4bd] px-8 py-2.5 md:py-10 rounded-3xl  border-2 border-[#374C83] overflow-hidden">
               <div
                 class="h-76 w-56 md:h-64 md:w-64 2xl:h-96 2xl:w-96 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
@@ -818,8 +818,7 @@
     </div>
 
     <!-- sponsor -->
-    <div class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center"
-      style="background-image: url('images/nsw.png');">
+    <div class=" w-full bg-auto	bg-no-repeat bg-center bg-[url('/images/nsw.png')]">
       <div class="grid">
         <!-- Section for "ผู้สนับสนุน" -->
         <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
@@ -921,54 +920,56 @@
     </style>
 
 
-    <div class="bg-blue-600 py-12 px-8 sm:px-16 lg:px-32 text-white">
+    <div class="bg-blue-600  w-full p-4 lg:px-16 text-white">
       <!-- Top Section -->
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <!-- Left: Title -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="font-family: 'Kanit';">
-          <span class="text-lg sm:text-xl lg:text-2xl">WHAT IS</span><br>
-          BARCAMP SONGKHLA?
+        <h1 class="lg:text-8xl sm:text-6xl font-bold" style="font-family: 'Kanit';">
+          <span class="text-3xl">WHAT IS</span><br>
+          <div class="lg:text-8xl text-5xl ">
+            <p>BARCAMP </p>
+            <p>SONGKHLA? </p>
+          </div>
         </h1>
         <!-- Right: Description -->
-        <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg">
-          เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน<br>
-          จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่<br>
+          <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg ">
+          เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน
+          จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่
           และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
         </p>
       </div>
 
       <!-- Bottom Section -->
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-white">
         <!-- Card 1 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
-          <div class="flex items-center mb-4">
-            <img src="/images/Group 17.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+        <div class="bg-[#7E5C54] p-6 shadow-lg border-[10px]">
+          <div class="flex items-center mb-4 h-[100px]">
+            <img src="/images/people.png" alt="Icon">
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
-            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
-          </p>
+          <div class="text-sm sm:text-base">
+            <h2 class="text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+              บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
+          </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
+        <div class="bg-[#7E5C54] p-6 shadow-lg border-[10px]">
           <div class="flex items-center mb-4">
-            <img src="/images/Group 16.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+            <img src="/images/connect_without_contact_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1 (1).png" alt="Icon">
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
-            แลกเปลี่ยนความคิดเห็น<br>
-            และแบ่งปันความรู้
+          <p class="text-sm sm:text-base">
+            <h2 class="text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+            แลกเปลี่ยนความคิดเห็น และแบ่งปันความรู้
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
+        <div class="bg-[#7E5C54] p-6 shadow-lg border-[10px]">
           <div class="flex items-center mb-4">
-            <img src="/images/Group 18.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
+            <img src="/images/terminal_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1.png" alt="Icon">
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
+          <p class="text-sm sm:text-base">
+            <h2 class="text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
             เรียนรู้ร่วมกัน สร้างเครือข่าย<br>
             ระหว่างคนที่ชื่นชอบในเทคโนโลยี
           </p>
@@ -980,14 +981,14 @@
 
     <!-- timeline -->
     <div style="font-family: 'IBM Plex Sans Thai Looped';"
-      class="bg-[#218AC1] text-white pb-10 lg:mx-8 xl:mx-32 border-[3px] border-black" id="Timeline">
+      class="bg-[#218AC1] text-white pb-10  border-[3px] border-black" id="Timeline">
       <div class="grid lg:flex flex-wrap items-start max">
         <div style="font-family: 'Kanit'"
-          class="bg-cover w-full h-full bg-fixed bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl lg:text-8xl text-white font-bold min-[1024px]:px-10 min-[0px]:p-0  md:mb-10  text-start border-4 border-l-0 border-r-0">
+          class="bg-cover w-full h-full bg-fixed bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl lg:text-8xl text-white font-bold min-[1024px]:px-16 min-[0px]:p-0  md:mb-10 min-[0px]:text-center md:text-start border-4 border-l-0 border-r-0">
           TIMELINE
         </div>
 
-        <div class="sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-4 sm:border-l-0 mt-4">
+        <div class="sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-0 sm:border-l-0 mt-4">
           <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
             <li class="">
               <div class="timeline-middle">
@@ -1010,10 +1011,10 @@
                   ทั่วโลกอย่าง รวดเร็ว
                 </div>
               </div>
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD] " style="width: 14px;" />
             </li>
             <li class="">
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 14px;"/>
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-10 w-10 text-[#FFD700]">
@@ -1034,10 +1035,10 @@
                   สงขลา และ ภูเก็ต
                 </div>
               </div>
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
             </li>
             <li class="">
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-10 w-10 text-[#FFD700]">
@@ -1056,10 +1057,10 @@
                   ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
                 </div>
               </div>
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
             </li>
             <li class="min-">
-              <hr class="bg-[#FFF4BD]" style="width: 27px;" />
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
               <div class="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                   class="h-10 w-10 text-[#FFD700]">
