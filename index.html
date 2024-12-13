@@ -818,44 +818,80 @@
     </div>
 
     <!-- sponsor -->
-    <div class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center"
-      style="background-image: url('images/nsw.png');">
-      <div class="grid">
-        <!-- Section for "ผู้สนับสนุน" -->
-        <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
-          <div class="supporter w-full text-center" style="font-family: 'Kanit';">
-            ผู้สนับสนุน
+    <div  class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center"
+          style="background-image: url('images/nsw.png'); background-size: 100%; background-position: right 5%; overflow: hidden;" id="sponsor-frame">
+        <style>
+          #sponsor-frame {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #000000;
+            width: calc(100% - 60px);
+            max-width: 1700px;
+            padding: 100px ; /* เพิ่ม padding ด้านบนและล่าง */
+            margin: 20px 0; /* เพิ่ม margin ด้านบนและล่าง */
+            background-color: rgba(33, 138, 193, 0.8); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+        
+          .supporter {
+            font-size: 2rem; /* ขนาดตัวอักษรที่ชัดเจน */
+            font-weight: bold; /* เน้นให้เด่นขึ้น */
+            margin-bottom: 16px; /* ระยะห่างด้านล่าง */
+            color: #ffffff; /* สีตัวอักษร */
+          }
+        
+          #About img {
+            transition: transform 0.3s, box-shadow 0.3s; /* เพิ่มเอฟเฟกต์เมื่อโฮเวอร์ */
+          }
+        
+          #About img:hover {
+            transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อโฮเวอร์ */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเมื่อโฮเวอร์ */
+          }
+        
+        </style>
+        
+        <div class="grid">
+          <!-- Section for "ผู้สนับสนุน" -->
+          <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
+            <div class="w-full text-center text-black" style="font-family: 'IBM Plex Sans Thai Looped'; font-size: 5rem; font-weight: bold;">
+              <h1>ผู้สนับสนุน</h1>
+            </div>            
           </div>
         </div>
-      </div>
-
-
-
-      <div class="flex flex-wrap gap-5 items-center justify-center" id="About">
-        <div class="sm:hidden block">
-          <marquee>
-            <div class="flex gap-4">
-              <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
-                class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-              <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
-              <img src="images/import-star.png" alt="Tech Icon"
-                class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-              <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
+      
+        <div class="flex flex-wrap gap-5 items-center justify-center" id="About">
+          <div class="sm:hidden block">
+            <marquee>
+              <div class="flex gap-4">
+                <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="PaOCLOUD Logo"
+                     class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+                <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
+                <img src="images/import-star.png" alt="Import Star Logo"
+                     class="w-[200px] h-[120px] object-contain rounded-lg shadow-md">
+                <div class="bg-white-500 min-w-[50px] h-[90px] flex items-center justify-center"></div>
+              </div>
+            </marquee>
+          </div>
+      
+          <div class="bg-[#FFF4BD] p-8 rounded-xl shadow-lg sm:flex flex-wrap gap-8 items-center justify-center">
+            <!-- โลโก้ PaOCLOUD -->
+            <div class="flex flex-col items-center">
+              <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="PaOCLOUD Logo"
+                   class="w-[220px] h-[150px] object-contain rounded-xl shadow-md border-2 border-blue-200 bg-[#706199]">
+              <p class="mt-2 text-sm text-gray-600">PaOCLOUD</p>
             </div>
-          </marquee>
+            <!-- โลโก้ Import Star -->
+            <div class="flex flex-col items-center">
+              <img src="images/import-star.png" alt="Import Star Logo"
+                   class="w-[220px] h-[150px] object-contain rounded-xl shadow-md border-2 border-blue-200 bg-[#706199]">
+              <p class="mt-2 text-sm text-gray-600">Import Star</p>
+            </div>
+          </div>
+          
         </div>
-
-        <div class="hidden sm:flex flex-wrap gap-10 items-center justify-center">
-          <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="Tech Icon"
-            class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-          <img src="images/import-star.png" alt="Tech Icon"
-            class="bg-white w-[200px] h-[120px] object-contain rounded-lg shadow-md">
-        </div>
-
-
       </div>
-    </div>
-    </div>
+
 
     <style>
       .supporter {
@@ -921,57 +957,95 @@
     </style>
 
 
-    <div class="bg-blue-600 py-12 px-8 sm:px-16 lg:px-32 text-white">
+    <div class="text-white" id="about-frame">
+      <style>
+        #about-frame {
+          display: flex;
+          flex-direction: column;
+          background: #218AC1;
+          border: 3px solid #000000;
+          width: calc(100% - 60px);
+          max-width: 1700px;
+          padding: 20px; /* เพิ่ม padding เพื่อเว้นระยะขอบ */
+          gap: 40px; /* ระยะห่างระหว่าง section */
+          
+
+        }
+      </style>
       <!-- Top Section -->
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <!-- Left: Title -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="font-family: 'Kanit';">
+        <h1 class="text-3xl sm:text-4xl lg:text-7xl font-bold" style="font-family: 'IBM Plex Sans Thai Looped';">
           <span class="text-lg sm:text-xl lg:text-2xl">WHAT IS</span><br>
-          BARCAMP SONGKHLA?
+          BARCAMP<br>
+          SONGKHLA?
         </h1>
         <!-- Right: Description -->
-        <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg">
+        <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-2xl w-lg" style="font-family: 'IBM Plex Sans Thai Looped'; line-height: 1.8;">
           เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน<br>
           จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่<br>
           และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
         </p>
       </div>
-
+    
       <!-- Bottom Section -->
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="text-white grid gap-8 sm:grid-cols-2 lg:grid-cols-3" style="font-family: 'IBM Plex Sans Thai Looped';">
+        <style>
+          #card3 {
+            background: #653023;
+            padding: 50px; /* เพิ่มระยะขอบในการ์ดภายใน */
+            margin: 8px; /* เพิ่มระยะขอบภายใน */
+          }
+          #bigcard {
+            background: #FFF4BD;
+            padding: 0px; /* เพิ่มระยะขอบในการ์ดใหญ่ */
+            
+          }
+          
+        </style>
         <!-- Card 1 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
-          <div class="flex items-center mb-4">
-            <img src="/images/Group 17.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+        <div class="bg-white p-6 shadow-lg border"id="bigcard" >
+          <!-- Inner Frame -->
+          <div class="bg-#653023 border border-gray-300 p-4"id="card3">
+            <div class="flex items-center mb-4">
+              <img src="/images/Group 17.png" alt="Icon" class="w-12 h-12">
+              <h2 class="ml-4 text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+            </div>
+            <p class="text-sm sm:text-xl">
+              บรรยากาศที่ไม่เป็นทางการ<br>
+              และผ่อนคลาย
+            </p>
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
-            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
-          </p>
         </div>
-
+    
         <!-- Card 2 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
-          <div class="flex items-center mb-4">
-            <img src="/images/Group 16.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+        <div class="bg-white p-6 shadow-lg border"id="bigcard">
+          <!-- Inner Frame -->
+          <div class="bg-#653023 border border-gray-300 p-4"id="card3">
+            <div class="flex items-center mb-4">
+              <img src="/images/Group 16.png" alt="Icon" class="w-12 h-12">
+              <h2 class="ml-4 text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+            </div>
+            <p class="text-sm sm:text-xl">
+              แลกเปลี่ยนความคิดเห็น<br>
+              และแบ่งปันความรู้
+            </p>
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
-            แลกเปลี่ยนความคิดเห็น<br>
-            และแบ่งปันความรู้
-          </p>
         </div>
-
+    
         <!-- Card 3 -->
-        <div class="bg-white text-black rounded-xl p-6 shadow-lg border">
-          <div class="flex items-center mb-4">
-            <img src="/images/Group 18.png" alt="Icon" class="w-12 h-12">
-            <h2 class="ml-4 text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
+        <div class="bg-white p-6 shadow-lg border"id="bigcard">
+          <!-- Inner Frame -->
+          <div class="bg-#653023 border border-gray-300 p-4"id="card3">
+            <div class="flex items-center mb-4">
+              <img src="/images/Group 18.png" alt="Icon" class="w-12 h-12">
+              <h2 class="ml-4 text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
+            </div>
+            <p class="text-sm sm:text-xl">
+              ร่วมกันสร้างเครือข่าย<br>
+              คนที่ชื่นชอบในเทคโนโลยี
+            </p>
           </div>
-          <p class="text-sm sm:text-base text-gray-600">
-            เรียนรู้ร่วมกัน สร้างเครือข่าย<br>
-            ระหว่างคนที่ชื่นชอบในเทคโนโลยี
-          </p>
         </div>
       </div>
     </div>
