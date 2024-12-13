@@ -67,7 +67,7 @@
     }
 
     /* เพิ่ม Media Query สำหรับหน้าจอที่มีความกว้างต่ำกว่า 1024px */
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1087px) {
       .gallery-container {
         flex-direction: column;
         /* เปลี่ยนการเรียงให้เป็นแนวตั้ง */
@@ -1074,12 +1074,13 @@
     <div id="Gallery">
       <div style="position: relative; display: inline-block;">
         <img src="images/fish2.png"
-          style="position: absolute; top: -10px; left: 0; width: 300px; height: 100%; z-index: 0;">
+             style="position: absolute; top: -10px; left: -10px; width: auto; height: 100%; max-width: none; z-index: 0;">
         <h2 class="gallery-title text-left"
-          style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
+            style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
           Gallery
         </h2>
       </div>
+      
 
 
 
