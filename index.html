@@ -818,8 +818,28 @@
     </div>
 
     <!-- sponsor -->
-    <div  class="lg:mx-20 xl:mx-64 pb-32 min-[0px]:mx-20 max-w-[1200px] w-full bg-cover bg-center"
-          style="background-image: url('images/nsw.png'); background-size: 100%; background-position: right 5%; overflow: hidden;" id="sponsor-frame">
+    <div 
+    id="sponsor-frame" 
+    class="w-full" 
+    style="
+      background-image: url('images/nsw.png'); 
+      background-size: cover; 
+      background-position: right; 
+      overflow: hidden; 
+      height: 600px;
+  
+      @media (max-width: 640px) {
+        background-size: contain; 
+        background-position: center; 
+        height: 300px;
+      }
+      
+      @media (max-width: 768px) {
+      background-size: cover;
+      background-position: center; 
+      height: 400px;
+    }
+    ">
         <style>
           #sponsor-frame {
             display: flex;
@@ -854,9 +874,10 @@
         <div class="grid">
           <!-- Section for "ผู้สนับสนุน" -->
           <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
-            <div class="w-full text-center text-black" style="font-family: 'IBM Plex Sans Thai Looped'; font-size: 5rem; font-weight: bold;">
-              <h1>ผู้สนับสนุน</h1>
-            </div>            
+            <div class="w-full text-center text-black flex items-center justify-center p-4 sm:p-8 whitespace-nowrap"
+              style="font-family: 'IBM Plex Sans Thai Looped';">
+              <h1 class="text-3xl sm:text-5xl font-bold">ผู้สนับสนุน</h1>
+            </div>
           </div>
         </div>
       
@@ -874,20 +895,19 @@
             </marquee>
           </div>
       
-          <div class="bg-[#FFF4BD] p-8 rounded-xl shadow-lg sm:flex flex-wrap gap-8 items-center justify-center">
+          <div class="bg-[#FFF4BD] p-8 rounded-xl shadow-lg sm:flex flex-wrap gap-8 items-center justify-center hidden sm:block">
             <!-- โลโก้ PaOCLOUD -->
             <div class="flex flex-col items-center">
               <img src="images/PaOCLOUD-Logo-v5-White-FB-Profile-2.png" alt="PaOCLOUD Logo"
                    class="w-[220px] h-[150px] object-contain rounded-xl shadow-md border-2 border-blue-200 bg-[#706199]">
-              <p class="mt-2 text-sm text-gray-600">PaOCLOUD</p>
             </div>
             <!-- โลโก้ Import Star -->
             <div class="flex flex-col items-center">
               <img src="images/import-star.png" alt="Import Star Logo"
                    class="w-[220px] h-[150px] object-contain rounded-xl shadow-md border-2 border-blue-200 bg-[#706199]">
-              <p class="mt-2 text-sm text-gray-600">Import Star</p>
             </div>
           </div>
+          
           
         </div>
       </div>
