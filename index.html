@@ -171,7 +171,17 @@
       }
     }
 
+    #Sponser {
+      border: 2px solid #000000;
+      width: calc(100%);
+      max-width: 100%;
+    }
 
+    #Timeline {
+      border: 2px solid #000000;
+      width: calc(100%);
+      max-width: 100%;
+    }
 
     #Gallery {
       display: flex;
@@ -186,7 +196,7 @@
       margin-bottom: 30px;
       /* margin-left: 30px;
       margin-right: 30px; */
-      border: 3px solid #000000;
+      border: 2px solid #000000;
       width: calc(100%);
       max-width: 100%;
 
@@ -418,6 +428,9 @@
       #About {
         flex-direction: column;
         gap: 4rem;
+        border: 2px solid #000000;
+        width: calc(100%);
+        max-width: 100%;
       }
 
       .card h1 {
@@ -673,7 +686,7 @@
 
       <!-- เมนูตัวเลือก -->
       <div id="menu"
-        class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-50"
+        class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-70"
         style="z-index: 40; padding-top: 2rem; padding-bottom: 2rem;">
         <ul class="flex flex-col md:flex-row md:space-x-6" style="font-family: 'Kanit';">
           <li><a href="#" class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">HOME</a>
@@ -721,7 +734,7 @@
           <div class="text-base sm:text-3xl md:text-4xl">BARCAMP SONGKHLA 9</div>
         </div>
 
-        <div class="flex flex-col gap-6 sm:flex-row items-between sm:gap-6 md:gap-16 pt-4 md:pt-12">
+        <div class="flex flex-col gap-6 sm:flex-row items-between sm:gap-6 md:gap-16 pt-12">
           <div class="flex flex-col items-center justify-center relative ">
             <div
               class="absolute -top-2.5 sm:-top-2 md:-top-4 left-1/2 transform -translate-x-1/2  bg-black rounded-full flex justify-center items-center w-fit px-6 font-bold text-sm md:text-xl 2xl:text-3xl text-white"
@@ -732,17 +745,17 @@
                 style="font-family: 'Kanit';">
                 <div class="lg:text-left text-start" style="font-family: 'IBM Plex Sans Thai Looped';">
                   <div
-                    class="flex flex-col justify-between items-start sm:text-sm md:text-sm 2xl:text-2xl text-[#374C83]">
+                    class="flex flex-col justify-between items-start pt-4 sm:pt-0 sm:text-sm md:text-sm 2xl:text-2xl text-[#374C83]">
                     <p class="p-2 font-semibold">ติดตามข่าวสารได้ที่</p>
                     <p class="p-2 font-bold sm:text-lg md:text-3xl 2xl:text-5xl" style="font-family: 'Kanit';">BARCAMP
                       SONGKHLA</p>
                     <p class="p-2 font-semibold ">Facebook : Barcamp Songkhla</p>
                     <p class="p-2 font-semibold ">IG : BarcampSK</p>
                     <div
-                      class="flex flex-row pt-2 sm:pt-0 gap-2 md:gap-4 pl-8 sm:pl-2 md:pt-2 md:pl-3 2xl:pt-4 2xl:pl-6">
+                      class="flex flex-row pt-2 sm:pt-1 gap-2 md:gap-4 pl-4 sm:pl-2 md:pt-2 md:pl-3 2xl:pt-4 2xl:pl-6">
                       <!-- Facebook -->
                       <a href="https://www.facebook.com/BarcampSongkhla" target="_blank" rel="noopener noreferrer"
-                        class="group relative w-16 h-16 md:w-24 md:h-24 2xl:w-32 2xl:h-32 z-20">
+                        class="group relative w-16 h-16  md:w-24 md:h-24 2xl:w-32 2xl:h-32 z-20">
                         <img src="images/facebookLogo.svg" alt="FACEBOOK"
                           class="absolute inset-0 w-full h-full rotate-30 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
                         <img src="images/facebookOnHoverLogo.svg" alt="FACEBOOK"
@@ -812,54 +825,13 @@
     </div>
 
     <!-- sponsor -->
-    <!-- <div class="lg:mx-8 xl:mx-36  pb-16 min-[0px]:mx-10">
-      <div class="grid">
-        <div class="flex flex-wrap pb-16 justify-between sm:flex">
-          <div class="font-bold text-lg sm:text-4xl md:text-5xl py-4" style="font-family: 'Kanit';">ผู้สนับสนุน</div>
-          <div class="justify-self-end hidden sm:block">
-            <p>เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน</p>
-            <p>จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่</p>
-            <p>และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้</p>
-          </div>
-        </div>
-  
-        <div class="flex flex-wrap gap-5 items-center justify-center">
-          <div class="sm:hidden block">
-            <marquee>
-              <div class="flex gap-4">
-                <div class="bg-red-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
-                <div class="bg-blue-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
-                <div class="bg-green-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
-                <div class="bg-yellow-500 min-w-[150px] h-[90px] flex items-center justify-center"></div>
-                <div class="bg-black min-w-[150px] h-[90px] flex items-center justify-center"></div>
-              </div>
-            </marquee>
-          </div>
-  
-          <div class="hidden sm:flex flex-wrap gap-5 items-center justify-center">
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-            <div class="bg-[#FFF4BD] w-[255px] h-[90px]"></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- bg-[url('/images/nsw.png')]  -->
-    <div class=" w-full h-screen bg-auto	bg-no-repeat bg-center border-black border-2 mb-12 flex justify-center items-center relative overflow-hidden">
-      <div class="absolute -bottom-36 z-10">
-        <img src="images/sea-wave.png" ></img>
-      </div>
-      <div class="absolute top-0 right-0">
-        <img src="images/beach.png" class="w-[1173px] h-[661px]"></img>
-      </div>
+    <div id="Sponser"
+      class=" w-screen h-screen bg-cover bg-no-repeat bg-center border-black border-2  flex justify-center items-center bg-[url('/images/nnsw.png')]  overflow-hidden">
       <div class="grid grid-rows-2 place-content-center z-30">
         <!-- Section for "ผู้สนับสนุน" -->
         <div class="flex flex-wrap pb-16 justify-center sm:justify-center">
-          <div class="supporter w-full text-center text-4xl sm:text-5xl md:text-6xl font-bold" style="font-family: 'Kanit';">
+          <div class="supporter w-full text-center text-4xl sm:text-5xl md:text-6xl font-bold"
+            style="font-family: 'Kanit';">
             ผู้สนับสนุน
           </div>
         </div>
@@ -895,70 +867,68 @@
 
         </div>
       </div>
-      </div>
-      <style>
-        .supporter {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+    </div>
+    <style>
+      .supporter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .lg\:mx-8 {
-          margin-left: 32px;
-          margin-right: 32px;
-        }
+      .lg\:mx-8 {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
 
-        .xl\:mx-36 {
-          margin-left: 144px;
-          /* เพิ่มระยะห่างด้านซ้าย */
-          margin-right: 144px;
-          /* เพิ่มระยะห่างด้านขวา */
-        }
+      .xl\:mx-36 {
+        margin-left: 144px;
+        /* เพิ่มระยะห่างด้านซ้าย */
+        margin-right: 144px;
+        /* เพิ่มระยะห่างด้านขวา */
+      }
 
-        .bg-white.pb-16 {
-          padding-bottom: 64px;
-          /* เพิ่มระยะห่างด้านล่าง */
-        }
+      .bg-white.pb-16 {
+        padding-bottom: 64px;
+        /* เพิ่มระยะห่างด้านล่าง */
+      }
 
-        .min-\[0px\]\:mx-10 {
-          margin-left: 40px;
-          /* เพิ่มระยะห่างด้านซ้าย */
-          margin-right: 40px;
-          /* เพิ่มระยะห่างด้านขวา */
-        }
+      .min-\[0px\]\:mx-10 {
+        margin-left: 40px;
+        /* เพิ่มระยะห่างด้านซ้าย */
+        margin-right: 40px;
+        /* เพิ่มระยะห่างด้านขวา */
+      }
 
-        .lg\:mx-8.xl\:mx-36 {
-          max-width: 1200px;
-          /* ขยายความกว้างสูงสุด */
-          width: 100%;
-          /* ทำให้ขยายเต็มพื้นที่ที่กำหนด */
-        }
-
-
-        .sponsor-logo {
-          width: 150px;
-          /* กำหนดความกว้างของภาพ */
-          height: 90px;
-          /* กำหนดความสูงของภาพ */
-          object-fit: contain;
-          /* ทำให้ภาพคงอัตราส่วน */
-          border-radius: 8px;
-          /* เพิ่มมุมโค้งเพื่อความสวยงาม */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          /* เพิ่มเงา */
-        }
-
-        .flex-wrap.gap-5 {
-          gap: 20px;
-          /* ปรับระยะห่างระหว่างภาพ */
-        }
-      </style>
+      .lg\:mx-8.xl\:mx-36 {
+        max-width: 1200px;
+        /* ขยายความกว้างสูงสุด */
+        width: 100%;
+        /* ทำให้ขยายเต็มพื้นที่ที่กำหนด */
+      }
 
 
-      <div class=" w-full pb-16 lg:px-16  text-black border-black border-2" id="About">
-        <!-- Top Section -->
+      .sponsor-logo {
+        width: 150px;
+        /* กำหนดความกว้างของภาพ */
+        height: 90px;
+        /* กำหนดความสูงของภาพ */
+        object-fit: contain;
+        /* ทำให้ภาพคงอัตราส่วน */
+        border-radius: 8px;
+        /* เพิ่มมุมโค้งเพื่อความสวยงาม */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* เพิ่มเงา */
+      }
+
+      .flex-wrap.gap-5 {
+        gap: 20px;
+        /* ปรับระยะห่างระหว่างภาพ */
+      }
+    </style>
+
+
+     <div class=" w-full py-16 sm:py-0  lg:px-16  text-black border-black border-2" id="About">
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
-          <!-- Left: Title -->
           <h1 class="lg:text-8xl sm:text-6xl font-bold" style="font-family: 'Kanit';">
             <span class="text-3xl">WHAT IS</span><br>
             <div class="lg:text-8xl text-5xl ">
@@ -966,18 +936,14 @@
               <p>SONGKHLA? </p>
             </div>
           </h1>
-          <!-- Right: Description -->
           <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg ">
             เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน
             จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่
             และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
           </p>
         </div>
-
-        <!-- Bottom Section -->
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Card 1 -->
-          <div class="bg-[#BEB1E0] p-6 shadow-lg text-[#374C83]">
+        <div class="grid gap-0 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
             <div class="flex items-center mb-4 h-[100px]">
               <img src="/images/people.png" alt="Icon">
             </div>
@@ -986,9 +952,7 @@
               บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="bg-[#FFF4BD] p-6 shadow-lg text-black">
+          <div class="bg-[#FFF4BD]  sm:bg-[#BEB1E0]  lg:bg-[#FFF4BD] p-4 m-4 lg:m-0 shadow-lg lg:text-black sm:text-[#374C83]  lg:text-black">
             <div class="flex items-center mb-4">
               <img src="/images/connect_without_contact_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1 (1).png" alt="Icon">
             </div>
@@ -997,9 +961,7 @@
             แลกเปลี่ยนความคิดเห็น และแบ่งปันความรู้
             </p>
           </div>
-
-          <!-- Card 3 -->
-          <div class="bg-[#BEB1E0] p-6 shadow-lg text-[#374C83]">
+          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
             <div class="flex items-center mb-4">
               <img src="/images/terminal_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1.png" alt="Icon">
             </div>
@@ -1010,217 +972,281 @@
             </p>
           </div>
         </div>
-      </div>
-
-
-
-      <!-- timeline -->
-      <div style="font-family: 'IBM Plex Sans Thai Looped';" class=" text-white pb-10  border-[3px] border-black"
-        id="Timeline">
-        <div class="grid lg:flex flex-wrap items-start max">
-          <div style="font-family: 'Kanit'"
-            class="bg-cover w-full h-full  bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl lg:text-8xl text-white font-bold min-[1024px]:px-16 min-[0px]:p-0  md:mb-10 min-[0px]:text-center md:text-start border-4 border-l-0 border-r-0">
-            TIMELINE
+      </div> 
+    
+    
+      <!-- <div
+      class="mx-4 rounded-3xl	 lg:mx-8 xl:mx-32 bg-gradient-to-b from-[#FFF4BD] to-[#F6E176] pt-8 sm:py-16 px-4 sm:px-8 border border-gray-300 shadow-lg flex flex-col gap-8 relative"
+      id="About">
+      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle py-8">
+        <div class="pt-12">
+          <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl text-center" style="font-family: 'Kanit';">Barcamp Songkhla?
           </div>
-
-          <div class="sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-0 sm:border-l-0 mt-4">
-            <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
-              <li class="">
-                <div class="timeline-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                    class="h-10 w-10 text-[#FFD700]">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div
-                  class="sm:w-[200px] md:w-9/12	rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black lg:p-6 min-[0px]:p-4">
-                  <time class="font-mono italic text-blue-500">In 2005</time>
-                  <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">First time of Barcamp</div>
-                  <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                    class="border-b-4 border-blue-400 p-2 mt-2 text-start">
-                    บาร์แคมป์จัดขึ้นครั้งแรกเมื่อ พ.ศ. 2548 ที่เมืองพาโลอัลโต
-                    สหรัฐอเมริกา ได้
-                    รับความนิยมจนมีการจัดบาร์แคมป์กระจายไปตามเมืองต่างๆ
-                    ทั่วโลกอย่าง รวดเร็ว
-                  </div>
-                </div>
-                <hr class="bg-[#FFF4BD] " style="width: 14px;" />
-              </li>
-              <li class="">
-                <hr class="bg-[#FFF4BD]" style="width: 14px;" />
-                <div class="timeline-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                    class="h-10 w-10 text-[#FFD700]">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div
-                  class="sm:w-[200px] md:w-9/12 rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
-                  <time class="font-mono italic text-blue-500">January 26th, 2008</time>
-                  <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Thailand</div>
-                  <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                    class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
-                    บาร์แคมป์ได้จัดขึ้นครั้งแรกเมื่อวันที่ 26 มกราคม
-                    พ.ศ. 2551 ที่กรุงเทพมหานคร
-                    จากนั้นได้มีผู้สนใจจัดงานตามจังหวัดต่างๆ ได้แก่ เชียงใหม่
-                    สงขลา และ ภูเก็ต
-                  </div>
-                </div>
-                <hr class="bg-[#FFF4BD]" style="width: 14px;" />
-              </li>
-              <li class="">
-                <hr class="bg-[#FFF4BD]" style="width: 14px;" />
-                <div class="timeline-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                    class="h-10 w-10 text-[#FFD700]">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div
-                  class="sm:w-[200px] md:w-9/12	rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
-                  <time class="font-mono italic text-blue-500">Jun 28th, 2008</time>
-                  <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Songkhla</div>
-                  <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                    class="border-b-4 border-blue-400 p-2 mt-2 text-start">
-                    สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ
-                    ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
-                  </div>
-                </div>
-                <hr class="bg-[#FFF4BD]" style="width: 14px;" />
-              </li>
-              <li class="min-">
-                <hr class="bg-[#FFF4BD]" style="width: 14px;" />
-                <div class="timeline-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                    class="h-10 w-10 text-[#FFD700]">
-                    <path fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div
-                  class="sm:w-[200px] md:w-9/12 rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
-                  <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
-                  <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Coming soon</div>
-                  <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                    class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
-                    บาร์แคมป์ได้ดำเนินมาถึงครั้งที่ 9 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
-                    มหาวิทยาลัยสงขลานครินทร์
-                  </div>
-                </div>
-              </li>
-            </ul>
+          <div class="text-base sm:text-lg lg:text-xl font-normal	text-[#786F6F]"
+            style="font-family: 'IBM Plex Sans Thai Looped';">
+            <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
+              เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
+            <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
           </div>
         </div>
       </div>
 
-      <!-- Gallery -->
-      <div id="Gallery">
-        <div style="position: relative; display: inline-block;">
-          <img src="images/fish2.png"
-            style="position: absolute; top: -10px; left: -10px; width: auto; height: 100%; max-width: none; z-index: 0;">
-          <h2 class="gallery-title text-left"
-            style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
-            Gallery
-          </h2>
+
+      <div class="flex flex-col lg:flex-row gap-6  justify-center items-center pb-8">
+        <div
+          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
+          <img src="/images/Group 17.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
+          <br>
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">งานสัมมนานอกกรอบ</h1>
+          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
+          </p>
+          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+
+          </p>
+        </div>
+
+        <div
+          class="rounded-3xl card flex flex-col justify-start items-start w-full  h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
+          <img src="/images/Group 16.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
+          <br>
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
+          <div>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
+              แลกเปลี่ยนความคิดเห็น
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
+              และแบ่งปันความรู้
+            </p>
+          </div>
+
+        </div>
+
+        <div
+          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
+          <img src="/images/Group 18.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
+          <br>
+          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
+          <div>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+              เรียนรู้ร่วมกัน สร้างเครือข่าย
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
+              ระหว่างคนที่ชื่นชอบในเทคโนโลยี
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- timeline -->
+    <div style="font-family: 'IBM Plex Sans Thai Looped';" class=" text-white pb-10 border-black"
+      id="Timeline">
+      <div class="grid lg:flex flex-wrap items-start max">
+        <div style="font-family: 'Kanit'"
+          class="bg-cover w-full h-full  bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl lg:text-8xl text-white font-bold min-[1024px]:px-16 min-[0px]:p-0  md:mb-10 min-[0px]:text-center md:text-start border-b-2 border-black">
+          TIMELINE
+        </div>
+
+        <div class="sm:pl-0 lg:px-4 xl:px-24 min-[0px]:px-0 sm:border-l-0 mt-4">
+          <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
+            <li class="">
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-10 w-10 text-[#FFD700]">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div
+                class="sm:w-[200px] md:w-9/12	rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black lg:p-6 min-[0px]:p-4">
+                <time class="font-mono italic text-blue-500">In 2005</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">First time of Barcamp</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'"
+                  class="border-b-4 border-blue-400 p-2 mt-2 text-start">
+                  บาร์แคมป์จัดขึ้นครั้งแรกเมื่อ พ.ศ. 2548 ที่เมืองพาโลอัลโต
+                  สหรัฐอเมริกา ได้
+                  รับความนิยมจนมีการจัดบาร์แคมป์กระจายไปตามเมืองต่างๆ
+                  ทั่วโลกอย่าง รวดเร็ว
+                </div>
+              </div>
+              <hr class="bg-[#FFF4BD] " style="width: 14px;" />
+            </li>
+            <li class="">
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-10 w-10 text-[#FFD700]">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div
+                class="sm:w-[200px] md:w-9/12 rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
+                <time class="font-mono italic text-blue-500">January 26th, 2008</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Thailand</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'"
+                  class="border-b-4 border-blue-400 p-2 mt-2 text-starts">
+                  บาร์แคมป์ได้จัดขึ้นครั้งแรกเมื่อวันที่ 26 มกราคม
+                  พ.ศ. 2551 ที่กรุงเทพมหานคร
+                  จากนั้นได้มีผู้สนใจจัดงานตามจังหวัดต่างๆ ได้แก่ เชียงใหม่
+                  สงขลา และ ภูเก็ต
+                </div>
+              </div>
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
+            </li>
+            <li class="">
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-10 w-10 text-[#FFD700]">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div
+                class="sm:w-[200px] md:w-9/12	rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
+                <time class="font-mono italic text-blue-500">Jun 28th, 2008</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Barcamp in Songkhla</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'"
+                  class="border-b-4 border-blue-400 p-2 mt-2 text-start">
+                  สำหรับจังหวัดสงขลานั้นบาร์แคมป์จัดขึ้นครั้ง แรกเมื่อวันที่ 28 มิถุนายน พ.ศ. 2551 ณ
+                  ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์
+                </div>
+              </div>
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
+            </li>
+            <li class="min-">
+              <hr class="bg-[#FFF4BD]" style="width: 14px;" />
+              <div class="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="h-10 w-10 text-[#FFD700]">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div
+                class="sm:w-[200px] md:w-9/12 rounded-3xl md:mx-16 sm:mx-0 linetime timeline-end mb-4 hover:scale-105 transition duration-300 ease-in-ou shadow-lg  bg-[#B2DEF8] text-black p-6">
+                <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
+                <div style="font-family: 'Kanit'" class="text-lg font-black text-blue-700">Coming soon</div>
+                <div style="font-family: 'IBM Plex Sans Thai Looped'"
+                  class=" border-b-4 border-blue-400 p-2 mt-2 text-start">
+                  บาร์แคมป์ได้ดำเนินมาถึงครั้งที่ 9 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
+                  มหาวิทยาลัยสงขลานครินทร์
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div id="Gallery">
+      <div style="position: relative; display: inline-block;">
+        <img src="images/fish2.png"
+          style="position: absolute; top: -10px; left: -10px; width: auto; height: 100%; max-width: none; z-index: 0;">
+        <h2 class="gallery-title text-left"
+          style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; position: relative; z-index: 1;">
+          Gallery
+        </h2>
+      </div>
+
+
+
+
+      <div class="gallery-container">
+        <div class="left" style="position: relative;">
+          <img src="images/images69.png" style="max-width: 100%;height: auto; z-index: 2;" class="jellyfish-animation"
+            id="myJelly">
         </div>
 
 
-
-
-        <div class="gallery-container">
-          <div class="left" style="position: relative;">
-            <img src="images/images69.png" style="max-width: 100%;height: auto; z-index: 2;" class="jellyfish-animation"
-              id="myJelly">
-          </div>
-
-
-          <style>
-            /* CSS สำหรับอนิเมชั่น */
-            @keyframes jellyfishMove {
-              0% {
-                transform: translateY(0);
-              }
-
-              50% {
-                transform: translateY(-20px);
-                /* ขึ้นไปข้างบน */
-              }
-
-              100% {
-                transform: translateY(0);
-                /* กลับมาตำแหน่งเดิม */
-              }
+        <style>
+          /* CSS สำหรับอนิเมชั่น */
+          @keyframes jellyfishMove {
+            0% {
+              transform: translateY(0);
             }
 
-            .jellyfish-animation {
-              animation: jellyfishMove 3s infinite;
-              /* ระยะเวลา 3 วินาที และวนลูป */
+            50% {
+              transform: translateY(-20px);
+              /* ขึ้นไปข้างบน */
             }
-          </style>
+
+            100% {
+              transform: translateY(0);
+              /* กลับมาตำแหน่งเดิม */
+            }
+          }
+
+          .jellyfish-animation {
+            animation: jellyfishMove 3s infinite;
+            /* ระยะเวลา 3 วินาที และวนลูป */
+          }
+        </style>
 
 
 
-          <div class="right">
-            <div class="gallery-wrapper">
-              <div data-simplebar class="horizontal-gallery-container">
-                <div class="horizontal-gallery">
-                </div>
-                <div class="horizontal-gallery">
-                </div>
+        <div class="right">
+          <div class="gallery-wrapper">
+            <div data-simplebar class="horizontal-gallery-container">
+              <div class="horizontal-gallery">
+              </div>
+              <div class="horizontal-gallery">
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- เริ่มต้นส่วนที่ต้องการพื้นหลังสีน้ำตาล -->
-        <div class="background-brown" style="background-color: #D9AD65; width: 100% ;padding-bottom: 50px;">
-          <div class="flex items-center justify-center w-full mt-8">
-            <div class="flex-1 border-t-2 border-gray-400"></div>
-            <div class="mx-4">
-              <img src="images/godot_logo.png" alt="center-image" class="w-12 h-12 object-contain">
-            </div>
-            <div class="flex-1 border-t-2 border-gray-400"></div>
+      <!-- เริ่มต้นส่วนที่ต้องการพื้นหลังสีน้ำตาล -->
+      <div class="background-brown pb-8 xl:pb-0" style="background-color: #D9AD65; width: 100% ;">
+        <div class="flex items-center justify-center w-full mt-8">
+          <div class="flex-1 border-t-2 border-gray-400"></div>
+          <div class="mx-4">
+            <img src="images/godot_logo.png" alt="center-image" class="w-12 h-12 object-contain">
           </div>
-          <div class="flex items-center justify-between mt-8 w-full px-8">
-            <div class="flex items-center image-container" style="margin-left: 30px;">
-              <img src="images/my-gallery.png" alt="image" class="w-90 h-64 object-cover rounded-lg image-element">
-              <h2 class="gallery-title1"
-                style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; margin-left: 50px;">
-                Gallery Room
-              </h2>
-            </div>
-
-
-            <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
-              <img src="images/dead_ship.png" alt="center-image"
-                style="width: 400px; height: 400px; margin-right: 175px;">
-              <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
-                class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
-                style="background: linear-gradient(to bottom, #374C83, #6E6295);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
-                  class="w-8 h-8">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+          <div class="flex-1 border-t-2 border-gray-400"></div>
+        </div>
+        <div class="flex items-center justify-between mt-8 w-full px-8">
+          <div class="flex items-center image-container" style="margin-left: 30px;">
+            <img src="images/my-gallery.png" alt="image" class="w-90 h-64 object-cover rounded-lg image-element">
+            <h2 class="gallery-title1"
+              style="font-family: 'Kanit', sans-serif; font-weight: bold; font-size: 36px; margin-left: 50px;">
+              Gallery Room
+            </h2>
           </div>
 
-          <!-- ปุ่มใหม่ (สำหรับหน้าจอเล็ก) -->
-          <div class="flex items-center justify-center mt-8 md:hidden new-button">
-            <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
-              <span class="icon">🎮</span> เข้าสู่ Gallery Room
+
+          <div class="flex items-center old-button" style="margin-left: auto; margin-right: 30px;">
+            <img src="images/dead_ship.png" alt="center-image"
+              style="width: 400px; height: 400px; margin-right: 175px;">
+            <a href="https://jajoji.github.io/my-godot-game/" target="_blank" rel="noopener noreferrer"
+              class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-purple-600"
+              style="background: linear-gradient(to bottom, #374C83, #6E6295);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"
+                class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
-
         </div>
+
+        <!-- ปุ่มใหม่ (สำหรับหน้าจอเล็ก) -->
+        <div class="flex items-center justify-center mt-8 md:hidden new-button">
+          <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
+            <span class="icon">🎮</span> เข้าสู่ Gallery Room
+          </a>
+        </div>
+
       </div>
+    </div>
     </div>
 
   </main>
