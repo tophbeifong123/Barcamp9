@@ -988,116 +988,63 @@
 
      <div class=" w-full py-16 sm:py-0 pb-0 lg:pb-16 lg:px-16  text-black border-black border-2" id="About">
         <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
-          <h1 class="lg:text-8xl sm:text-6xl font-bold" style="font-family: 'Kanit';">
+          <h1 class="lg:text-8xl sm:text-6xl font-bold tablet-padding phone-padding" style="font-family: 'Kanit';">
             <span class="text-3xl">WHAT IS</span><br>
-            <div class="lg:text-8xl text-5xl ">
-              <p>BARCAMP </p>
-              <p>SONGKHLA? </p>
+            <div class="lg:text-8xl text-5xl">
+              <p>BARCAMP</p>
+              <p>SONGKHLA?</p>
             </div>
           </h1>
-          <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg" style="font-family: IBM Plex Sans Thai Looped;">
+          <style>
+            /* เพิ่ม padding สำหรับ tablet */
+            @media (min-width: 768px) and (max-width: 1024px) {
+              .tablet-padding {
+                padding-left: 20px; /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
+              }
+            }
+
+            @media (min-width: 375px) and (max-width: 520px) {
+              .phone-padding {
+                padding-left: 20px; /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
+              }
+            }
+          </style>
+          <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg tablet-padding phone-padding">
             เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน
             จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่
             และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
           </p>
         </div>
         <div class="grid gap-0 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
-          <div class="rounded-[30px] bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
+          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
             <div class="flex items-center mb-4 h-[100px]">
-              <img class="bg=[#374C83]" src="/images/Vector (3).png" alt="Icon">
+              <img src="images/people.png" alt="Icon">
             </div>
             <div class="text-sm sm:text-base">
               <h2 class="text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
               บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
             </div>
           </div>
-          <div class="rounded-[30px] bg-[#FFF4BD]  sm:bg-[#BEB1E0]  lg:bg-[#FFF4BD] p-4 m-4 lg:m-0 shadow-lg sm:text-[#374C83]  lg:text-black">
-            <div class="flex items-center mb-4v h-[100px]">
-              <img src="/images/Vector (4).png" alt="Icon">
+          <div class="bg-[#FFF4BD]  sm:bg-[#BEB1E0]  lg:bg-[#FFF4BD] p-4 m-4 lg:m-0 shadow-lg lg:text-black sm:text-[#374C83]  lg:text-black">
+            <div class="flex items-center mb-4">
+              <img src="images/connect_without_contact_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1 (1).png" alt="Icon">
             </div>
             <p class="text-sm sm:text-base">
             <h2 class="text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
             แลกเปลี่ยนความคิดเห็น และแบ่งปันความรู้
             </p>
           </div>
-          <div class="rounded-[30px] bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
-            <div class="flex items-center mb-4v h-[100px]">
-              <img  class="" src="/images/Vector (5).png" alt="Icon">
+          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
+            <div class="flex items-center mb-4">
+              <img src="images/terminal_24dp_6E6295  _FILL0_wght400_GRAD0_opsz24 1.png" alt="Icon">
             </div>
             <p class="text-sm sm:text-base">
             <h2 class="text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
-            เรียนรู้ร่วมกัน สร้างเครือข่าย<br>
-            ระหว่างคนที่ชื่นชอบในเทคโนโลยี
+            สร้างเครือข่ายของคนชื่นชอบในเทคโนโลยี
             </p>
           </div>
         </div>
       </div> 
-    
-    
-      <!-- <div
-      class="mx-4 rounded-3xl	 lg:mx-8 xl:mx-32 bg-gradient-to-b from-[#FFF4BD] to-[#F6E176] pt-8 sm:py-16 px-4 sm:px-8 border border-gray-300 shadow-lg flex flex-col gap-8 relative"
-      id="About">
-      <div class="text-3xl font-bold text-gray-900 w-full text-center lg:text-left" id="barcampTitle py-8">
-        <div class="pt-12">
-          <div class="mb-4 text-3xl sm:text-4xl lg:text-5xl text-center" style="font-family: 'Kanit';">Barcamp Songkhla?
-          </div>
-          <div class="text-base sm:text-lg lg:text-xl font-normal	text-[#786F6F]"
-            style="font-family: 'IBM Plex Sans Thai Looped';">
-            <div style="text-align: center;">คืองานสัมมนาที่ไม่เป็นทางการ
-              เราจะให้ผู้เข้าร่วมที่มีเรื่องที่อยากจะเล่าเตรียมหัวข้อมา</div>
-            <div style="text-align: center;">เพื่อนำเสนอความรู้ ประสบการณ์ เรื่องราวต่าง ๆ ตามที่ต้องการ</div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="flex flex-col lg:flex-row gap-6  justify-center items-center pb-8">
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <img src="/images/Group 17.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">งานสัมมนานอกกรอบ</h1>
-          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
-          </p>
-          <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-
-          </p>
-        </div>
-
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full  h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <img src="/images/Group 16.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">เสวนาแลกเปลี่ยนทัศนคติ</h1>
-          <div>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
-              แลกเปลี่ยนความคิดเห็น
-            </p>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181] mt-4">
-              และแบ่งปันความรู้
-            </p>
-          </div>
-
-        </div>
-
-        <div
-          class="rounded-3xl card flex flex-col justify-start items-start w-full h-auto bg-white shadow-lg hover:shadow-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 transition-transform duration-300 transform hover:-translate-y-2">
-          <img src="/images/Group 18.png" alt="Tech Icon" class="w-16 h-16 mb-4 rounded-xl">
-          <br>
-          <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold text-left text-black">ชื่นชอบในเทคโนโลยี</h1>
-          <div>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-              เรียนรู้ร่วมกัน สร้างเครือข่าย
-            </p>
-            <p class="text-sm sm:text-base lg:text-lg text-left text-[#888181]  mt-4">
-              ระหว่างคนที่ชื่นชอบในเทคโนโลยี
-            </p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
 
     <!-- timeline -->
     <div style="font-family: 'IBM Plex Sans Thai Looped';" class=" text-white pb-10 border-black"
