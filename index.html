@@ -38,25 +38,27 @@
     }
 
     .responsive-container {
-    position: relative;
-    display: inline-block;
-}
-
-    .fish-style {
-    position: absolute;
-    top: -50px;
-    left: -95px;
-    width: auto;
-    height: 180%;
-    max-width: none;
-    z-index: 0;
-}
-
-@media screen and (max-width: 480px) {
-    .fish-style {
-        display: none; /* ซ่อนภาพ */
+      position: relative;
+      display: inline-block;
     }
-}
+
+    .fish-style {
+      position: absolute;
+      top: -50px;
+      left: -95px;
+      width: auto;
+      height: 180%;
+      max-width: none;
+      z-index: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      .fish-style {
+        display: none;
+        /* ซ่อนภาพ */
+      }
+    }
+
     .gallery-container {
       display: flex;
       justify-content: space-between;
@@ -120,14 +122,14 @@
         margin-right: 0;
       }
 
-      .fish-style{
+      .fish-style {
         left: -50px;
         top: -40px;
       }
     }
 
     @media screen and (max-width: 1024px) {
-      .fish-style{
+      .fish-style {
         left: -50px;
         top: -30px;
       }
@@ -154,19 +156,22 @@
 
     @media (max-width: 706px) {
       .cool-button {
-      font-size: 1rem;
-    }}
+        font-size: 1rem;
+      }
+    }
 
     @media (max-width: 628px) {
       .cool-button {
-      font-size: 0.8rem;
-    }}
+        font-size: 0.8rem;
+      }
+    }
 
     @media (max-width: 549px) {
       .cool-button {
-      font-size: 0.6rem;
-      width: 200px;
-    }}
+        font-size: 0.6rem;
+        width: 200px;
+      }
+    }
 
 
     .cool-button:hover {
@@ -736,25 +741,32 @@
         class="hidden absolute top-0 left-0 w-full shadow-lg md:flex md:relative md:top-auto md:left-auto md:shadow-none md:w-auto md:bg-transparent md:items-center order-3 peer-checked:flex bg-white bg-opacity-70"
         style="z-index: 40; padding-top: 2rem; padding-bottom: 2rem;">
         <ul class="flex flex-col md:flex-row md:space-x-6" style="font-family: 'Kanit';">
-          <li><a href="#" class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">HOME</a>
+          <li style="margin-left: 30px;">
+            <a href="#"
+              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold hover:underline">HOME</a>
           </li>
-          <li><a href="#About"
-              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">ABOUT</a>
+          <li style="margin-left: 30px;">
+            <a href="#About"
+              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold hover:underline">ABOUT</a>
           </li>
-          <li><a href="#Timeline"
-              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">TIMELINE</a></li>
-          <li><a href="#Gallery"
-              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold">GALLERY</a></li>
-
+          <li style="margin-left: 30px;">
+            <a href="#Timeline"
+              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold hover:underline">TIMELINE</a>
+          </li>
+          <li style="margin-left: 30px;">
+            <a href="#Gallery"
+              class="transition-colors duration-300 text-[#374C83] text-lg lg:text-xl font-bold hover:underline">GALLERY</a>
+          </li>
         </ul>
       </div>
+
     </div>
   </nav>
 
 
   <main class="flex flex-col items-center w-full gap-16 lg:px-8 min-[0px]:px-4 bg-[#DDF3FF]">
     <div
-      class="w-full h-screen min-h-[750px] sm:min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] md:max-h-[800px] flex flex-col justify-start sm:justify-center md:justify-start pt-16 md:pt-24 lg:pt-28 items-center overflow-hidden"
+      class="w-full h-screen min-h-[750px] sm:min-h-[500px] max-h-[550px] sm:min-h-[600px] sm:max-h-[650px] lg:min-h-[800px] md:max-h-[800px] flex flex-col justify-start sm:justify-center md:justify-start pt-16 md:pt-24 lg:pt-28 items-center"
       id="Home">
 
       <!-- <div class="wrapper">
@@ -774,14 +786,30 @@
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
     </div> -->
-      <div class="flex flex-col justify-start items-center text-black gap-0 sm:gap-4 md:gap-6"
-        style="font-family: 'Kanit';">
-        <div class="font-bold flex flex-col items-center sm:gap-2 md:gap-4 h-fit">
-          <div class="text-lg sm:text-4xl md:text-5xl">มาร่วมแลกเปลี่ยนไอเดียไปพร้อมกัน</div>
-          <div class="text-base sm:text-3xl md:text-4xl">BARCAMP SONGKHLA 9</div>
+      <div class="flex flex-col justify-start items-center text-black gap-2 sm:gap-4 md:gap-6 "
+        style="font-family: 'Kanit'; ">
+        <div class="font-bold flex flex-col items-center gap-2 sm:gap-4 md:gap-6 h-fit custom-margin"
+          style="font-family: 'Kanit';">
+          <!-- ปรับขนาดข้อความ -->
+          <div class="text-2xl sm:text-4xl md:text-5xl custom-small-text">มาร่วมแลกเปลี่ยนไอเดียไปพร้อมกัน</div>
+          <div class="text-2xl sm:text-3xl md:text-4xl custom-small-text">BARCAMP SONGKHLA 9</div>
         </div>
+        <style>
+          @media (max-width: 473px) {
+            .custom-small-text {
+              font-size: 1.25rem;
+              line-height: 1.5rem;
+            }
+          }
 
-        <div class="flex flex-col gap-6 sm:flex-row items-between sm:gap-6 md:gap-16 pt-12">
+          @media (max-width: 639px) {
+            .custom-margin {
+              margin-top: 20px;
+            }
+          }
+        </style>
+
+        <div class="flex flex-col gap-6 sm:flex-row items-between sm:gap-6 md:gap-16 pt-12" >
           <div class="flex flex-col items-center justify-center relative ">
             <div
               class="absolute -top-2.5 sm:-top-2 md:-top-4 left-1/2 transform -translate-x-1/2  bg-black rounded-full flex justify-center items-center w-fit px-6 font-bold text-sm md:text-xl 2xl:text-3xl text-white"
@@ -831,13 +859,13 @@
             </div>
           </div>
 
-          <div class="flex flex-col items-center justify-center relative ">
+          <div class="flex flex-col items-center justify-center relative">
             <div
               class="absolute -top-2.5 sm:-top-2 md:-top-4 left-1/2 transform -translate-x-1/2  bg-black rounded-full flex justify-center items-center w-fit px-6 font-bold text-sm md:text-xl 2xl:text-3xl text-white"
               style="font-family: 'Kanit';">EVENT</div>
             <div class=" bg-[#fff4bd] px-8 py-2.5 md:py-10 rounded-3xl border border-2 border-black overflow-hidden">
               <div
-                class="h-72 w-48 md:h-64 md:w-64 2xl:h-96 2xl:w-96 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
+                class="h-full w-48 md:h-64 md:w-64 2xl:h-96 2xl:w-96 text-sm sm:text-lg md:text-base lg:text-base flex flex-col items-center md:gap-4 "
                 style="font-family: 'Kanit';">
                 <div class=" text-sm 2xl:text-2xl lg:text-left text-start"
                   style="font-family: 'IBM Plex Sans Thai Looped';">
@@ -854,11 +882,11 @@
                   </div>
                 </div>
 
-                <div class="flex justify-center item z-20 ">
+                <div class="flex justify-center item z-20 " >
                   <iframe
                     class="w-full sm:h-32  md:h-36 xl:h-48  max-w-xs sm:max-w-md lg:max-w-4xl border rounded-lg shadow-lg"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.025931690464!2d100.4960252!3d7.0062293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d29f53320558d%3A0x44bc2a2c81175fd9!2z4Lio4Li54LiZ4Lii4LmM4Lia4Lij4Li04LiB4Liy4Lij4Lin4Li04LiK4Liy4LiB4Liy4LijIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4quC4h-C4guC4peC4suC4meC4hOC4o-C4tOC4meC4l-C4o-C5jA!5e0!3m2!1sth!2sth!4v1733348193726!5m2!1sth!2sth"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade ">
                   </iframe>
                 </div>
               </div>
@@ -913,33 +941,29 @@
       <div class="flex flex-wrap flex-col gap-16 justify-center z-30 ">
         <div class="flex flex-wrap justify-center sm:justify-center">
           <div class="supporter w-full text-center text-4xl sm:text-5xl md:text-6xl font-bold"
-            style="font-family: 'Kanit';">
+            style="font-family: 'Kanit'; color: #000;">
             ผู้สนับสนุน
           </div>
         </div>
         <div class="sm:hidden block">
           <marquee>
             <div class="flex gap-0">
-              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo"
-                class="w-[120px] h-[120px] object-contain rounded-lg">
+              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo" class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
               <img src="images/importstar.png" alt="Import Star Logo"
                 class="w-[200px] h-[120px] object-contain rounded-lg">
-              <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center" ></div>
-              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo"
-                class="w-[120px] h-[120px] object-contain rounded-lg">
+              <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
+              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo" class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
               <img src="images/importstar.png" alt="Import Star Logo"
                 class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
-              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo"
-                class="w-[120px] h-[120px] object-contain rounded-lg">
+              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo" class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
               <img src="images/importstar.png" alt="Import Star Logo"
                 class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
-              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo"
-                class="w-[120px] h-[120px] object-contain rounded-lg">
+              <img src="images/PaOCLOUD.png" alt="PaOCLOUD Logo" class="w-[120px] h-[120px] object-contain rounded-lg">
               <div class="bg-transparent min-w-[50px] h-[90px] flex items-center justify-center"></div>
               <img src="images/importstar.png" alt="Import Star Logo"
                 class="w-[120px] h-[120px] object-contain rounded-lg">
@@ -948,12 +972,14 @@
           </marquee>
         </div>
 
-        <div class="hidden sm:relative sm:flex sm:justify-around sm:items-center sm:h-fit">
-          <div class="bg-[#FFF4BD] sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full -mr-3 z-10 flex items-center justify-center">
+        <div class="hidden sm:relative sm:flex sm:justify-around sm:items-center sm:h-fit sm:gap-10">
+          <div
+            class="bg-[#FFF4BD] sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full -mr-3 z-10 flex items-center justify-center">
             <img src="images/PaOCLOUD.png" alt="icon" class="sm:w-36 sm:h-36 md:w-56 md:h-56 rounded-full object-cover">
           </div>
           <div class="bg-[#BEB1E0] sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-[65px] flex items-center justify-center">
-            <img src="images/import-star.png" alt="icon" class="sm:w-36 sm:h-36 md:w-56 md:h-56 sm:rounded-3xl md:rounded-[65px]  object-cover">
+            <img src="images/import-star.png" alt="icon"
+              class="sm:w-36 sm:h-36 md:w-56 md:h-56 sm:rounded-3xl md:rounded-[65px]  object-cover">
           </div>
         </div>
       </div>
@@ -1013,7 +1039,6 @@
       </div>
     </div> -->
     <style>
-
       .lg\:mx-8 {
         margin-left: 32px;
         margin-right: 32px;
@@ -1046,10 +1071,10 @@
       }
 
       #Sponser {
-      border: 2px solid #000000;
-      width: calc(100%);
-      max-width: 100%;
-    }
+        border: 2px solid #000000;
+        width: calc(100%);
+        max-width: 100%;
+      }
 
 
       .sponsor-logo {
@@ -1072,69 +1097,71 @@
     </style>
 
     <!-- about -->
-     <div class=" w-full py-16 sm:py-0 pb-0 lg:pb-16 lg:px-16 text-black border-black border-2" id="About">
-        <div class="ml-4 sm:md-0 flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
-          <h1 class="lg:text-8xl sm:text-6xl font-bold tablet-padding phone-padding" style="font-family: 'Kanit';">
-            <span class="text-2xl sm:text-3xl">WHAT IS</span><br>
-            <div class="lg:text-8xl text-4xl">
-              <p>BARCAMP</p>
-              <p>SONGKHLA?</p>
-            </div>
-          </h1>
-          <style>
-            /* เพิ่ม padding สำหรับ tablet */
-            @media (min-width: 768px) and (max-width: 1024px) {
-              .tablet-padding {
-                padding-left: 20px; /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
-              }
+    <div class=" w-full py-16 sm:py-0 pb-0 lg:pb-16 lg:px-16 text-black border-black border-2" id="About">
+      <div class="ml-4 sm:md-0 flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
+        <h1 class="lg:text-8xl sm:text-6xl font-bold tablet-padding phone-padding" style="font-family: 'Kanit';">
+          <span class="text-2xl sm:text-3xl">WHAT IS</span><br>
+          <div class="lg:text-8xl text-4xl">
+            <p>BARCAMP</p>
+            <p>SONGKHLA?</p>
+          </div>
+        </h1>
+        <style>
+          /* เพิ่ม padding สำหรับ tablet */
+          @media (min-width: 768px) and (max-width: 1024px) {
+            .tablet-padding {
+              padding-left: 20px;
+              /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
             }
+          }
 
-            @media (min-width: 375px) and (max-width: 520px) {
-              .phone-padding {
-                padding-left: 20px; /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
-              }
+          @media (min-width: 375px) and (max-width: 520px) {
+            .phone-padding {
+              padding-left: 20px;
+              /* ปรับระยะห่างขอบซ้ายตามที่ต้องการ */
             }
-          </style>
-          <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg tablet-padding phone-padding">
-            เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน
-            จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่
-            และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
+          }
+        </style>
+        <p class="mt-4 lg:mt-0 text-base sm:text-lg lg:text-xl max-w-lg tablet-padding phone-padding">
+          เพราะเราเชื่อว่าถ้าเรามีพื้นที่ให้แลกเปลี่ยนความคิดกัน
+          จะทำให้ทุกคนสามารถแชร์ความรู้ได้อย่างเต็มที่
+          และทำให้เกิดไอเดียใหม่ๆที่น่าสนใจได้
+        </p>
+      </div>
+      <div class="grid gap-0 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+        <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
+          <div class="flex items-center mb-4 h-[100px]">
+            <img src="images/people.png" alt="Icon">
+          </div>
+          <div class="text-sm sm:text-base">
+            <h2 class="text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
+            บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
+          </div>
+        </div>
+        <div
+          class="bg-[#FFF4BD]  sm:bg-[#BEB1E0]  lg:bg-[#FFF4BD] p-4 m-4 lg:m-0 shadow-lg lg:text-black sm:text-[#374C83]  lg:text-black">
+          <div class="flex items-center mb-4">
+            <img src="images/commu.png" alt="Icon"><br><br><br><br>
+          </div>
+          <p class="text-sm sm:text-base">
+          <h2 class="text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
+          แลกเปลี่ยนความคิดเห็น และแบ่งปันความรู้
           </p>
         </div>
-        <div class="grid gap-0 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
-          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
-            <div class="flex items-center mb-4 h-[100px]">
-              <img src="images/people.png" alt="Icon" >
-            </div>
-            <div class="text-sm sm:text-base">
-              <h2 class="text-lg sm:text-xl font-bold">งานสัมมนานอกกรอบ</h2>
-              บรรยากาศที่ไม่เป็นทางการและผ่อนคลาย
-            </div>
+        <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
+          <div class="flex items-center mb-4">
+            <img src="images/tech.png" alt="Icon"><br><br><br><br>
           </div>
-          <div class="bg-[#FFF4BD]  sm:bg-[#BEB1E0]  lg:bg-[#FFF4BD] p-4 m-4 lg:m-0 shadow-lg lg:text-black sm:text-[#374C83]  lg:text-black">
-            <div class="flex items-center mb-4">
-              <img src="images/commu.png" alt="Icon"><br><br><br><br>
-            </div>
-            <p class="text-sm sm:text-base">
-            <h2 class="text-lg sm:text-xl font-bold">เสวนาแลกเปลี่ยนทัศนคติ</h2>
-            แลกเปลี่ยนความคิดเห็น และแบ่งปันความรู้
-            </p>
-          </div>
-          <div class="bg-[#BEB1E0] p-4 m-4 lg:m-0 shadow-lg text-[#374C83]">
-            <div class="flex items-center mb-4">
-              <img src="images/tech.png" alt="Icon" ><br><br><br><br>
-            </div>
-            <p class="text-sm sm:text-base">
-            <h2 class="text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
-            สร้างเครือข่ายของคนชื่นชอบในเทคโนโลยี
-            </p>
-          </div>
+          <p class="text-sm sm:text-base">
+          <h2 class="text-lg sm:text-xl font-bold">ชื่นชอบในเทคโนโลยี</h2>
+          สร้างเครือข่ายของคนชื่นชอบในเทคโนโลยี
+          </p>
         </div>
-      </div> 
+      </div>
+    </div>
 
     <!-- timeline -->
-    <div style="font-family: 'IBM Plex Sans Thai Looped';" class=" text-white pb-10 border-black"
-      id="Timeline">
+    <div style="font-family: 'IBM Plex Sans Thai Looped';" class=" text-white pb-10 border-black" id="Timeline">
       <div class="grid lg:flex flex-wrap items-start max">
         <div style="font-family: 'Kanit'"
           class="bg-cover w-full h-full  bg-no-repeat bg-left bg-[url('images/sea-wave.png')] ease-in-out min-[0px]:text-6xl md:text-8xl md:px-16  lg:text-8xl text-white font-bold min-[1024px]:px-16 min-[0px]:p-0  md:mb-10 min-[0px]:text-center sm:text-center md:text-start border-b-2 border-black md:h-[100px]">
@@ -1181,7 +1208,7 @@
                 <time class="font-mono italic text-blue-500">January 26th, 2008</time>
                 <div style="font-family: 'Kanit'" class="text-2xl font-black text-blue-700">Barcamp in Thailand</div>
                 <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                class="border-b-4 border-blue-400 p-2 mt-2 text-start md:text-base lg:text-xl sm:text-xs">
+                  class="border-b-4 border-blue-400 p-2 mt-2 text-start md:text-base lg:text-xl sm:text-xs">
                   บาร์แคมป์ได้จัดขึ้นครั้งแรกเมื่อวันที่ 26 มกราคม
                   พ.ศ. 2551 ที่กรุงเทพมหานคร
                   จากนั้นได้มีผู้สนใจจัดงานตามจังหวัดต่างๆ ได้แก่ เชียงใหม่
@@ -1227,7 +1254,7 @@
                 <time class="font-mono italic text-blue-500">Feb 1th, 2024</time>
                 <div style="font-family: 'Kanit'" class="text-2xl font-black text-blue-700">Coming soon</div>
                 <div style="font-family: 'IBM Plex Sans Thai Looped'"
-                class="border-b-4 border-blue-400 p-2 mt-2 text-start md:text-base lg:text-xl sm:text-xs font-normal">
+                  class="border-b-4 border-blue-400 p-2 mt-2 text-start md:text-base lg:text-xl sm:text-xs font-normal">
                   บาร์แคมป์ได้ดำเนินมาถึงครั้งที่ 9 ซึ่งจัดที่อาคารศูนย์ทรัพยากรการเรียนรู้ฯ ชั้น8
                   มหาวิทยาลัยสงขลานครินทร์
                 </div>
@@ -1242,22 +1269,22 @@
     <div id="Gallery">
       <div class="responsive-container">
         <!-- <img src="images/fish2.png" class="fish-style"> -->
-        <h2 class="gallery-title text-left font-bold min-[0px]:text-6xl lg:text-8xl" 
-            style="font-family: 'Kanit', sans-serif; position: relative; z-index: 1;">
-            GALLERY
+        <h2 class="gallery-title text-left font-bold min-[0px]:text-6xl lg:text-8xl"
+          style="font-family: 'Kanit', sans-serif; position: relative; z-index: 1;">
+          GALLERY
         </h2>
-    </div>
+      </div>
 
 
 
 
       <div class="gallery-container">
         <div class="left" style="position: relative;">
-          <img src="images/images69.png" style="max-width: 100%;height: auto; z-index: 2; min-width: 250px;" class="jellyfish-animation"
-            id="myJelly">
-            <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
-              <span class="icon">🎮</span> เข้าสู่ Gallery Room
-            </a>
+          <img src="images/images69.png" style="max-width: 100%;height: auto; z-index: 2; min-width: 250px;"
+            class="jellyfish-animation" id="myJelly">
+          <a href="https://jajoji.github.io/my-godot-game/" class="cool-button">
+            <span class="icon">🎮</span> เข้าสู่ Gallery Room
+          </a>
         </div>
 
 
@@ -1288,7 +1315,8 @@
 
 
         <div class="right">
-          <img src="images/char_idle.gif" style="width: 100px; height: auto; image-rendering: pixelated; margin-left: 10%;">
+          <img src="images/char_idle.gif"
+            style="width: 100px; height: auto; image-rendering: pixelated; margin-left: 10%;">
 
           <div class="gallery-wrapper">
             <div data-simplebar class="horizontal-gallery-container">
